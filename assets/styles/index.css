@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Montserrat", sans-serif;
+    @apply text-text text-base;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    @apply bg-surface;
+  }
+}
+
+@layer components {
+  .section {
+    @apply flex flex-col gap-8;
+    @apply px-6 py-6;
+  }
+
+  .title {
+    @apply font-extrabold text-3xl md:text-5xl text-primary;
+  }
+
+  .subtitle {
+    @apply text-2xl font-semibold text-center text-primary;
+  }
+
+  .card {
+    @apply flex flex-col justify-center items-center shadow-lg rounded-3xl py-8 px-4 text-center gap-6;
+  }
+
+  .card--title {
+    @apply font-bold text-primary pt-2;
+  }
+
+  .card--description {
+    @apply text-sm font-normal lg:text-[20px];
+  }
+}
+
+#navbar-btn-open {
+  @apply hidden;
+}
+
+.navbar--open #navbar-menu {
+  height: calc(100vh - 4.5rem);
+}
+
+.navbar--open #navbar-btn-open {
+  @apply block;
+}
+
+.navbar--open #navbar-btn-close {
+  @apply hidden;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-180px * 11));
+  }
+}

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./dist/styles/index.css" rel="stylesheet" />
+    <link href="./dist/libs/splidejs/css/splide.min.css" rel="stylesheet" />
+    <script src="./dist/libs/splidejs/js/splide.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav id="navbar" class="w-full lg:bg-surface shadow-sm">
+        <div
+          class="flex flex-col lg:flex-row lg:container lg:mx-auto lg:max-w-[1184px]"
+        >
+          <div
+            class="flex items-center h-[4.5rem] px-6 drop-shadow-sm bg-surface justify-between lg:drop-shadow-none"
+          >
+            <a href="./index.html">
+              <img src="assets/images/logo.png" />
+            </a>
+            <div class="flex lg:hidden">
+              <button
+                type="button"
+                id="navbar-btn"
+                class="text-text focus:outline-none"
+              >
+                <svg class="h-8 w-8 fill-current" viewBox="0 0 24 24">
+                  <path
+                    id="navbar-btn-close"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M3 7h18v2H3V7zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"
+                  />
+                  <path
+                    id="navbar-btn-open"
+                    d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            id="navbar-menu"
+            class="transition-all duration-700 h-0 bg-surface overflow-hidden lg:h-[4.5rem] lg:flex-1 lg:bg-surface lg:transition-none"
+          >
+            <ul
+              class="flex flex-col justify-center gap-6 p-6 pr-4 pt-12 lg:flex-row lg:py-0 lg:justify-end lg:h-full lg:items-center lg:gap-8"
+            >
+              <li>
+                <a
+                  href="./index.html"
+                  class="py-2.5 hover:text-4xl transition-all flex text-3xl items-center justify-between lg:text-base lg:hover:text-lg"
+                >
+                  Health Insurance
+                  <svg
+                    class="h-12 w-12 lg:hidden"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.21739 17.2826C9.07246 17.1377 9 16.9661 9 16.7678C9 16.5696 9.07246 16.3982 9.21739 16.2536L13.4638 12.0072L9.2029 7.74638C9.06763 7.61111 9 7.44203 9 7.23913C9 7.03623 9.07246 6.86232 9.21739 6.71739C9.36232 6.57246 9.53391 6.5 9.73217 6.5C9.93043 6.5 10.1018 6.57246 10.2464 6.71739L15.1159 11.6014C15.1739 11.6594 15.2151 11.7222 15.2394 11.7899C15.2638 11.8575 15.2757 11.93 15.2754 12.0072C15.2754 12.0845 15.2632 12.157 15.2388 12.2246C15.2145 12.2923 15.1735 12.3551 15.1159 12.413L10.2319 17.2971C10.0966 17.4324 9.92985 17.5 9.73159 17.5C9.53333 17.5 9.36193 17.4275 9.21739 17.2826Z"
+                      fill="#3F3F3F"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./medicare-plans.html"
+                  class="py-2.5 hover:text-4xl transition-all flex text-3xl items-center justify-between lg:text-base lg:hover:text-lg"
+                >
+                  Medicare Plans
+                  <svg
+                    class="h-12 w-12 lg:hidden"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.21739 17.2826C9.07246 17.1377 9 16.9661 9 16.7678C9 16.5696 9.07246 16.3982 9.21739 16.2536L13.4638 12.0072L9.2029 7.74638C9.06763 7.61111 9 7.44203 9 7.23913C9 7.03623 9.07246 6.86232 9.21739 6.71739C9.36232 6.57246 9.53391 6.5 9.73217 6.5C9.93043 6.5 10.1018 6.57246 10.2464 6.71739L15.1159 11.6014C15.1739 11.6594 15.2151 11.7222 15.2394 11.7899C15.2638 11.8575 15.2757 11.93 15.2754 12.0072C15.2754 12.0845 15.2632 12.157 15.2388 12.2246C15.2145 12.2923 15.1735 12.3551 15.1159 12.413L10.2319 17.2971C10.0966 17.4324 9.92985 17.5 9.73159 17.5C9.53333 17.5 9.36193 17.4275 9.21739 17.2826Z"
+                      fill="#3F3F3F"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./about-us.html"
+                  class="py-2.5 hover:text-4xl transition-all flex text-3xl items-center justify-between lg:text-base lg:hover:text-lg"
+                >
+                  About us
+                  <svg
+                    class="h-12 w-12 lg:hidden"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.21739 17.2826C9.07246 17.1377 9 16.9661 9 16.7678C9 16.5696 9.07246 16.3982 9.21739 16.2536L13.4638 12.0072L9.2029 7.74638C9.06763 7.61111 9 7.44203 9 7.23913C9 7.03623 9.07246 6.86232 9.21739 6.71739C9.36232 6.57246 9.53391 6.5 9.73217 6.5C9.93043 6.5 10.1018 6.57246 10.2464 6.71739L15.1159 11.6014C15.1739 11.6594 15.2151 11.7222 15.2394 11.7899C15.2638 11.8575 15.2757 11.93 15.2754 12.0072C15.2754 12.0845 15.2632 12.157 15.2388 12.2246C15.2145 12.2923 15.1735 12.3551 15.1159 12.413L10.2319 17.2971C10.0966 17.4324 9.92985 17.5 9.73159 17.5C9.53333 17.5 9.36193 17.4275 9.21739 17.2826Z"
+                      fill="#3F3F3F"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./contact-us.html"
+                  class="py-2.5 hover:text-4xl transition-all flex text-3xl items-center justify-between lg:text-base lg:hover:text-lg"
+                >
+                  Contact Us
+                  <svg
+                    class="h-12 w-12 lg:hidden"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.21739 17.2826C9.07246 17.1377 9 16.9661 9 16.7678C9 16.5696 9.07246 16.3982 9.21739 16.2536L13.4638 12.0072L9.2029 7.74638C9.06763 7.61111 9 7.44203 9 7.23913C9 7.03623 9.07246 6.86232 9.21739 6.71739C9.36232 6.57246 9.53391 6.5 9.73217 6.5C9.93043 6.5 10.1018 6.57246 10.2464 6.71739L15.1159 11.6014C15.1739 11.6594 15.2151 11.7222 15.2394 11.7899C15.2638 11.8575 15.2757 11.93 15.2754 12.0072C15.2754 12.0845 15.2632 12.157 15.2388 12.2246C15.2145 12.2923 15.1735 12.3551 15.1159 12.413L10.2319 17.2971C10.0966 17.4324 9.92985 17.5 9.73159 17.5C9.53333 17.5 9.36193 17.4275 9.21739 17.2826Z"
+                      fill="#3F3F3F"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./privacy-policy.html"
+                  class="py-2.5 hover:text-4xl transition-all flex text-3xl items-center justify-between lg:text-base lg:hover:text-lg"
+                >
+                  Privacy Policy
+                  <svg
+                    class="h-12 w-12 lg:hidden"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.21739 17.2826C9.07246 17.1377 9 16.9661 9 16.7678C9 16.5696 9.07246 16.3982 9.21739 16.2536L13.4638 12.0072L9.2029 7.74638C9.06763 7.61111 9 7.44203 9 7.23913C9 7.03623 9.07246 6.86232 9.21739 6.71739C9.36232 6.57246 9.53391 6.5 9.73217 6.5C9.93043 6.5 10.1018 6.57246 10.2464 6.71739L15.1159 11.6014C15.1739 11.6594 15.2151 11.7222 15.2394 11.7899C15.2638 11.8575 15.2757 11.93 15.2754 12.0072C15.2754 12.0845 15.2632 12.157 15.2388 12.2246C15.2145 12.2923 15.1735 12.3551 15.1159 12.413L10.2319 17.2971C10.0966 17.4324 9.92985 17.5 9.73159 17.5C9.53333 17.5 9.36193 17.4275 9.21739 17.2826Z"
+                      fill="#3F3F3F"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./terms-of-service.html"
+                  class="py-2.5 hover:text-4xl transition-all flex text-3xl items-center justify-between lg:text-base lg:hover:text-lg"
+                >
+                  Terms of Services
+                  <svg
+                    class="h-12 w-12 lg:hidden"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.21739 17.2826C9.07246 17.1377 9 16.9661 9 16.7678C9 16.5696 9.07246 16.3982 9.21739 16.2536L13.4638 12.0072L9.2029 7.74638C9.06763 7.61111 9 7.44203 9 7.23913C9 7.03623 9.07246 6.86232 9.21739 6.71739C9.36232 6.57246 9.53391 6.5 9.73217 6.5C9.93043 6.5 10.1018 6.57246 10.2464 6.71739L15.1159 11.6014C15.1739 11.6594 15.2151 11.7222 15.2394 11.7899C15.2638 11.8575 15.2757 11.93 15.2754 12.0072C15.2754 12.0845 15.2632 12.157 15.2388 12.2246C15.2145 12.2923 15.1735 12.3551 15.1159 12.413L10.2319 17.2971C10.0966 17.4324 9.92985 17.5 9.73159 17.5C9.53333 17.5 9.36193 17.4275 9.21739 17.2826Z"
+                      fill="#3F3F3F"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="max-w-[1184px] flex flex-col">
+      <section class="container px-7 pt-8 md:justify-between">
+        <div class="flex flex-col gap-10">
+          <p class="title max-w-[400px]">
+            <span>Get credit </span>
+            <span class="text-accent">card debt relief </span>
+            <span>from America’s top debt relief company</span>
+          </p>
+
+          <div class="flex flex-col gap-6">
+            <img src="./assets/images/debt-amount.png" alt="debt amount" />
+
+            <div class="flex flex-col gap-8 rounded-2xl shadow-md py-10 px-4">
+              <p class="subtitlepx-8">Choose your debt amount</p>
+
+              <div class="w-[280px] self-center">
+                <input type="range" name="range" class="w-full" />
+              </div>
+
+              <button
+                class="rounded-lg h-12 bg-accent text-white font-extrabold md:block"
+              >
+                Continue
+              </button>
+
+              <p class="flex flex-col justify-center color-primary text-center">
+                <span class="text-sm font-normal"
+                  >Or talk to a certified debt consultant
+                </span>
+                <span class="text-xl font-semibold">800-910-0065</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="pt-8 w-full inline-block overflow-hidden whitespace-nowrap"
+      >
+        <div class="text-surface items-center bg-primary flex gap-2">
+          <img src="./assets/images/check-bold.png" alt="Check" />
+          <span>Over $15 billion debt resolved since 2002</span>
+
+          <img src="./assets/images/user.png" alt="Check" />
+          <span>
+            Over 850.000 clients enrolled Free, no-risk credit card debt relief
+            consultation
+          </span>
+
+          <img src="./assets/images/dollar.png" alt="Check" />
+          <span> Free, no-risk credit card debt relief consultation </span>
+        </div>
+      </section>
+
+      <section class="flex flex-col px-6 py-8 gap-8 items-center">
+        <div class="flex flex-col gap-6 px-6">
+          <div class="card">
+            <div class="flex flex-col items-center">
+              <img
+                src="./assets/images/credit-card.png"
+                alt="tell us about your debt"
+              />
+              <span class="card--title">Tell us about your debt</span>
+            </div>
+            <span class="card--description">
+              Talk to one of our Certified Debt Consultants to see if Freedom
+              Debt Relief could be the right solution for your debt.
+            </span>
+          </div>
+
+          <div class="card">
+            <div class="flex flex-col items-center">
+              <img
+                src="./assets/images/point.png"
+                alt="tell us about your debt"
+              />
+              <span class="card--title">See what you could save </span>
+            </div>
+            <span class="card--description">
+              Find out how much time and money you could save by partnering with
+              us to resolve your debt.
+            </span>
+          </div>
+
+          <div class="card">
+            <div class="flex flex-col items-center">
+              <img
+                src="./assets/images/pencil.png"
+                alt="tell us about your debt"
+              />
+              <span class="card--title">
+                Enroll in our debt relief program
+              </span>
+            </div>
+            <span class="card--description">
+              We will negotiate settlements with your creditors until all of
+              your enrolled debt is behind you.
+            </span>
+          </div>
+        </div>
+
+        <span class="text-sm text-center font-semibold px-8"
+          >You could begin your path to credit card debt relief in just a few
+          days
+        </span>
+
+        <div class="px-6 w-full">
+          <button
+            class="rounded-lg h-12 bg-accent text-white font-extrabold w-full"
+          >
+            Find debt relief options
+          </button>
+        </div>
+
+        <div class="flex flex-col gap-6 text-center">
+          <span class="subtitle"> How our debt relief program works </span>
+
+          <span>
+            Debt relief is an opportunity to put your credit card debt behind
+            you without paying the full amount owed. Our debt experts negotiate
+            with your creditors to get them to agree to settle for less than the
+            full amount you owe, so you can resolve your debt for less and in
+            less time than other debt solutions.
+          </span>
+
+          <span>
+            As a debt relief company that has been helping people for over 15
+            years, we know how to create a custom debt relief program that gets
+            you the best possible results.
+          </span>
+
+          <span class="font-bold">
+            There are 4 phases in the Freedom Debt Relief program:
+          </span>
+        </div>
+
+        <div class="flex flex-col gap-6 px-6">
+          <div class="card gap-8 py-11 relative">
+            <span
+              class="absolute text-[180px] font-black text-tertiary top-24 left-8 z-[-1]"
+              >1</span
+            >
+
+            <span class="text-2xl font-bold text-primary">Build</span>
+            <span class="text-sm font-semibold text-left px-4">
+              Each month, you make a deposit into an FDIC-insured dedicated
+              account that you control. As your account grows, we create a
+              custom plan to get you out of debt.
+            </span>
+          </div>
+
+          <div class="card gap-8 py-11 relative">
+            <span
+              class="absolute text-[180px] font-black text-tertiary top-24 left-8 z-[-1]"
+              >2</span
+            >
+
+            <span class="text-2xl font-bold text-primary">Negotiate</span>
+            <span class="text-sm font-semibold text-left px-4">
+              After enough funds build up in your account, we negotiate with
+              your creditors to settle your debts for significantly less than
+              you owe.
+            </span>
+          </div>
+
+          <div class="card gap-8 py-11 relative">
+            <span
+              class="absolute text-[180px] font-black text-tertiary top-24 left-8 z-[-1]"
+              >3</span
+            >
+
+            <span class="text-2xl font-bold text-primary">Settle</span>
+            <span class="text-sm font-semibold text-left px-4">
+              Our expert negotiators work hard to get you the best savings
+              possible. Every time we settle one of your debts, we contact you
+              for authorization and approval.
+            </span>
+          </div>
+
+          <div class="card gap-8 py-11 relative">
+            <span
+              class="absolute text-[180px] font-black text-tertiary top-24 left-8 z-[-1]"
+              >4</span
+            >
+
+            <span class="text-2xl font-bold text-primary">Freedom</span>
+            <span class="text-sm font-semibold text-left px-4">
+              After the full settlement amount is paid on each account, you no
+              longer owe your creditors. Your credit card debt is behind you!
+            </span>
+          </div>
+
+          <p class="text-sm font-bold">
+            <span>
+              Every step of the way, our friendly customer service
+              representatives are ready to answer your questions and offer
+              support. Complete
+            </span>
+            <span class="text-accent">our simple online form </span>
+            <span>to get started today. </span>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <section
+      class="flex flex-col pt-11 pb-16 w-full bg-banner text-center gap-7 max-w-[1184px]"
+    >
+      <span class="title">As featured in</span>
+
+      <div class="flex gap-2 overflow-hidden whitespace-nowrap">
+        <img src="./assets/images/cnbc.png" alt="CNBC" />
+        <img src="./assets/images/motley-fool.png" alt="The Motley Fool" />
+        <img src="./assets/images/msn.png" alt="msn" />
+        <img src="./assets/images/usa-today.png" alt="USA Today" />
+        <img src="./assets/images/yahoo.png" alt="Yahoo Finance" />
+      </div>
+    </section>
+
+    <section class="container flex flex-col gap-8 py-8 px-12 max-w-[1184px]">
+      <span class="subtitle text-primary">
+        We’re your debt relief partners, every step of the way
+      </span>
+
+      <span class="text-sm">
+        Enroll in our credit card debt relief program, and it's no longer just
+        you against your creditors. We’re on your side, ready to help you get
+        out of credit card debt — and get on with your life. You don't have to
+        go it alone anymore.
+      </span>
+
+      <div class="flex flex-col gap-6">
+        <div class="card gap-8 py-6 relative">
+          <img src="./assets/images/call-center.png" />
+
+          <div class="flex flex-col gap-2">
+            <span class="text-[22px] font-semibold text-primary">
+              Talk to us – We’re here to help
+            </span>
+            <span class="text-sm text-left">
+              After enough funds build up in your account, we negotiate with
+              your creditors to settle your debts for significantly less than
+              you owe.
+            </span>
+          </div>
+        </div>
+
+        <div class="card gap-8 py-6 relative">
+          <img src="./assets/images/track.png" />
+
+          <div class="flex flex-col gap-2">
+            <span class="text-[22px] font-bold text-accent"
+              >Track your progress 24/7</span
+            >
+            <span class="text-sm text-left">
+              Your online Client Dashboard makes it easy to stay up to date on
+              your debt relief program status
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="flex flex-col w-full bg-banner text-center text-[22px] text-primary py-6 px-2 max-w-[1184px]"
+    >
+      <p class="font-semibold">Have more questions?</p>
+      <p class="font-extrabold">Call us now 800-910-0065</p>
+    </section>
+
+    <footer
+      class="flex flex-col bg-primary text-surface font-[roboto] py-16 px-12 gap-8 max-w-[1184px]"
+    >
+      <div class="flex flex-col self-center gap-6 text-[20px] font-semibold">
+        <div class="flex flex-row gap-2">
+          <img src="./assets/images/terms-of-use.svg" alt="terms-of-service" />
+          <a
+            href="./terms-of-service.html"
+            class="text-[20px] leading-6 underline decoration-solid font-semibold"
+            >Terms of Services</a
+          >
+        </div>
+
+        <div class="flex flex-row gap-2">
+          <img src="./assets/images/privacy-policy.svg" alt="privacy-policy" />
+          <a
+            href="./privacy-policy.html"
+            class="text-[20px] leading-6 underline decoration-solid font-semibold"
+            >Privacy Policy</a
+          >
+        </div>
+      </div>
+
+      <p class="text-lg">
+        *Our estimates are based on prior results, which will vary depending on
+        your specific enrolled creditors and your individual program terms. Not
+        all clients are able to complete their program for various reasons,
+        including their ability to save sufficient funds. We do not guarantee
+        that your debts will be resolved for a specific amount or percentage or
+        within a specific period of time. We do not assume your debts, make
+        monthly payments to creditors or provide tax, bankruptcy, accounting or
+        legal advice or credit repair services. Our service is not available in
+        all states, including New Jersey, and our fees may vary from state to
+        state. Please contact a tax professional to discuss potential tax
+        consequences of less than full balance debt resolution. Read and
+        understand all program materials prior to enrollment. The use of debt
+        settlement services will likely adversely affect your creditworthiness,
+        may result in you being subject to collections or being sued by
+        creditors or collectors and may increase the outstanding balances of
+        your enrolled accounts due to the accrual of fees and interest. However,
+        negotiated settlements we obtain on your behalf resolve the entire
+        account, including all accrued fees and interest. C.P.D. Reg. No.
+        T.S.12-03825.
+      </p>
+
+      <p class="text-lg">
+        ** This guarantee takes effect when you graduate the program—or even if
+        you leave before graduating. When you exit the program, we’ll use the
+        combined total of all the debts you enrolled and settled and the fees
+        you paid to us to calculate your eligibility for a refund.
+      </p>
+
+      <p class="text-lg">
+        DebtQuote, LLC does not discriminate on the basis of race, color,
+        religion, sex, marital status, national origin, or ancestry.
+      </p>
+
+      <div class="flex flex-col items-center text-[20px] pb-5">
+        <p class="flex gap-4">
+          <img src="./assets/images/copyright.png" alt="copyright icon" />
+          <span>2023 All Rights Reserved</span>
+        </p>
+        <p class="font-bold">DebtQuote.com</p>
+      </div>
+    </footer>
+
+    <script src="./assets/index.js"></script>
+  </body>
+</html>
