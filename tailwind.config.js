@@ -9,7 +9,7 @@ module.exports = {
         tertiary: "#F2E3E1",
         secondary: "#66CCCC",
         accent: "#DF1C01",
-        text: "#2B2B2B",
+        text: "#2A2A2A",
         banner: "#E4938A",
       },
     },
