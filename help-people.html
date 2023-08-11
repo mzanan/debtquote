@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./dist/styles/index.css" rel="stylesheet" />
+    <link href="./dist/libs/splidejs/css/splide.min.css" rel="stylesheet" />
+    <script src="./dist/libs/splidejs/js/splide.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav id="navbar" class="w-full lg:bg-surface shadow-sm">
+        <div
+          class="flex flex-col lg:flex-row lg:container lg:mx-auto lg:max-w-[1184px]"
+        >
+          <div
+            class="flex items-center h-[4.5rem] px-6 drop-shadow-sm bg-surface justify-between lg:drop-shadow-none"
+          >
+            <a href="./index.html">
+              <img src="assets/images/logo.png" />
+            </a>
+            <div class="flex lg:hidden">
+              <button
+                type="button"
+                id="navbar-btn"
+                class="text-text focus:outline-none"
+              >
+                <svg class="h-8 w-8 fill-current" viewBox="0 0 24 24">
+                  <path
+                    id="navbar-btn-close"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M3 7h18v2H3V7zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"
+                  />
+                  <path
+                    id="navbar-btn-open"
+                    d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            id="navbar-menu"
+            class="transition-all duration-700 h-0 bg-surface overflow-hidden lg:h-[4.5rem] lg:flex-1 lg:bg-surface lg:transition-none"
+          >
+            <ul
+              class="flex flex-col justify-center gap-6 p-6 pr-4 pt-12 lg:flex-row lg:py-0 lg:justify-end lg:h-full lg:items-center lg:gap-8"
+            >
+              <li>
+                <a
+                  href="./index.html"
+                  class="py-2.5 transition-all flex items-center justify-between"
+                >
+                  The Program
+                  <svg
+                    class="h-12 w-12 lg:hidden"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.21739 17.2826C9.07246 17.1377 9 16.9661 9 16.7678C9 16.5696 9.07246 16.3982 9.21739 16.2536L13.4638 12.0072L9.2029 7.74638C9.06763 7.61111 9 7.44203 9 7.23913C9 7.03623 9.07246 6.86232 9.21739 6.71739C9.36232 6.57246 9.53391 6.5 9.73217 6.5C9.93043 6.5 10.1018 6.57246 10.2464 6.71739L15.1159 11.6014C15.1739 11.6594 15.2151 11.7222 15.2394 11.7899C15.2638 11.8575 15.2757 11.93 15.2754 12.0072C15.2754 12.0845 15.2632 12.157 15.2388 12.2246C15.2145 12.2923 15.1735 12.3551 15.1159 12.413L10.2319 17.2971C10.0966 17.4324 9.92985 17.5 9.73159 17.5C9.53333 17.5 9.36193 17.4275 9.21739 17.2826Z"
+                      fill="#3F3F3F"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./articles.html"
+                  class="py-2.5 transition-all flex items-center justify-between"
+                >
+                  Articles
+                  <svg
+                    class="h-12 w-12 lg:hidden"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.21739 17.2826C9.07246 17.1377 9 16.9661 9 16.7678C9 16.5696 9.07246 16.3982 9.21739 16.2536L13.4638 12.0072L9.2029 7.74638C9.06763 7.61111 9 7.44203 9 7.23913C9 7.03623 9.07246 6.86232 9.21739 6.71739C9.36232 6.57246 9.53391 6.5 9.73217 6.5C9.93043 6.5 10.1018 6.57246 10.2464 6.71739L15.1159 11.6014C15.1739 11.6594 15.2151 11.7222 15.2394 11.7899C15.2638 11.8575 15.2757 11.93 15.2754 12.0072C15.2754 12.0845 15.2632 12.157 15.2388 12.2246C15.2145 12.2923 15.1735 12.3551 15.1159 12.413L10.2319 17.2971C10.0966 17.4324 9.92985 17.5 9.73159 17.5C9.53333 17.5 9.36193 17.4275 9.21739 17.2826Z"
+                      fill="#3F3F3F"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./about-us.html"
+                  class="py-2.5 transition-all flex items-center justify-between"
+                >
+                  About Us
+                  <svg
+                    class="h-12 w-12 lg:hidden"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.21739 17.2826C9.07246 17.1377 9 16.9661 9 16.7678C9 16.5696 9.07246 16.3982 9.21739 16.2536L13.4638 12.0072L9.2029 7.74638C9.06763 7.61111 9 7.44203 9 7.23913C9 7.03623 9.07246 6.86232 9.21739 6.71739C9.36232 6.57246 9.53391 6.5 9.73217 6.5C9.93043 6.5 10.1018 6.57246 10.2464 6.71739L15.1159 11.6014C15.1739 11.6594 15.2151 11.7222 15.2394 11.7899C15.2638 11.8575 15.2757 11.93 15.2754 12.0072C15.2754 12.0845 15.2632 12.157 15.2388 12.2246C15.2145 12.2923 15.1735 12.3551 15.1159 12.413L10.2319 17.2971C10.0966 17.4324 9.92985 17.5 9.73159 17.5C9.53333 17.5 9.36193 17.4275 9.21739 17.2826Z"
+                      fill="#3F3F3F"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./contact-us.html"
+                  class="py-2.5 transition-all flex items-center justify-between"
+                >
+                  Contact Us
+                  <svg
+                    class="h-12 w-12 lg:hidden"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.21739 17.2826C9.07246 17.1377 9 16.9661 9 16.7678C9 16.5696 9.07246 16.3982 9.21739 16.2536L13.4638 12.0072L9.2029 7.74638C9.06763 7.61111 9 7.44203 9 7.23913C9 7.03623 9.07246 6.86232 9.21739 6.71739C9.36232 6.57246 9.53391 6.5 9.73217 6.5C9.93043 6.5 10.1018 6.57246 10.2464 6.71739L15.1159 11.6014C15.1739 11.6594 15.2151 11.7222 15.2394 11.7899C15.2638 11.8575 15.2757 11.93 15.2754 12.0072C15.2754 12.0845 15.2632 12.157 15.2388 12.2246C15.2145 12.2923 15.1735 12.3551 15.1159 12.413L10.2319 17.2971C10.0966 17.4324 9.92985 17.5 9.73159 17.5C9.53333 17.5 9.36193 17.4275 9.21739 17.2826Z"
+                      fill="#3F3F3F"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="max-w-[1184px] flex flex-col">
+      <section class="container flex flex-col px-6 pt-8 gap-8">
+        <div class="flex flex-col gap-6">
+          <p class="title">We help people like you</p>
+          <p class="subtitle text-left text-text max-w-[400px]">
+            We're here for the millions of people who are struggling to make
+            minimum monthly payments and want to resolve their debt, so they can
+            live their lives to the fullest.
+          </p>
+
+          <div class="flex flex-col gap-8">
+            <img src="./assets/images/help-people.png" alt="hwe help people" />
+
+            <div class="flex flex-col gap-8 px-8">
+              <button
+                class="rounded-lg h-14 bg-accent text-white font-extrabold"
+              >
+                Get debt help now
+              </button>
+            </div>
+
+            <div class="flex flex-col gap-6">
+              <div class="flex flex-col text-center text-primary gap-4">
+                <span class="text-[22px] font-bold">Financial Situation</span>
+                <span>Stressed and dealing with hardship</span>
+              </div>
+
+              <span>
+                Many people struggle with debt due to events beyond their
+                control. We negotiate with your creditors to reduce what you owe
+                and resolve your debt. We’ll consider your hardship, such as:
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="px-6">
+          <ul class="flex flex-col gap-4 px-6">
+            <li class="flex gap-2">
+              <div class="bg-primary w-6 h-6 rounded-full">
+                <img src="./assets/images/check.svg" />
+              </div>
+              <span> Reduced income </span>
+            </li>
+            <li class="flex gap-2">
+              <div class="bg-primary w-6 h-6 rounded-full">
+                <img src="./assets/images/check.svg" />
+              </div>
+              <span> Unexpected expenses </span>
+            </li>
+            <li class="flex gap-2">
+              <div class="bg-primary w-6 h-6 rounded-full">
+                <img src="./assets/images/check.svg" />
+              </div>
+              <span> Job loss </span>
+            </li>
+            <li class="flex gap-2">
+              <div class="bg-primary w-6 h-6 rounded-full">
+                <img src="./assets/images/check.svg" />
+              </div>
+              <span> Medical bills </span>
+            </li>
+            <li class="flex gap-2">
+              <div class="bg-primary w-6 h-6 rounded-full">
+                <img src="./assets/images/check.svg" />
+              </div>
+              <span> Divorce </span>
+            </li>
+            <li class="flex gap-2">
+              <div class="bg-primary w-6 h-6 rounded-full">
+                <img src="./assets/images/check.svg" />
+              </div>
+              <span> Other financial emergencies </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col px-6 w-full text-center gap-6">
+          <button
+            class="rounded-lg h-12 bg-accent text-white font-extrabold w-full"
+          >
+            Get your free evaluation
+          </button>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <div class="card p-0 gap-0 border">
+            <div class="w-52 pt-16 pb-10 relative">
+              <span class="font-[neuton] text-7xl absolute top-9 left-[-1rem]">
+                “
+              </span>
+              <span class="card--description">
+                I felt stupid, embarrassed, frustrated -the whole nine yards...
+                I called myself a closet debtor because my family, my friends,
+                and even my children didn’t know of my situation. But once I got
+                started in this program. I felt that I finally found a path to
+                the end of my debt load.
+              </span>
+              <span class="font-[neuton] text-7xl absolute right-[-1rem]"
+                >”</span
+              >
+            </div>
+
+            <div class="flex flex-row gap-1 items-center pb-5">
+              <img src="./assets/images/quote1.png" alt="quote image" />
+
+              <div class="w-[14px] h-[2px] bg-[#959595]"></div>
+
+              <span class="font-extrabold text-[#959595]">Melissa M.</span>
+            </div>
+
+            <span class="pb-6 max-w-[250px]">
+              Debt Quote program graduate, 2020.
+            </span>
+          </div>
+
+          <div class="card p-0 gap-0 border">
+            <div class="w-52 pt-16 pb-10 relative">
+              <span class="font-[neuton] text-7xl absolute top-9 left-[-1rem]">
+                “
+              </span>
+              <span class="card--description">
+                I was at the lowest point in my life emotionally, physically,
+                and financially. It was Keisha (Debt Quote Consultant) who gave
+                me hope at a time when there wasn’t a lot I trusted in this
+                world.
+              </span>
+              <span class="font-[neuton] text-7xl absolute right-[-1rem]"
+                >”</span
+              >
+            </div>
+
+            <div class="flex flex-row gap-1 items-center pb-5">
+              <img src="./assets/images/quote2.png" alt="quote image" />
+
+              <div class="w-[14px] h-[2px] bg-[#959595]"></div>
+
+              <span class="font-extrabold text-[#959595]">Kristi A.</span>
+            </div>
+
+            <span class="pb-6 max-w-[250px]">
+              Debt Quote program graduate, 2020.
+            </span>
+          </div>
+
+          <div class="card p-0 gap-0 border">
+            <div class="w-52 pt-16 pb-10 relative">
+              <span class="font-[neuton] text-7xl absolute top-9 left-[-1rem]">
+                “
+              </span>
+              <span class="card--description">
+                Knowing that in 3 years... I could be debt free. At the rate I
+                was going, it would have taken me 10 to 15 years. I feel like
+                there are so many possibilities and options for me now that I
+                didn’t think I had before.
+              </span>
+              <span class="font-[neuton] text-7xl absolute right-[-1rem]"
+                >”</span
+              >
+            </div>
+
+            <div class="flex flex-row gap-1 items-center pb-5">
+              <img src="./assets/images/quote3.png" alt="quote image" />
+
+              <div class="w-[14px] h-[2px] bg-[#959595]"></div>
+
+              <span class="font-extrabold text-[#959595]">Marian P.</span>
+            </div>
+
+            <span class="pb-6 max-w-[250px]">
+              Debt Quote program graduate, 2020.
+            </span>
+          </div>
+        </div>
+
+        <div class="flex flex-col text-center gap-4">
+          <p class="subtitle">Debt impact</p>
+          <p class="font-bold text-primary">Worried about the future</p>
+          <p class="text-left">
+            If you’re using credit cards for day-to-day expenses and unable to
+            save, it can put a strain on your future. Our program helps you take
+            control of your debt and start saving.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-1 px-6">
+          <div class="flex flex-col gap-8 p-8">
+            <div class="flex flex-col gap-4 items-center">
+              <img src="./assets/images/debt-impact-1.png" />
+              <span class="text-text text-3xl font-extrabold">66%</span>
+            </div>
+
+            <span class="text-center">
+              Of Americans are not financially healthy and could need help.
+            </span>
+
+            <span class="text-center text-xs">
+              Source: Financial Health Network 2021
+            </span>
+          </div>
+
+          <div class="w-full h-[1px] bg-[#A2A5F0]"></div>
+
+          <div class="flex flex-col gap-8 p-8">
+            <div class="flex flex-col gap-4 items-center">
+              <img src="./assets/images/debt-impact-2.png" />
+              <span class="text-text text-3xl font-extrabold">39%</span>
+            </div>
+
+            <span class="text-center">
+              Don’t have enough saving to cover 2 months of expenses.
+            </span>
+
+            <span class="text-center text-xs">
+              Source: Financial Health Network 2021
+            </span>
+          </div>
+
+          <div class="w-full h-[1px] bg-[#A2A5F0]"></div>
+
+          <div class="flex flex-col gap-8 p-8">
+            <div class="flex flex-col gap-4 items-center">
+              <img src="./assets/images/debt-impact-3.png" />
+              <span class="text-text text-3xl font-extrabold">29%</span>
+            </div>
+
+            <span class="text-center">
+              Are unable to pay all their bills on time.
+            </span>
+
+            <span class="text-center text-xs">
+              Source: Financial Health Network 2021
+            </span>
+          </div>
+
+          <div class="w-full h-[1px] bg-[#A2A5F0]"></div>
+
+          <div class="flex flex-col gap-8 p-8">
+            <div class="flex flex-col gap-4 items-center">
+              <img src="./assets/images/debt-impact-4.png" />
+              <span class="text-text text-3xl font-extrabold">59%</span>
+            </div>
+
+            <span class="text-center">
+              Say their financial life affects mental health.
+            </span>
+
+            <span class="text-center text-xs">
+              Source: Financial Health Network 2021
+            </span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div
+      class="flex flex-col bg-primary text-surface pt-12 px-6 gap-6 max-w-[1184px]"
+    >
+      <p class="title text-surface">Find out how DebtQuote can work for you</p>
+      <div class="flex flex-col gap-4 font-medium">
+        <p>Reduce what you owe</p>
+        <p>Pay less each month</p>
+        <p>Get rid of debt faster than making minimum payments.</p>
+      </div>
+
+      <div class="flex flex-col px-6 w-full text-center gap-6">
+        <button
+          class="rounded-lg h-12 bg-accent text-white font-extrabold w-full"
+        >
+          Get debt help now
+        </button>
+      </div>
+
+      <p class="font-medium">
+        <span> Or speak to a debt consultant </span>
+        <span class="font-bold"> 800-910-0056 </span>
+      </p>
+
+      <img
+        src="assets/images/consultant.png"
+        alt="consultant"
+        class="pt-12 pb-2 px-8"
+      />
+    </div>
+
+    <section
+      class="flex flex-col w-full bg-banner text-center text-[22px] text-primary py-6 px-2 max-w-[1184px]"
+    >
+      <p class="font-semibold">Have more questions?</p>
+      <p class="font-extrabold">Call us now 800-910-0065</p>
+    </section>
+
+    <footer
+      class="flex flex-col bg-primary text-surface font-[roboto] py-16 px-12 gap-8 max-w-[1184px]"
+    >
+      <div class="flex flex-col self-center gap-6 text-[20px] font-semibold">
+        <div class="flex flex-row gap-2">
+          <img src="./assets/images/terms-of-use.svg" alt="terms-of-service" />
+          <a
+            href="./terms-of-service.html"
+            class="text-[20px] leading-6 underline decoration-solid font-semibold"
+            >Terms of Services</a
+          >
+        </div>
+
+        <div class="flex flex-row gap-2">
+          <img src="./assets/images/privacy-policy.svg" alt="privacy-policy" />
+          <a
+            href="./privacy-policy.html"
+            class="text-[20px] leading-6 underline decoration-solid font-semibold"
+            >Privacy Policy</a
+          >
+        </div>
+      </div>
+
+      <p class="text-lg">
+        *Our estimates are based on prior results, which will vary depending on
+        your specific enrolled creditors and your individual program terms. Not
+        all clients are able to complete their program for various reasons,
+        including their ability to save sufficient funds. We do not guarantee
+        that your debts will be resolved for a specific amount or percentage or
+        within a specific period of time. We do not assume your debts, make
+        monthly payments to creditors or provide tax, bankruptcy, accounting or
+        legal advice or credit repair services. Our service is not available in
+        all states, including New Jersey, and our fees may vary from state to
+        state. Please contact a tax professional to discuss potential tax
+        consequences of less than full balance debt resolution. Read and
+        understand all program materials prior to enrollment. The use of debt
+        settlement services will likely adversely affect your creditworthiness,
+        may result in you being subject to collections or being sued by
+        creditors or collectors and may increase the outstanding balances of
+        your enrolled accounts due to the accrual of fees and interest. However,
+        negotiated settlements we obtain on your behalf resolve the entire
+        account, including all accrued fees and interest. C.P.D. Reg. No.
+        T.S.12-03825.
+      </p>
+
+      <p class="text-lg">
+        ** This guarantee takes effect when you graduate the program—or even if
+        you leave before graduating. When you exit the program, we’ll use the
+        combined total of all the debts you enrolled and settled and the fees
+        you paid to us to calculate your eligibility for a refund.
+      </p>
+
+      <p class="text-lg">
+        DebtQuote, LLC does not discriminate on the basis of race, color,
+        religion, sex, marital status, national origin, or ancestry.
+      </p>
+
+      <div class="flex flex-col items-center text-[20px] pb-5">
+        <div class="flex gap-4">
+          <img
+            src="./assets/images/copyright.png"
+            alt="copyright icon"
+            style="width: 25px; height: 25px"
+          />
+          <span>2023 All Rights Reserved</span>
+        </div>
+        <p class="font-bold">DebtQuote.com</p>
+      </div>
+    </footer>
+
+    <script src="./assets/index.js"></script>
+  </body>
+</html>
