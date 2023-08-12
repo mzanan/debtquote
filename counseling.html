@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./dist/styles/index.css" rel="stylesheet" />
+    <link href="./dist/libs/splidejs/css/splide.min.css" rel="stylesheet" />
+    <script src="./dist/libs/splidejs/js/splide.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav id="navbar" class="w-full lg:bg-surface shadow-sm">
+        <div
+          class="flex flex-col lg:flex-row lg:container lg:mx-auto lg:max-w-[1184px]"
+        >
+          <div
+            class="flex items-center h-[4.5rem] px-6 drop-shadow-sm bg-surface justify-between lg:drop-shadow-none"
+          >
+            <a href="./index.html">
+              <img src="assets/images/logo.png" alt="logo" />
+            </a>
+            <div class="flex lg:hidden">
+              <button
+                type="button"
+                id="navbar-btn"
+                class="text-text focus:outline-none"
+              >
+                <svg class="h-8 w-8 fill-current" viewBox="0 0 24 24">
+                  <path
+                    id="navbar-btn-close"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M3 7h18v2H3V7zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"
+                  />
+                  <path
+                    id="navbar-btn-open"
+                    d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            id="navbar-menu"
+            class="transition-all duration-700 h-0 bg-surface overflow-hidden lg:h-[4.5rem] lg:flex-1 lg:bg-surface lg:transition-none"
+          >
+            <ul
+              class="flex flex-col justify-center gap-6 p-6 pr-4 pt-12 lg:flex-row lg:py-0 lg:justify-end lg:h-full lg:items-center lg:gap-8"
+            >
+              <li>
+                <a
+                  href="./index.html"
+                  class="py-2.5 transition-all flex items-center justify-between"
+                >
+                  The Program
+                  <svg
+                    class="h-12 w-12 lg:hidden"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.21739 17.2826C9.07246 17.1377 9 16.9661 9 16.7678C9 16.5696 9.07246 16.3982 9.21739 16.2536L13.4638 12.0072L9.2029 7.74638C9.06763 7.61111 9 7.44203 9 7.23913C9 7.03623 9.07246 6.86232 9.21739 6.71739C9.36232 6.57246 9.53391 6.5 9.73217 6.5C9.93043 6.5 10.1018 6.57246 10.2464 6.71739L15.1159 11.6014C15.1739 11.6594 15.2151 11.7222 15.2394 11.7899C15.2638 11.8575 15.2757 11.93 15.2754 12.0072C15.2754 12.0845 15.2632 12.157 15.2388 12.2246C15.2145 12.2923 15.1735 12.3551 15.1159 12.413L10.2319 17.2971C10.0966 17.4324 9.92985 17.5 9.73159 17.5C9.53333 17.5 9.36193 17.4275 9.21739 17.2826Z"
+                      fill="#3F3F3F"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./articles.html"
+                  class="py-2.5 transition-all flex items-center justify-between"
+                >
+                  Articles
+                  <svg
+                    class="h-12 w-12 lg:hidden"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.21739 17.2826C9.07246 17.1377 9 16.9661 9 16.7678C9 16.5696 9.07246 16.3982 9.21739 16.2536L13.4638 12.0072L9.2029 7.74638C9.06763 7.61111 9 7.44203 9 7.23913C9 7.03623 9.07246 6.86232 9.21739 6.71739C9.36232 6.57246 9.53391 6.5 9.73217 6.5C9.93043 6.5 10.1018 6.57246 10.2464 6.71739L15.1159 11.6014C15.1739 11.6594 15.2151 11.7222 15.2394 11.7899C15.2638 11.8575 15.2757 11.93 15.2754 12.0072C15.2754 12.0845 15.2632 12.157 15.2388 12.2246C15.2145 12.2923 15.1735 12.3551 15.1159 12.413L10.2319 17.2971C10.0966 17.4324 9.92985 17.5 9.73159 17.5C9.53333 17.5 9.36193 17.4275 9.21739 17.2826Z"
+                      fill="#3F3F3F"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./about-us.html"
+                  class="py-2.5 transition-all flex items-center justify-between"
+                >
+                  About Us
+                  <svg
+                    class="h-12 w-12 lg:hidden"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.21739 17.2826C9.07246 17.1377 9 16.9661 9 16.7678C9 16.5696 9.07246 16.3982 9.21739 16.2536L13.4638 12.0072L9.2029 7.74638C9.06763 7.61111 9 7.44203 9 7.23913C9 7.03623 9.07246 6.86232 9.21739 6.71739C9.36232 6.57246 9.53391 6.5 9.73217 6.5C9.93043 6.5 10.1018 6.57246 10.2464 6.71739L15.1159 11.6014C15.1739 11.6594 15.2151 11.7222 15.2394 11.7899C15.2638 11.8575 15.2757 11.93 15.2754 12.0072C15.2754 12.0845 15.2632 12.157 15.2388 12.2246C15.2145 12.2923 15.1735 12.3551 15.1159 12.413L10.2319 17.2971C10.0966 17.4324 9.92985 17.5 9.73159 17.5C9.53333 17.5 9.36193 17.4275 9.21739 17.2826Z"
+                      fill="#3F3F3F"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./contact-us.html"
+                  class="py-2.5 transition-all flex items-center justify-between"
+                >
+                  Contact Us
+                  <svg
+                    class="h-12 w-12 lg:hidden"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.21739 17.2826C9.07246 17.1377 9 16.9661 9 16.7678C9 16.5696 9.07246 16.3982 9.21739 16.2536L13.4638 12.0072L9.2029 7.74638C9.06763 7.61111 9 7.44203 9 7.23913C9 7.03623 9.07246 6.86232 9.21739 6.71739C9.36232 6.57246 9.53391 6.5 9.73217 6.5C9.93043 6.5 10.1018 6.57246 10.2464 6.71739L15.1159 11.6014C15.1739 11.6594 15.2151 11.7222 15.2394 11.7899C15.2638 11.8575 15.2757 11.93 15.2754 12.0072C15.2754 12.0845 15.2632 12.157 15.2388 12.2246C15.2145 12.2923 15.1735 12.3551 15.1159 12.413L10.2319 17.2971C10.0966 17.4324 9.92985 17.5 9.73159 17.5C9.53333 17.5 9.36193 17.4275 9.21739 17.2826Z"
+                      fill="#3F3F3F"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="max-w-[1184px] flex flex-col">
+      <section class="container px-7 pt-8 md:justify-between">
+        <div class="flex flex-col gap-10">
+          <p class="title max-w-[400px]">
+            Credit card counseling pros and cons
+          </p>
+
+          <div class="flex flex-col gap-6">
+            <img
+              src="./assets/images/counseling.png"
+              alt="Credit card counseling pros and cons"
+            />
+          </div>
+
+          <div class="flex flex-col gap-6">
+            <p class="subtitle px-8">Key takeaways</p>
+
+            <ul class="flex flex-col gap-7">
+              <li class="flex gap-6">
+                <div
+                  class="bg-primary w-6 h-6 rounded-full shrink-0 self-center"
+                >
+                  <img src="./assets/images/check.svg" alt="check logo" />
+                </div>
+                <span>
+                  Credit card debt relief allows you to pay off your credit
+                  cards for less than the amount owed.
+                </span>
+              </li>
+
+              <li class="flex gap-6">
+                <div
+                  class="bg-primary w-6 h-6 rounded-full shrink-0 self-center"
+                >
+                  <img src="./assets/images/check.svg" alt="check logo" />
+                </div>
+                <span>
+                  You may be able to get credit card debt relief from your card
+                  issuer, a debt buyer, or a collection agency.
+                </span>
+              </li>
+
+              <li class="flex gap-6">
+                <div
+                  class="bg-primary w-6 h-6 rounded-full shrink-0 self-center"
+                >
+                  <img src="./assets/images/check.svg" alt="check logo" />
+                </div>
+                <span>
+                  You can negotiate yourself or hire a debt relief company.
+                </span>
+              </li>
+            </ul>
+
+            <div class="flex flex-col gap-8 rounded-2xl shadow-md py-10 px-4">
+              <p class="subtitle px-6">
+                Achieve financial control. How much debt do you have?
+              </p>
+
+              <div class="flex flex-col gap-6 max-w-[280px] w-full self-center">
+                <input
+                  type="range"
+                  name="range"
+                  class="w-full"
+                  aria-label="slider"
+                />
+
+                <div class="flex justify-between text-primary">
+                  <span>$1000</span>
+                  <span>$100000 +</span>
+                </div>
+              </div>
+
+              <button
+                class="rounded-lg h-12 bg-accent text-white font-extrabold md:block"
+              >
+                Get your free plan now
+              </button>
+
+              <p class="flex flex-col justify-center text-primary text-center">
+                <span class="text-sm font-normal">
+                  Or talk to a certified debt consultant
+                </span>
+                <span class="text-[22px] leading-8 font-semibold">
+                  800-910-0065
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section
+      class="container flex flex-col gap-8 pt-6 px-6 pb-8 max-w-[1184px]"
+    >
+      <div class="flex flex-col gap-6">
+        <p>
+          Feel like you don’t know how to keep your finances under control?
+          You’re not alone. Nearly 43% of Americans failed a national financial
+          literacy test. Meanwhile, millions across the country are in heavy
+          credit card debt. Many don’t have any money saved for retirement. And
+          many don’t know how to budget.
+        </p>
+
+        <p>
+          Wouldn’t it be great if there were organizations that could help you
+          learn about your finances? Actually, there are. They’re called
+          consumer credit counseling agencies, and they could have resources to
+          help you get out of debt. But before committing to this option, learn
+          about credit card counseling pros and cons.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <p class="text-[22px] leading-7 text-primary text-left font-bold">
+          What is a consumer credit counseling agency?
+        </p>
+
+        <span>
+          Consumer <u>credit counseling</u> agencies are usually non-profit
+          organizations that provide money management advice and debt help for
+          those struggling with their finances. Need financial assistance? A
+          credit counseling agency can help you:
+        </span>
+
+        <ul class="flex flex-col gap-4">
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>Improve your financial literacy</span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span> Budget better and save money </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span> Learn about debt relief options </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              Get out of credit card debt, medical debt, and other kinds of
+              unsecured debt.
+            </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              Find student loan counseling and bankruptcy counseling services.
+            </span>
+          </li>
+        </ul>
+
+        <span>
+          Consumer credit counseling agencies offer free workshops and
+          resources. These can help you with budgeting, debt management, saving
+          money, and establishing long-term financial goals. Credit counselors
+          who work at these agencies can also evaluate your budget. They can
+          discuss your financial concerns and position you to improve your
+          situation.
+        </span>
+
+        <span>
+          If you’re having issues paying off your debt, a credit counseling
+          agency may help. Depending on how much you owe, they could give you
+          resources and advice to help you get out of debt. Or they can offer a
+          Debt Management Plan to help you free yourself from debt.
+        </span>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <span class="text-[22px] leading-7 text-primary font-bold">
+          What is a debt management plan?
+        </span>
+
+        <p>
+          Consumer credit counseling agencies offer something called a Debt
+          Management Plan (DMP, also known as a Debt Management Program) to help
+          you manage your debts and your credit health. These plans can save you
+          money in some cases if the counselor negotiates with your creditors to
+          reduce the interest rates on your accounts and waive certain fees.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <p class="">Here’s how a DMP works:</p>
+
+        <ul class="flex flex-col gap-7">
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              You request an evaluation by a credit counselor. The two of you
+              will discuss your income, monthly expenses, credit card and debt
+              balances, and other financial obligations. The counselor will pull
+              your credit report with a soft credit check that won’t affect your
+              credit score. After reviewing your information, they will map out
+              your debt relief options and let you know if a Debt Management
+              Plan is right for you.
+            </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              If you qualify for a DMP, your credit counselor will help you
+              enroll. You choose which debts you want to enter into the program
+              and decide how much you can pay each month into your Debt
+              Management Plan account, run by your credit counseling agency to
+              pay your creditors.
+            </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              Then, the credit counseling agency contacts your creditors to
+              negotiate a lower interest rate. This reduced rate is called a
+              concession rate. When your creditor agrees to the new terms, you
+              countersign the agreement and start your Debt Management Plan.
+            </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              After your Debt Management Plan is set up, you’ll pay a startup
+              fee. Then you’ll make monthly payments into an account that the
+              credit counseling agency uses to pay your creditors. Your credit
+              counseling agency will also collect a monthly fee for maintaining
+              your Debt Management Plan.
+            </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              You continue to pay into your Debt Management Plan account, and
+              your credit counseling agency continues to pay your creditors
+              until all of your debt is gone. This process usually lasts 3-5
+              years.
+            </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              You must agree to make regular payments on time per your plan. If
+              not, you could lose out on the plan’s benefits, including any
+              negotiated discounts or fee waivers.
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <p class="font-bold">
+          A Debt Management Plan isn’t for everybody. But it could be right for
+          you if:
+        </p>
+
+        <ul class="flex flex-col gap-7">
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              You can afford to make a monthly payment toward your debts
+            </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span> Your intention is to repay your debts in full </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span> You want help and guidance </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              You don’t want to file for bankruptcy or you don’t qualify
+            </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span> You want to learn how to maintain a good credit score </span>
+          </li>
+        </ul>
+
+        <span>
+          but you’re feeling overwhelmed by the process, need help getting
+          organized, can get a lower interest rate.
+        </span>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <p class="text-[22px] leading-7 text-primary font-bold">
+          How do you qualify for a debt management plan?
+        </p>
+
+        <span>
+          To qualify for a Debt Management Plan, your credit card, personal
+          loan, medical debt, and other unsecured debt should add up to 15%-39%
+          of your annual income. But there's technically no minimum debt
+          requirement to be eligible.
+        </span>
+
+        <span>
+          You must agree to make monthly DMP payments before a consumer credit
+          counseling agency lets you enroll.
+        </span>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <p class="text-[22px] leading-7 text-primary font-bold">
+          Credit card counseling pros and cons
+        </p>
+
+        <p>
+          As with any other debt relief option, credit counseling has its pluses
+          and minuses.
+        </p>
+
+        <p class="text-primary font-bold">
+          Benefits of consumer credit counseling
+        </p>
+
+        <p>
+          One of the biggest perks of working with a credit counseling agency?
+          They can help you consolidate your outstanding debt into a single
+          account.
+        </p>
+
+        <p>
+          Making just one monthly payment can simplify your finances. You won’t
+          have to fret about different due dates. Simpler repayment means less
+          financial stress.
+        </p>
+
+        <p>
+          Think about that. You can consolidate without needing a new loan or
+          taking on more debt. Additionally, all of your DMP payments will go
+          directly toward your debt. As a result, you might be able to pay off
+          your debt more quickly compared to going it alone.
+        </p>
+
+        <p>
+          What’s more, the credit counseling agency can work to get you a lower
+          interest rate. The goal is to have you pay off all of your existing
+          debt within five years. This is more than doable if your agency can
+          reduce your rates, finance charges, and fees.
+        </p>
+
+        <p>
+          Also, the counselor will help you create a workable monthly budget.
+          You’ll learn to organize your money better and adopt healthier
+          financial habits.
+        </p>
+
+        <p>
+          If you have delinquent accounts, you can expect fewer collection calls
+          after enrolling in the DMP. After creditors accept your DMP, the pesky
+          phone calls, emails, and messages from debt collection agencies should
+          stop or slow down.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <p class="text-[22px] leading-7 text-primary font-bold">
+          Disadvantages of consumer credit counseling
+        </p>
+
+        <p>
+          Credit counseling is a good option if you have modest debts. But there
+          are downsides. Qualifying for a Debt Management Plan may be hard if
+          you have a large debt and don’t make enough income. For these and
+          other reasons, some creditors may not agree to participate in your
+          DMP. These creditors will need to be paid back separately. DMPs only
+          apply to unsecured debt, such as personal loans or credit cards. So if
+          you have auto loans, a mortgage, or other debts like student loans, a
+          DMP won’t help with these. You won’t be allowed to use credit while
+          your DMP is in effect. You’ll have to close your credit accounts to
+          prevent getting into more debt. New lines of credit will be closed to
+          you, as well. <br />
+          Professional debt help isn’t free. For a DMP you’ll pay a startup fee
+          and monthly fees. Fees vary, so you’ll need to research a credit
+          counselor that offers an affordable plan. Your initial setup fee can
+          cost $50 or more. <br />
+          Monthly fees are often $40-$70. <br />
+          Your credit score could drop slightly after enrolling in a DMP and
+          closing credit accounts. But your score should bounce back soon if you
+          make your DMP payments on time. <br />
+          Lastly, a DMP has limitations. Your credit counseling agency can help
+          you decrease interest rates and avoid certain fees. But they can’t
+          help you reduce the principal amount you owe. <br />
+          If you have a massive debt amount, you might want to look into debt
+          settlement instead. Debt settlement could get you out of debt for less
+          than a DMP may charge. That’s because debt settlement works to
+          negotiate with creditors to shrink your total debt amount – not just
+          the interest rate. You can learn more about
+          <u>debt settlement here</u>.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-6 px-4">
+          <div class="card text-left p-6 gap-4">
+            <div class="flex flex-col">
+              <span class="text-[22px] font-bold text-primary text-center">
+                Credit Counseling Pros
+              </span>
+            </div>
+            <div class="flex flex-col gap-4 items-start">
+              <span>
+                Consolidate debt into a single account with only one payment
+                needed
+              </span>
+              <span>100% of DMP payments go toward your debt</span>
+              <span>Could get your interest rate, and fees reduced</span>
+              <span>Learn better money management habits</span>
+              <span>Expect fewer collection calls</span>
+              <span>Reduce financial stress</span>
+            </div>
+          </div>
+
+          <div class="card text-left p-6 gap-4">
+            <div class="flex flex-col">
+              <span class="text-[22px] font-bold text-primary text-center">
+                Credit Counseling Cons
+              </span>
+            </div>
+            <div class="flex flex-col gap-4 items-start">
+              <span> Some creditors may not agree to participate </span>
+              <span>DMP only applies to unsecured debts</span>
+              <span>Your principal amount owed won’t be reduced</span>
+              <span>
+                You won’t be allowed to use existing credit or open new credit
+              </span>
+              <span>The agency may charge fees</span>
+              <span>Your credit score may drop slightly</span>
+            </div>
+          </div>
+
+          <p>
+            Think you’re a good candidate for a DMP after learning about credit
+            card counseling pros and cons? Your next step is to find a reputable
+            credit counseling agency in your area.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <p class="text-[22px] leading-7 text-primary font-bold">
+          How to find the right credit counseling agency for you
+        </p>
+
+        <p>
+          Whether you’re seeking help with your budget or need to enroll in a
+          DMP, here are a few resources that could help you find a credit
+          counseling agency:
+        </p>
+
+        <ul class="flex flex-col gap-7">
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              The U.S. Department of Justice has a credit counseling search tool
+              that could help you locate approved consumer credit counseling
+              agencies in your area.
+            </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              The National Foundation for Credit Counseling (NFCC) also offers a
+              search tool for credit counseling agencies near you. The NFCC is
+              the largest nonprofit financial counseling organization in the
+              U.S.
+            </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              You can also consult the
+              <u>Financial Counseling Association of America</u> to locate a
+              credit counseling agency in your state.
+            </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              Some counseling agencies will appear on all of these lists.
+            </span>
+          </li>
+        </ul>
+
+        <p>
+          Not all credit counseling agencies are legitimate, so before you
+          contact a credit counseling agency:
+        </p>
+
+        <ul class="flex flex-col gap-7">
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span> Check out their customer reviews online </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              Verify that they are licensed and accredited in your state
+            </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              Verify that they are accredited by the NFCC, the FCAA or both
+            </span>
+          </li>
+        </ul>
+
+        <p>If they don’t meet these criteria, you may want to keep looking.</p>
+        <p>
+          Even if a credit counseling agency seems legitimate, keep your guard
+          up. Plenty of companies look good on paper but could end up being
+          scams. Here are some red flags that the credit counseling agency
+          you’re dealing with is too good to be true:
+        </p>
+
+        <ul class="flex flex-col gap-7">
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              Credit counselors aren't certified or accredited by a third-party
+              organization such as NFCC
+            </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              Try to charge upfront fees before they negotiate any new terms
+              with your creditors
+            </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              Guarantee that using their service will improve your credit
+              score</span
+            >
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              Pressure you into a DMP without telling you about your other
+              options
+            </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              Aren’t upfront about their fees or how their DMP works
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <p class="text-[22px] leading-7 text-primary font-bold">
+          Credit counseling agencies: the bottom line
+        </p>
+
+        <p>
+          Credit counseling agencies can offer multiple ways to deal with debt
+          stress—from free resources to Debt Management Plans. With their help,
+          you could be debt-free, faster, and for less money than it would take
+          to pay off your debt by making minimum payments. But, like all other
+          debt-relief options, credit counseling has pros and cons. If you’re
+          deep in debt and having trouble making minimum monthly payments, a
+          credit counseling agency may not be the best choice. Weigh all of your
+          debt relief options before committing to one.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-8 rounded-2xl shadow-md py-10 px-4">
+        <p class="subtitle px-6">
+          Achieve financial control. How much debt do you have?
+        </p>
+
+        <div class="flex flex-col gap-6 max-w-[280px] w-full self-center">
+          <input type="range" name="range" class="w-full" aria-label="slider" />
+
+          <div class="flex justify-between text-primary">
+            <span>$1000</span>
+            <span>$100000 +</span>
+          </div>
+        </div>
+
+        <button
+          class="rounded-lg h-12 bg-accent text-white font-extrabold md:block"
+        >
+          Get your free plan now
+        </button>
+
+        <p class="flex flex-col justify-center text-primary text-center">
+          <span class="text-sm font-normal">
+            Or talk to a certified debt consultant
+          </span>
+          <span class="text-[22px] leading-8 font-semibold">
+            800-910-0065
+          </span>
+        </p>
+      </div>
+    </section>
+
+    <footer
+      class="flex flex-col bg-primary text-surface font-[roboto] py-16 px-12 gap-8 max-w-[1184px]"
+    >
+      <div class="flex flex-col self-center gap-6 text-[20px] font-semibold">
+        <div class="flex flex-row gap-2">
+          <img src="./assets/images/terms-of-use.svg" alt="terms-of-service" />
+          <a
+            href="./terms-of-service.html"
+            class="text-[20px] leading-6 underline decoration-solid font-semibold"
+            >Terms of Services</a
+          >
+        </div>
+
+        <div class="flex flex-row gap-2">
+          <img src="./assets/images/privacy-policy.svg" alt="privacy-policy" />
+          <a
+            href="./privacy-policy.html"
+            class="text-[20px] leading-6 underline decoration-solid font-semibold"
+            >Privacy Policy</a
+          >
+        </div>
+      </div>
+
+      <p class="text-lg">
+        *Our estimates are based on prior results, which will vary depending on
+        your specific enrolled creditors and your individual program terms. Not
+        all clients are able to complete their program for various reasons,
+        including their ability to save sufficient funds. We do not guarantee
+        that your debts will be resolved for a specific amount or percentage or
+        within a specific period of time. We do not assume your debts, make
+        monthly payments to creditors or provide tax, bankruptcy, accounting or
+        legal advice or credit repair services. Our service is not available in
+        all states, including New Jersey, and our fees may vary from state to
+        state. Please contact a tax professional to discuss potential tax
+        consequences of less than full balance debt resolution. Read and
+        understand all program materials prior to enrollment. The use of debt
+        settlement services will likely adversely affect your creditworthiness,
+        may result in you being subject to collections or being sued by
+        creditors or collectors and may increase the outstanding balances of
+        your enrolled accounts due to the accrual of fees and interest. However,
+        negotiated settlements we obtain on your behalf resolve the entire
+        account, including all accrued fees and interest. C.P.D. Reg. No.
+        T.S.12-03825.
+      </p>
+
+      <p class="text-lg">
+        ** This guarantee takes effect when you graduate the program—or even if
+        you leave before graduating. When you exit the program, we’ll use the
+        combined total of all the debts you enrolled and settled and the fees
+        you paid to us to calculate your eligibility for a refund.
+      </p>
+
+      <p class="text-lg">
+        DebtQuote, LLC does not discriminate on the basis of race, color,
+        religion, sex, marital status, national origin, or ancestry.
+      </p>
+
+      <div class="flex flex-col items-center text-[20px] pb-5">
+        <div class="flex gap-4">
+          <img
+            src="./assets/images/copyright.png"
+            alt="copyright icon"
+            style="width: 25px; height: 25px"
+          />
+          <span>2023 All Rights Reserved</span>
+        </div>
+        <p class="font-bold">DebtQuote.com</p>
+      </div>
+    </footer>
+
+    <script src="./assets/index.js"></script>
+  </body>
+</html>
