@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./dist/styles/index.css" rel="stylesheet" />
+    <link href="./dist/libs/splidejs/css/splide.min.css" rel="stylesheet" />
+    <script src="./dist/libs/splidejs/js/splide.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav id="navbar" class="w-full lg:bg-surface shadow-sm">
+        <div
+          class="flex flex-col lg:flex-row lg:container lg:mx-auto lg:max-w-[1184px]"
+        >
+          <div
+            class="flex items-center h-[4.5rem] px-6 drop-shadow-sm bg-surface justify-between lg:drop-shadow-none"
+          >
+            <a href="./index.html">
+              <img src="assets/images/logo.png" alt="logo" />
+            </a>
+            <div class="flex lg:hidden">
+              <button
+                type="button"
+                id="navbar-btn"
+                class="text-text focus:outline-none"
+              >
+                <svg class="h-8 w-8 fill-current" viewBox="0 0 24 24">
+                  <path
+                    id="navbar-btn-close"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M3 7h18v2H3V7zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"
+                  />
+                  <path
+                    id="navbar-btn-open"
+                    d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            id="navbar-menu"
+            class="transition-all duration-700 h-0 bg-surface overflow-hidden lg:h-[4.5rem] lg:flex-1 lg:bg-surface lg:transition-none"
+          >
+            <ul
+              class="flex flex-col justify-center gap-6 p-6 pr-4 pt-12 lg:flex-row lg:py-0 lg:justify-end lg:h-full lg:items-center lg:gap-8"
+            >
+              <li>
+                <a
+                  href="./index.html"
+                  class="py-2.5 transition-all flex items-center justify-between"
+                >
+                  The Program
+                  <svg
+                    class="h-12 w-12 lg:hidden"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.21739 17.2826C9.07246 17.1377 9 16.9661 9 16.7678C9 16.5696 9.07246 16.3982 9.21739 16.2536L13.4638 12.0072L9.2029 7.74638C9.06763 7.61111 9 7.44203 9 7.23913C9 7.03623 9.07246 6.86232 9.21739 6.71739C9.36232 6.57246 9.53391 6.5 9.73217 6.5C9.93043 6.5 10.1018 6.57246 10.2464 6.71739L15.1159 11.6014C15.1739 11.6594 15.2151 11.7222 15.2394 11.7899C15.2638 11.8575 15.2757 11.93 15.2754 12.0072C15.2754 12.0845 15.2632 12.157 15.2388 12.2246C15.2145 12.2923 15.1735 12.3551 15.1159 12.413L10.2319 17.2971C10.0966 17.4324 9.92985 17.5 9.73159 17.5C9.53333 17.5 9.36193 17.4275 9.21739 17.2826Z"
+                      fill="#3F3F3F"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./articles.html"
+                  class="py-2.5 transition-all flex items-center justify-between"
+                >
+                  Articles
+                  <svg
+                    class="h-12 w-12 lg:hidden"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.21739 17.2826C9.07246 17.1377 9 16.9661 9 16.7678C9 16.5696 9.07246 16.3982 9.21739 16.2536L13.4638 12.0072L9.2029 7.74638C9.06763 7.61111 9 7.44203 9 7.23913C9 7.03623 9.07246 6.86232 9.21739 6.71739C9.36232 6.57246 9.53391 6.5 9.73217 6.5C9.93043 6.5 10.1018 6.57246 10.2464 6.71739L15.1159 11.6014C15.1739 11.6594 15.2151 11.7222 15.2394 11.7899C15.2638 11.8575 15.2757 11.93 15.2754 12.0072C15.2754 12.0845 15.2632 12.157 15.2388 12.2246C15.2145 12.2923 15.1735 12.3551 15.1159 12.413L10.2319 17.2971C10.0966 17.4324 9.92985 17.5 9.73159 17.5C9.53333 17.5 9.36193 17.4275 9.21739 17.2826Z"
+                      fill="#3F3F3F"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./about-us.html"
+                  class="py-2.5 transition-all flex items-center justify-between"
+                >
+                  About Us
+                  <svg
+                    class="h-12 w-12 lg:hidden"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.21739 17.2826C9.07246 17.1377 9 16.9661 9 16.7678C9 16.5696 9.07246 16.3982 9.21739 16.2536L13.4638 12.0072L9.2029 7.74638C9.06763 7.61111 9 7.44203 9 7.23913C9 7.03623 9.07246 6.86232 9.21739 6.71739C9.36232 6.57246 9.53391 6.5 9.73217 6.5C9.93043 6.5 10.1018 6.57246 10.2464 6.71739L15.1159 11.6014C15.1739 11.6594 15.2151 11.7222 15.2394 11.7899C15.2638 11.8575 15.2757 11.93 15.2754 12.0072C15.2754 12.0845 15.2632 12.157 15.2388 12.2246C15.2145 12.2923 15.1735 12.3551 15.1159 12.413L10.2319 17.2971C10.0966 17.4324 9.92985 17.5 9.73159 17.5C9.53333 17.5 9.36193 17.4275 9.21739 17.2826Z"
+                      fill="#3F3F3F"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./contact-us.html"
+                  class="py-2.5 transition-all flex items-center justify-between"
+                >
+                  Contact Us
+                  <svg
+                    class="h-12 w-12 lg:hidden"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.21739 17.2826C9.07246 17.1377 9 16.9661 9 16.7678C9 16.5696 9.07246 16.3982 9.21739 16.2536L13.4638 12.0072L9.2029 7.74638C9.06763 7.61111 9 7.44203 9 7.23913C9 7.03623 9.07246 6.86232 9.21739 6.71739C9.36232 6.57246 9.53391 6.5 9.73217 6.5C9.93043 6.5 10.1018 6.57246 10.2464 6.71739L15.1159 11.6014C15.1739 11.6594 15.2151 11.7222 15.2394 11.7899C15.2638 11.8575 15.2757 11.93 15.2754 12.0072C15.2754 12.0845 15.2632 12.157 15.2388 12.2246C15.2145 12.2923 15.1735 12.3551 15.1159 12.413L10.2319 17.2971C10.0966 17.4324 9.92985 17.5 9.73159 17.5C9.53333 17.5 9.36193 17.4275 9.21739 17.2826Z"
+                      fill="#3F3F3F"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="max-w-[1184px] flex flex-col">
+      <section class="container px-7 pt-8 md:justify-between">
+        <div class="flex flex-col gap-10">
+          <p class="title max-w-[400px]">Debt Consolidation near me</p>
+
+          <div class="flex flex-col gap-6">
+            <img
+              src="./assets/images/debt-consolidation-near-me.png"
+              alt="Debt consolidation near me"
+            />
+
+            <p class="subtitle px-8">Key takeaways</p>
+
+            <ul class="flex flex-col gap-7">
+              <li class="flex gap-4">
+                <div
+                  class="bg-primary w-6 h-6 rounded-full shrink-0 self-center"
+                >
+                  <img src="./assets/images/check.svg" alt="check logo" />
+                </div>
+                <span>
+                  Credit card debt relief allows you to pay off your credit
+                  cards for less than the amount owed.
+                </span>
+              </li>
+
+              <li class="flex gap-4">
+                <div
+                  class="bg-primary w-6 h-6 rounded-full shrink-0 self-center"
+                >
+                  <img src="./assets/images/check.svg" alt="check logo" />
+                </div>
+                <span>
+                  You may be able to get credit card debt relief from your card
+                  issuer, a debt buyer, or a collection agency.
+                </span>
+              </li>
+
+              <li class="flex gap-4">
+                <div
+                  class="bg-primary w-6 h-6 rounded-full shrink-0 self-center"
+                >
+                  <img src="./assets/images/check.svg" alt="check logo" />
+                </div>
+                <span>
+                  You can negotiate yourself or hire a debt relief company.
+                </span>
+              </li>
+            </ul>
+
+            <div class="flex flex-col gap-8 rounded-2xl shadow-md py-10 px-4">
+              <p class="subtitle px-6">
+                Achieve financial control. How much debt do you have?
+              </p>
+
+              <div class="flex flex-col gap-6 max-w-[280px] w-full self-center">
+                <input
+                  type="range"
+                  name="range"
+                  class="w-full"
+                  aria-label="slider"
+                />
+
+                <div class="flex justify-between text-primary">
+                  <span>$1000</span>
+                  <span>$100000 +</span>
+                </div>
+              </div>
+
+              <button
+                class="rounded-lg h-12 bg-accent text-white font-extrabold md:block"
+              >
+                Get your free plan now
+              </button>
+
+              <p class="flex flex-col justify-center text-primary text-center">
+                <span class="text-sm font-normal">
+                  Or talk to a certified debt consultant
+                </span>
+                <span class="text-[22px] leading-8 font-semibold">
+                  800-910-0065
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section
+      class="container flex flex-col gap-8 pt-6 px-6 pb-8 max-w-[1184px]"
+    >
+      <div class="flex flex-col gap-6">
+        <p>
+          Debt consolidation is a debt management strategy where you combine
+          multiple debts into a single payment. When you use this method, you
+          may be able to simplify your payment schedule and get a lower interest
+          rate than you’re currently paying on your debts. If you owe more than
+          $5,000 in credit card debt spread over many different cards, debt
+          consolidation could make it easier for you to make a single payment
+          each month instead of worrying about organizing your bills and paying
+          each one on time.
+        </p>
+
+        <div class="px-4">
+          <div class="card p-6 gap-4">
+            <div class="flex flex-col">
+              <span class="text-[22px] font-bold text-primary">Pros</span>
+            </div>
+            <span class="self-start">One predictable monthly payment</span>
+            <span class="self-start">Flexible terms</span>
+            <span class="self-start">No credit impact</span>
+          </div>
+
+          <div class="card p-6 gap-4">
+            <div class="flex flex-col">
+              <span class="text-[22px] font-bold text-primary">Cons</span>
+            </div>
+            <span class="self-start">Need good credit</span>
+            <span class="self-start">No reduction on principal</span>
+            <span class="self-start">Results vary</span>
+          </div>
+        </div>
+
+        <p>
+          And since average interest rates on credit cards can range anywhere
+          between 13%-23%, certain debt consolidation methods could even help
+          you save on interest. If you’re considering debt consolidation, there
+          are a few different strategies you could use.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <p class="text-[22px] leading-7 text-primary text-left font-bold">
+          Is Credit Card Debt Consolidation Right for You?
+        </p>
+
+        <span>
+          Credit card debt consolidation can be a great way to lower your
+          interest rate so that more of your monthly payment goes toward paying
+          down balances. Credit card debt consolidation probably makes sense if:
+        </span>
+
+        <ul class="flex flex-col gap-4">
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>You have good-to-excellent credit</span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              You are certain that you won’t run up your balances again.
+            </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              You’re have not been able to make a significant dent in your
+              credit card debt.
+            </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span> Your credit card interest rates are high. </span>
+          </li>
+        </ul>
+
+        <span>There may be better solutions if:</span>
+
+        <ul class="flex flex-col gap-4">
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>You have low credit scores.</span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              You’re going through an illness, divorce, or job loss.
+            </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span> Your debt-to-income ratio is high. </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span> Your spending habits are not under control.</span>
+          </li>
+        </ul>
+
+        <span>
+          Credit card debt relief might be a better choice if you can’t qualify
+          for or afford debt consolidation. Credit card debt relief means
+          settling with your credit card companies for less than what you owe.
+          Credit card debt relief is different from debt consolidation because
+          debt consolidation does not reduce your balances. Understand that no
+          creditor is required to settle a debt. However, many creditors are
+          willing to work with consumers and come to an agreement.
+        </span>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <span class="text-[22px] leading-7 text-primary font-bold">
+          How to Consolidate Debt
+        </span>
+
+        <p>
+          You consolidate debt by combining it all into one payment each month.
+          There are many ways to consolidate debt. If you choose one of these
+          three popular ways to consolidate debt, that payment could be to a
+          lender, another credit card company, or a debt relief program:
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <div class="flex gap-6">
+          <div
+            class="flex justify-center items-center bg-primary w-6 h-6 rounded-full"
+          >
+            <span class="text-lg text-surface font-bold">1</span>
+          </div>
+
+          <span class="text-[22px] font-semibold text-primary">
+            Balance Transfer Cards
+          </span>
+        </div>
+
+        <p>
+          Credit card companies know better than anyone that the average U.S.
+          household owes $15,654 in credit card debt alone, and they’ve come up
+          with a debt management solution called a balance transfer card. A
+          balance transfer card is a high-limit credit card that allows you to
+          consolidate your existing credit card debt into a single line of
+          credit and gives you a chance to pay it off at a low rate for a set
+          amount of time. Some balance transfer cards offer promotional rates
+          starting as low as 0% APR for 12 months or more. If you’re carrying
+          multiple balances on cards that have high interest, it’s easy to see
+          why you could be tempted by this offer. But balance transfer cards
+          might not be that great of a deal in the long run.
+        </p>
+
+        <span class="text-center font-bold">
+          Many balance transfer cards require you to pay a fee for each new debt
+          that you transfer over to the card.
+        </span>
+
+        <p>
+          Many balance transfer cards require you to pay a fee for each new debt
+          that you transfer over to the card. This charge can be anywhere
+          between 3%-5% of the original balance. So, if you were to transfer a
+          credit card debt of $1,000 onto a balance transfer card, you would end
+          up paying your credit card company $30-$50 just to get the balance
+          transferred over. While that doesn’t seem like very much for one
+          single debt, imagine how much you’d end up paying in transfer fees
+          alone if you owed upwards of $10,000! To make things even less
+          enticing, once the promotional period ends on your balance transfer
+          card, your rate is subject to change. Many balance transfer cards have
+          the same interest rates as any other credit card after the promotional
+          0% APR period expires. So if you don’t pay off the debt during the
+          promotional period, you may end up with almost the same amount of debt
+          at the same rate that you had before transferring your balance over.
+        </p>
+
+        <span class="text-primary font-bold">
+          When to Use a Balance Transfer Card for Debt Consolidation
+        </span>
+
+        <p>
+          If you have several different debts with high interest rates and can
+          pay off all of your existing credit card debt within the promotional
+          period, balance transfer cards may be the right debt consolidation
+          solution for you. But if you have a lot of credit card debt and can’t
+          afford to pay it all off within the promotional period, a balance
+          transfer card could land you in the same financial situation that you
+          were stuck in before.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <div class="flex gap-6">
+          <div
+            class="flex justify-center items-center bg-primary w-6 h-6 rounded-full"
+          >
+            <span class="text-lg text-surface font-bold">2</span>
+          </div>
+
+          <span class="text-[22px] font-semibold text-primary">
+            Debt Consolidation Loans
+          </span>
+        </div>
+
+        <p>
+          Another way to consolidate debt is through a personal debt
+          consolidation loan. Personal loans are very popular financial products
+          nowadays, partly because you can use a personal loan for almost
+          anything-like paying for a major expense, wedding, or vacation. But
+          one of the most popular ways to use a personal loan is as a debt
+          consolidation loan. By rolling all of your unsecured debt into a debt
+          consolidation loan, you may be able to simplify your payments and pay
+          your debt off at a lower rate. Since debt consolidation loans have
+          terms ranging from 24-72 months, they could help you get out of debt
+          in less time than it takes to make minimum payments. Unlike balance
+          transfer cards, debt consolidation loans are usually fixed-rate loans.
+          Their rates won’t go up unless you miss your payments. Debt
+          consolidation loan rates typically range from 10%-32%, depending on
+          your credit profile, debt-to-income ratio, and other factors. Although
+          there’s no fee for rolling all your debt into a debt consolidation
+          loan, some consolidation loans require you to pay an origination fee.
+          These fees can range from 1%-6% of the total loan, but certain loan
+          providers waive this fee entirely. There are two main ways to take out
+          a debt consolidation loan: you could find a loan provider online, or
+          you could go to your local bank or credit union to find a debt
+          consolidation loan. Since different lenders will provide you different
+          rates, it’s a good idea to compare your rates and find the best deal
+          for you before you sign a contract for a debt consolidation loan.
+        </p>
+
+        <span class="text-primary font-bold">
+          When to Use a Debt Consolidation Loan
+        </span>
+
+        <p>
+          A consolidation loan could help simplify your payment schedule and
+          lower your interest rate, but you may pay more each month to get out
+          of debt faster. For example, if you have $15,000 in credit card debt
+          and are making minimum payments with 16.99% APR, it could take you 258
+          months to pay off your credit card debt and cost you approximately
+          $450 every month. If you took out a debt consolidation loan with a
+          rate of 13% APR, you could be debt-free in 36 months, but at the cost
+          of $505 every month.
+        </p>
+
+        <span class="font-bold">
+          A consolidation loan could help simplify your payment schedule and
+          lower your interest rate, but you may pay more each month to get out
+          of debt faster.
+        </span>
+
+        <p>
+          A debt consolidation loan could be worth exploring if you can get a
+          lower rate than you’re currently paying on your credit card debt and
+          you can afford to make your new monthly payments. Unfortunately, some
+          people who are struggling with heavy credit card debt can’t get a good
+          rate on a debt consolidation loan because their credit score is too
+          low and their debt to income ratio (DTI) is too high.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <div class="flex gap-6">
+          <div
+            class="flex justify-center items-center bg-primary w-6 h-6 rounded-full"
+          >
+            <span class="text-lg text-surface font-bold">3</span>
+          </div>
+
+          <span class="text-[22px] font-semibold text-primary">
+            Cash-Out Refinance
+          </span>
+        </div>
+
+        <p>
+          Homeowners who need to consolidate debt could do a cash-out refinance
+          to pay off their existing credit card debt at a lower rate and have
+          more time to pay it off. By refinancing your home loan and taking out
+          more money than you owe on your mortgage, you can use the additional
+          cash to consolidate your debt. Then, you just continue to pay your
+          mortgage like you normally would, with your unsecured debt rolled into
+          it. A cash-out refinance is a type of mortgage, and terms are usually
+          5, 15, or 30 years long. Since the average 30-year fixed mortgage rate
+          in 2017 was 3.99%, a cash-out refinance could provide you a
+          significantly lower interest rate than the debt you’re trying to pay
+          off. Consolidating debt with a cash-out refinance might seem like an
+          easy choice, but there are risks involved in this debt management
+          strategy. Since your mortgage is attached to your home and is
+          therefore considered a secured debt, your home could be foreclosed on
+          or repossessed if you are unable to pay your mortgage. That’s why it’s
+          critical to make sure you can afford your payments if you decide to
+          use this debt consolidation tactic. Keep in mind that a cash-out
+          refinance is a mortgage, which means that you may have to pay all of
+          the fees associated with a mortgage when you do a cash-out refinance.
+          Home appraisal, origination costs, and closing cost are still in
+          effect when you refinance-so be prepared to pay these expenses before
+          you consolidate debt with a cash-out refinance.
+        </p>
+
+        <span class="text-[22px] leading-7 text-primary font-semibold">
+          When to Use Cash-Out Refinance to Consolidate Debt
+        </span>
+
+        <p>
+          If you own a home, have a lot of high-interest credit card debt, and
+          can afford the fees and your new monthly mortgage payment, a cash-out
+          refinance could be the right debt management option for you. Similar
+          to a debt consolidation loan, part of your new mortgage rate is
+          determined by your credit score and debt-to-income ratio (DTI). If you
+          have a low credit score or your debt-to-income ratio is too high, you
+          may have trouble qualifying for a worthwhile interest rate.
+        </p>
+
+        <span class="text-[22px] leading-7 text-primary font-bold">
+          Debt Consolidation vs Credit Card Debt Relief
+        </span>
+
+        <p>
+          Credit card debt relief and debt consolidation are sometimes presented
+          as the same type of debt management solution, but they are very
+          different. Depending on your specific financial situation, one
+          solution could be better than the other. If you’re thinking about debt
+          consolidation, there are a few factors to consider first.
+        </p>
+
+        <span class="text-[22px] leading-7 text-primary font-semibold">
+          Are You Eligible for Debt Consolidation?
+        </span>
+
+        <p>
+          Debt consolidation loans, balance transfer cards, and cash-out
+          refinancing each have limits on how much you can borrow. Loan amounts
+          for balance transfer cards and debt consolidation loans could be
+          $1,000-$50,000. To qualify for a cash-out refinance, you need to have
+          equity in your home that you can borrow against. If you do have equity
+          in your home, you may only be able to borrow up to 97% against your
+          home’s current value. Even if you are eligible for debt consolidation,
+          you may not qualify for a favorable rate that is less that your
+          current debts. Many companies that offer debt consolidation loans
+          dangle ultra-low rates in front of you to get you in the door, but
+          they can’t offer you that kind of rate unless you have an excellent
+          FICO score and a low debt-to-income ratio. If you’re considering a
+          balance transfer card, you may not even qualify unless your credit
+          score is excellent. And if you want to do a cash-out refinance, you
+          might have trouble finding a low rate without excellent credit.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <p class="text-[22px] leading-7 text-primary text-left font-semibold">
+          Can You Afford Debt Consolidation?
+        </p>
+
+        <span>
+          It’s true that debt consolidation methods could allow you to pay off
+          the creditors you owe faster, but they could also cost you a lot more
+          each month than a debt relief program could.
+        </span>
+
+        <ul class="flex flex-col gap-4">
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span
+              >Debt consolidation loans extend the amount of time you have to
+              pay off your debt to 24-72 months, so if you consolidate $5,000 or
+              more in debt, you could end up paying more each month.</span
+            >
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              Balance transfer cards only really work if you can pay off your
+              debt during the low APR promotional period. And if you want to pay
+              off your debt within the 12 month promotional period, your monthly
+              payments could be astronomical.
+            </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              Cash-out refinancing may seem like a better alternative than
+              either of these options, but you’re still adding onto the amount
+              you pay each month for your mortgage and you’ll end up paying
+              thousands in interest if you spread your mortgage over a 15- or
+              30-year term.
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <p class="text-[22px] leading-7 text-primary text-left font-bold">
+          Debt Consolidation: The Bottom Line
+        </p>
+
+        <span> Debt consolidation works best if: </span>
+
+        <ul class="flex flex-col gap-4">
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span> You owe between $1,000-$50,000 </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              You can afford to pay off your debt during the term of your debt
+              consolidation loan or the promotional term of your balance
+              transfer card.
+            </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span> You have excellent credit and can get a low rate. </span>
+          </li>
+        </ul>
+
+        <span>
+          Even if you qualify for debt consolidation, remember that debt
+          consolidation loans, balance transfer cards, and cash-out refinancing
+          are still a type of debt that needs to be paid off. If you simply roll
+          your personal loan, medical, or credit card debt into a single account
+          and continue spending the way you used to, you could end up in the
+          same situation or worse, with even more debt than before.
+        </span>
+
+        <span>
+          We here at Debt Relief are happy to help give you more answers. Give
+          us a call at <u>800-910-0065</u> now or request a free debt evaluation
+          from a Certified Debt Consultant online now. They will be happy to
+          discuss different options for dealing with your debt with you. In our
+          first phone call, we’ll help you figure out which debt solution is
+          best for you. There’s no obligation to sign up for our debt relief
+          program, and our Certified Debt Consultants won’t pressure you into a
+          decision you aren’t ready to make. Even if it turns out that our debt
+          relief program isn’t right for you, we want to help you find the right
+          solution for your situation.
+        </span>
+      </div>
+
+      <div class="flex flex-col gap-8 rounded-2xl shadow-md py-10 px-4">
+        <p class="subtitle px-6">
+          Achieve financial control. How much debt do you have?
+        </p>
+
+        <div class="flex flex-col gap-6 max-w-[280px] w-full self-center">
+          <input type="range" name="range" class="w-full" aria-label="slider" />
+
+          <div class="flex justify-between text-primary">
+            <span>$1000</span>
+            <span>$100000 +</span>
+          </div>
+        </div>
+
+        <button
+          class="rounded-lg h-12 bg-accent text-white font-extrabold md:block"
+        >
+          Get your free plan now
+        </button>
+
+        <p class="flex flex-col justify-center text-primary text-center">
+          <span class="text-sm font-normal">
+            Or talk to a certified debt consultant
+          </span>
+          <span class="text-[22px] leading-8 font-semibold">
+            800-910-0065
+          </span>
+        </p>
+      </div>
+    </section>
+
+    <footer
+      class="flex flex-col bg-primary text-surface font-[roboto] py-16 px-12 gap-8 max-w-[1184px]"
+    >
+      <div class="flex flex-col self-center gap-6 text-[20px] font-semibold">
+        <div class="flex flex-row gap-2">
+          <img src="./assets/images/terms-of-use.svg" alt="terms-of-service" />
+          <a
+            href="./terms-of-service.html"
+            class="text-[20px] leading-6 underline decoration-solid font-semibold"
+            >Terms of Services</a
+          >
+        </div>
+
+        <div class="flex flex-row gap-2">
+          <img src="./assets/images/privacy-policy.svg" alt="privacy-policy" />
+          <a
+            href="./privacy-policy.html"
+            class="text-[20px] leading-6 underline decoration-solid font-semibold"
+            >Privacy Policy</a
+          >
+        </div>
+      </div>
+
+      <p class="text-lg">
+        *Our estimates are based on prior results, which will vary depending on
+        your specific enrolled creditors and your individual program terms. Not
+        all clients are able to complete their program for various reasons,
+        including their ability to save sufficient funds. We do not guarantee
+        that your debts will be resolved for a specific amount or percentage or
+        within a specific period of time. We do not assume your debts, make
+        monthly payments to creditors or provide tax, bankruptcy, accounting or
+        legal advice or credit repair services. Our service is not available in
+        all states, including New Jersey, and our fees may vary from state to
+        state. Please contact a tax professional to discuss potential tax
+        consequences of less than full balance debt resolution. Read and
+        understand all program materials prior to enrollment. The use of debt
+        settlement services will likely adversely affect your creditworthiness,
+        may result in you being subject to collections or being sued by
+        creditors or collectors and may increase the outstanding balances of
+        your enrolled accounts due to the accrual of fees and interest. However,
+        negotiated settlements we obtain on your behalf resolve the entire
+        account, including all accrued fees and interest. C.P.D. Reg. No.
+        T.S.12-03825.
+      </p>
+
+      <p class="text-lg">
+        ** This guarantee takes effect when you graduate the program—or even if
+        you leave before graduating. When you exit the program, we’ll use the
+        combined total of all the debts you enrolled and settled and the fees
+        you paid to us to calculate your eligibility for a refund.
+      </p>
+
+      <p class="text-lg">
+        DebtQuote, LLC does not discriminate on the basis of race, color,
+        religion, sex, marital status, national origin, or ancestry.
+      </p>
+
+      <div class="flex flex-col items-center text-[20px] pb-5">
+        <div class="flex gap-4">
+          <img
+            src="./assets/images/copyright.png"
+            alt="copyright icon"
+            style="width: 25px; height: 25px"
+          />
+          <span>2023 All Rights Reserved</span>
+        </div>
+        <p class="font-bold">DebtQuote.com</p>
+      </div>
+    </footer>
+
+    <script src="./assets/index.js"></script>
+  </body>
+</html>
