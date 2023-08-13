@@ -53,6 +53,10 @@
   }
 }
 
+a {
+  @apply underline;
+}
+
 #navbar-btn-open {
   @apply hidden;
 }
