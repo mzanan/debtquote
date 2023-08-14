@@ -73,11 +73,28 @@ a {
   @apply hidden;
 }
 
-@keyframes scroll {
+@keyframes scrollText {
   0% {
-    transform: translateX(0);
+    transform: translateX(100%);
   }
   100% {
-    transform: translateX(calc(-180px * 11));
+    transform: translateX(calc(-470px * 3));
   }
+}
+
+.animate-text {
+  animation: scrollText 20s linear infinite;
+}
+
+@keyframes scrollLogos {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(calc(-138px * 5));
+  }
+}
+
+.animate-logos {
+  animation: scrollLogos 10s linear infinite;
 }
