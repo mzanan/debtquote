@@ -173,17 +173,23 @@
         </div>
       </nav>
     </header>
-    <main class="max-w-[1184px] flex flex-col">
-      <section class="container px-7 pt-8 md:justify-between">
+    <main class="max-w-[1184px] flex flex-col lg:mx-auto">
+      <section class="container px-7 pt-8 lg:pt-10">
         <div class="flex flex-col gap-10">
-          <p class="title max-w-[400px]">
+          <p class="title max-w-[400px] md:self-center lg:max-w-[660px]">
             <span>Get credit </span>
             <span class="text-accent">card debt relief </span>
             <span>from America’s top debt relief company</span>
           </p>
 
-          <div class="flex flex-col gap-6">
-            <img src="./assets/images/debt-amount.png" alt="debt amount" />
+          <div
+            class="flex flex-col gap-6 items-center lg:flex-row-reverse lg:justify-between lg:w-full"
+          >
+            <img
+              src="./assets/images/debt-amount.png"
+              alt="debt amount"
+              class="w-[324px] h-[228px] lg:w-[550px] lg:h-[390px]"
+            />
 
             <div
               class="flex flex-col gap-8 rounded-2xl shadow-md border py-10 px-4"
@@ -211,7 +217,7 @@
               </div>
 
               <button
-                class="rounded-lg h-12 bg-accent text-white font-extrabold md:block"
+                class="rounded-lg h-12 bg-accent text-white font-extrabold w-[320px]"
               >
                 Continue
               </button>
@@ -230,7 +236,7 @@
       </section>
 
       <section
-        class="pt-8 w-full inline-block overflow-hidden whitespace-nowrap"
+        class="pt-8 w-full inline-block overflow-hidden whitespace-nowrap lg:pt-10"
       >
         <div class="text-surface bg-primary">
           <div class="flex items-center gap-2 py-2 animate-text">
@@ -249,9 +255,13 @@
         </div>
       </section>
 
-      <section class="flex flex-col px-6 py-8 gap-8 items-center">
-        <div class="flex flex-col gap-6 px-6">
-          <div class="card">
+      <section
+        class="flex flex-col px-6 py-8 gap-8 items-center lg:py-10 lg:gap-10"
+      >
+        <span class="subtitle"> Credit card debt relief is simple </span>
+
+        <div class="flex flex-col gap-6 px-6 lg:flex-row lg:gap-10 lg:px-0">
+          <div class="card md:w-[320px]">
             <div class="flex flex-col items-center">
               <img
                 src="./assets/images/credit-card.png"
@@ -265,7 +275,7 @@
             </span>
           </div>
 
-          <div class="card">
+          <div class="card md:w-[320px]">
             <div class="flex flex-col items-center">
               <img
                 src="./assets/images/point.png"
@@ -279,7 +289,7 @@
             </span>
           </div>
 
-          <div class="card">
+          <div class="card md:w-[320px]">
             <div class="flex flex-col items-center">
               <img
                 src="./assets/images/pencil.png"
@@ -296,43 +306,47 @@
           </div>
         </div>
 
-        <span class="text-sm text-center font-semibold px-8"
-          >You could begin your path to credit card debt relief in just a few
-          days
-        </span>
+        <div class="flex flex-col px-6 w-full items-center gap-8">
+          <span class="text-sm text-center font-semibold px-8"
+            >You could begin your path to credit card debt relief in just a few
+            days
+          </span>
 
-        <div class="px-6 w-full">
           <button
-            class="rounded-lg h-12 bg-accent text-white font-extrabold w-full"
+            class="rounded-lg h-12 bg-accent text-white font-extrabold w-full max-w-[320px]"
           >
             Find debt relief options
           </button>
         </div>
 
-        <div class="flex flex-col gap-6 text-center">
+        <div class="flex flex-col gap-6 text-center lg:text-start lg:pt-2">
           <span class="subtitle"> How our debt relief program works </span>
 
-          <span>
-            Debt relief is an opportunity to put your credit card debt behind
-            you without paying the full amount owed. Our debt experts negotiate
-            with your creditors to get them to agree to settle for less than the
-            full amount you owe, so you can resolve your debt for less and in
-            less time than other debt solutions.
-          </span>
+          <div class="flex flex-col gap-4">
+            <p>
+              Debt relief is an opportunity to put your credit card debt behindC
+              you without paying the full amount owed. Our debt experts
+              negotiate with your creditors to get them to agree to settle for
+              less than the full amount you owe, so you can resolve your debt
+              for less and in less time than other debt solutions.
+            </p>
 
-          <span>
-            As a debt relief company that has been helping people for over 15
-            years, we know how to create a custom debt relief program that gets
-            you the best possible results.
-          </span>
+            <p>
+              As a debt relief company that has been helping people for over 15
+              years, we know how to create a custom debt relief program that
+              gets you the best possible results.
+            </p>
 
-          <span class="font-bold">
-            There are 4 phases in the Freedom Debt Relief program:
-          </span>
+            <p class="font-bold pt-5">
+              There are 4 phases in the Freedom Debt Relief program:
+            </p>
+          </div>
         </div>
 
-        <div class="flex flex-col gap-6 px-6">
-          <div class="card gap-8 py-11 relative">
+        <div
+          class="flex flex-col gap-6 px-6 lg:flex-row lg:flex-wrap lg:gap-10 lg:px-0 lg:w-[768px]"
+        >
+          <div class="card gap-8 py-11 relative md:w-[364px] lg:shrink-0">
             <span
               class="absolute text-[180px] font-black text-tertiary top-24 left-8 z-[-1]"
               >1</span
@@ -346,7 +360,7 @@
             </span>
           </div>
 
-          <div class="card gap-8 py-11 relative">
+          <div class="card gap-8 py-11 relative md:w-[364px] lg:shrink-0">
             <span
               class="absolute text-[180px] font-black text-tertiary top-24 left-8 z-[-1]"
               >2</span
@@ -360,7 +374,7 @@
             </span>
           </div>
 
-          <div class="card gap-8 py-11 relative">
+          <div class="card gap-8 py-11 relative md:w-[364px] lg:shrink-0">
             <span
               class="absolute text-[180px] font-black text-tertiary top-24 left-8 z-[-1]"
               >3</span
@@ -374,7 +388,7 @@
             </span>
           </div>
 
-          <div class="card gap-8 py-11 relative">
+          <div class="card gap-8 py-11 relative md:w-[364px] lg:shrink-0">
             <span
               class="absolute text-[180px] font-black text-tertiary top-24 left-8 z-[-1]"
               >4</span
@@ -386,50 +400,77 @@
               longer owe your creditors. Your credit card debt is behind you!
             </span>
           </div>
-
-          <p class="text-sm font-bold">
-            <span>
-              Every step of the way, our friendly customer service
-              representatives are ready to answer your questions and offer
-              support. Complete
-            </span>
-            <span class="text-accent">our simple online form </span>
-            <span>to get started today. </span>
-          </p>
         </div>
+
+        <p class="text-sm font-bold lg:text-center w-full">
+          <span>
+            Every step of the way, our friendly customer service representatives
+            are ready to answer your questions and offer support. Complete
+          </span>
+          <span class="text-accent">our simple online form </span>
+          <span>to get started today. </span>
+        </p>
       </section>
     </main>
 
     <section
-      class="flex flex-col pt-11 pb-16 w-full bg-banner text-center gap-7 overflow-hidden"
+      class="flex flex-col pt-11 pb-16 w-full bg-banner text-center gap-7 overflow-hidden mx-auto max-w-[1184px]"
     >
       <span class="text-2xl font-semibold text-primary">As featured in</span>
 
       <div class="max-w-[1184px] overflow-hidden">
-        <div class="flex gap-2 animate-logos">
-          <img src="./assets/images/cnbc.png" alt="CNBC" />
-          <img src="./assets/images/motley-fool.png" alt="The Motley Fool" />
-          <img src="./assets/images/msn.png" alt="msn" />
-          <img src="./assets/images/usa-today.png" alt="USA Today" />
-          <img src="./assets/images/yahoo.png" alt="Yahoo Finance" />
+        <div
+          class="flex gap-2 items-center animate-logos-sm lg:animate-logos-lg lg:gap-12"
+        >
+          <img
+            src="./assets/images/cnbc.png"
+            alt="CNBC"
+            class="w-[130px] h-[94px] lg:w-[250px] lg:h-[180px]"
+          />
+          <img
+            src="./assets/images/motley-fool.png"
+            alt="The Motley Fool"
+            class="w-[130px] h-[94px] lg:w-[250px] lg:h-[180px]"
+          />
+          <img
+            src="./assets/images/msn.png"
+            alt="msn"
+            class="w-[130px] h-[94px] lg:w-[250px] lg:h-[180px]"
+          />
+          <img
+            src="./assets/images/usa-today.png"
+            alt="USA Today"
+            class="w-[130px] h-[94px] lg:w-[250px] lg:h-[180px]"
+          />
+          <img
+            src="./assets/images/yahoo.png"
+            alt="Yahoo Finance"
+            class="w-[130px] h-[94px] lg:w-[250px] lg:h-[180px]"
+          />
         </div>
       </div>
     </section>
 
-    <section class="container flex flex-col gap-8 py-8 px-12 max-w-[1184px]">
-      <span class="subtitle text-primary">
+    <section
+      class="container flex flex-col gap-8 py-8 px-12 mx-auto max-w-[1184px] lg:py-12"
+    >
+      <span
+        class="text-[22px] leading-[30px] font-semibold text-center text-primary"
+      >
         We’re your debt relief partners, every step of the way
       </span>
 
-      <span class="text-sm">
+      <span class="text-sm lg:pt-2 lg:max-w-[895px] lg:text-center lg:mx-auto">
         Enroll in our credit card debt relief program, and it's no longer just
         you against your creditors. We’re on your side, ready to help you get
         out of credit card debt — and get on with your life. You don't have to
         go it alone anymore.
       </span>
 
-      <div class="flex flex-col gap-6">
-        <div class="card gap-8 py-6 relative">
+      <div
+        class="flex flex-col gap-6 lg:flex-row lg:gap-20 md:justify-center md:items-center"
+      >
+        <div class="card gap-8 py-6 relative md:w-[320px]">
           <img src="./assets/images/call-center.png" alt="call center image" />
 
           <div class="flex flex-col gap-2">
@@ -444,7 +485,7 @@
           </div>
         </div>
 
-        <div class="card gap-8 py-6 relative">
+        <div class="card gap-8 py-6 relative md:w-[320px]">
           <img src="./assets/images/track.png" alt="track route image" />
 
           <div class="flex flex-col gap-2">
@@ -461,14 +502,14 @@
     </section>
 
     <section
-      class="flex flex-col w-full bg-banner text-center text-[22px] text-primary py-6 px-2 max-w-[1184px]"
+      class="flex flex-col w-full bg-banner text-center text-[22px] text-primary py-6 px-2 mx-auto max-w-[1184px]"
     >
       <p class="font-semibold">Have more questions?</p>
       <p class="font-extrabold">Call us now 800-910-0065</p>
     </section>
 
     <footer
-      class="flex flex-col bg-primary text-surface font-[roboto] py-16 px-12 gap-8 max-w-[1184px]"
+      class="flex flex-col bg-primary text-surface font-[roboto] py-16 px-12 gap-8 mx-auto max-w-[1184px]"
     >
       <div class="flex flex-col self-center gap-6 text-[20px] font-semibold">
         <div class="flex flex-row gap-2">

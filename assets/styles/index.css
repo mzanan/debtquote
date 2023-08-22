@@ -25,11 +25,11 @@
   }
 
   .title {
-    @apply font-extrabold text-[28px] leading-8 md:text-5xl text-primary;
+    @apply font-extrabold text-[28px] leading-8 lg:text-4xl text-primary;
   }
 
   .subtitle {
-    @apply text-[22px] leading-[30px] font-semibold text-center text-primary;
+    @apply text-[22px] leading-[30px] lg:text-[32px] lg:leading-[38px] font-semibold text-center text-primary;
   }
 
   .card {
@@ -201,7 +201,20 @@ input[type="range"]:focus::-ms-fill-upper {
   animation: scrollText 20s linear infinite;
 }
 
-@keyframes scrollLogos {
+@keyframes scrollLogosSm {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-1500px);
+  }
+}
+
+.animate-logos-sm {
+  animation: scrollLogosSm 15s linear infinite;
+}
+
+@keyframes scrollLogosLg {
   0% {
     transform: translateX(100%);
   }
@@ -210,6 +223,6 @@ input[type="range"]:focus::-ms-fill-upper {
   }
 }
 
-.animate-logos {
-  animation: scrollLogos 10s linear infinite;
+.animate-logos-lg {
+  animation: scrollLogosLg 10s linear infinite;
 }
