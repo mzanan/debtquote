@@ -173,43 +173,65 @@
         </div>
       </nav>
     </header>
-    <main class="max-w-[1184px] flex flex-col">
-      <section class="container flex flex-col px-6 pt-8 gap-8">
-        <div class="flex flex-col gap-6">
-          <p class="title">How Debt Quote works</p>
-          <p class="subtitle text-left text-text max-w-[400px]">
-            End your debt stress with a proven, affordable debt relief program.
-            Our consultants will guide you through every step.
-          </p>
-
-          <div class="flex flex-col gap-8">
-            <img src="./assets/images/how-it-works.png" alt="how it works" />
-
-            <div class="flex flex-col gap-8 px-8">
-              <button
-                class="rounded-lg h-14 bg-accent text-white font-extrabold"
+    <main class="max-w-[1184px] flex flex-col lg:mx-auto">
+      <section class="container flex flex-col px-6 pt-8 gap-8 lg:pt-10 lg:px-0">
+        <div class="flex flex-col gap-8 lg:gap-12">
+          <div class="lg:flex lg:flex-row lg:gap-20">
+            <div class="flex flex-col gap-6">
+              <p class="title">How Debt Quote works</p>
+              <p
+                class="subtitle text-left text-text max-w-[400px] lg:max-w-[660px]"
               >
-                Get debt help now
-              </button>
+                End your debt stress with a proven, affordable debt relief
+                program. Our consultants will guide you through every step.
+              </p>
+
+              <div class="flex flex-col gap-8 items-center lg:items-start">
+                <img
+                  src="./assets/images/how-it-works.png"
+                  alt="how it works"
+                  class="w-[324px] h-[228px] lg:hidden"
+                />
+
+                <div
+                  class="flex flex-col gap-8 items-center max-w-[320px] w-full lg:items-start"
+                >
+                  <div class="flex flex-col gap-8 w-full lg:px-0">
+                    <button
+                      class="rounded-lg h-14 bg-accent text-white font-extrabold"
+                    >
+                      Get debt help now
+                    </button>
+                  </div>
+
+                  <div class="flex flex-col gap-6 px-6 lg:flex-row lg:px-0">
+                    <div class="minicard">
+                      <span class="text-sm font-extrabold">$15 billion+</span>
+                      <span class="card--description">in debt resolved</span>
+                    </div>
+
+                    <div class="minicard">
+                      <span class="text-sm font-extrabold">850,000+</span>
+                      <span class="card--description">clients served</span>
+                    </div>
+
+                    <div class="minicard">
+                      <span class="text-sm font-extrabold">20 years</span>
+                      <span class="card--description">as a trusted leader</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="flex flex-col gap-6 px-6">
-              <div class="minicard">
-                <span class="text-sm font-extrabold">$15 billion+</span>
-                <span class="card--description">in debt resolved</span>
-              </div>
+            <img
+              src="./assets/images/how-it-works.png"
+              alt="how it works"
+              class="lg:w-[550px] lg:h-[390px] hidden lg:block"
+            />
+          </div>
 
-              <div class="minicard">
-                <span class="text-sm font-extrabold">850,000+</span>
-                <span class="card--description">clients served</span>
-              </div>
-
-              <div class="minicard">
-                <span class="text-sm font-extrabold">20 years</span>
-                <span class="card--description">as a trusted leader</span>
-              </div>
-            </div>
-
+          <div class="flex flex-col gap-6 lg:gap-8">
             <div class="flex flex-col gap-6">
               <div class="flex flex-col text-center text-primary gap-4">
                 <span class="text-[22px] font-bold">How It Works</span>
@@ -223,21 +245,27 @@
                 a thing until we negotiate an acceptable settlement.
               </span>
             </div>
+
+            <div
+              class="flex flex-col gap-4 max-w-[320px] w-full md:self-center"
+            >
+              <span class="text-primary font-extrabold text-center">
+                Find out which debts apply
+              </span>
+
+              <button
+                class="rounded-lg h-14 bg-accent text-white font-extrabold"
+              >
+                Get your free evaluation
+              </button>
+            </div>
           </div>
         </div>
 
-        <div class="flex flex-col px-6 w-full text-center gap-6">
-          <span class="font-extrabold px-8"> Find out which debts apply </span>
-
-          <button
-            class="rounded-lg h-12 bg-accent text-white font-extrabold w-full"
-          >
-            Get your free evaluation
-          </button>
-        </div>
-
-        <div class="flex flex-col gap-6">
-          <div class="card border text-left relative">
+        <div
+          class="flex flex-col gap-6 items-center w-full lg:flex-row lg:flex-wrap lg:gap-10 lg:justify-center"
+        >
+          <div class="card border text-left relative max-w-[360px]">
             <div
               class="section__card--circle absolute top-[-14px] left-[-14px]"
             >
@@ -259,7 +287,7 @@
             />
           </div>
 
-          <div class="card border text-left relative">
+          <div class="card border text-left relative max-w-[360px]">
             <div
               class="section__card--circle absolute top-[-14px] left-[-14px]"
             >
@@ -282,7 +310,7 @@
             />
           </div>
 
-          <div class="card border text-left relative">
+          <div class="card border text-left relative max-w-[360px]">
             <div
               class="section__card--circle absolute top-[-14px] left-[-14px]"
             >
@@ -302,7 +330,7 @@
             <img src="./assets/images/settlement.png" alt="settlement offers" />
           </div>
 
-          <div class="card border text-left relative">
+          <div class="card border text-left relative max-w-[360px]">
             <div
               class="section__card--circle absolute top-[-14px] left-[-14px]"
             >
@@ -321,7 +349,7 @@
             <img src="./assets/images/pay-off.png" alt="pay off" />
           </div>
 
-          <div class="card border text-left relative">
+          <div class="card border text-left relative max-w-[360px]">
             <div
               class="section__card--circle absolute top-[-14px] left-[-14px]"
             >
@@ -342,9 +370,11 @@
           </div>
         </div>
 
-        <div class="flex flex-col px-6 w-full text-center gap-6 pb-8">
+        <div
+          class="flex flex-col px-6 w-full text-center gap-6 pb-8 max-w-[320px] self-center lg:pt-2"
+        >
           <button
-            class="rounded-lg h-12 bg-accent text-white font-extrabold w-full"
+            class="rounded-lg h-14 bg-accent text-white font-extrabold w-full"
           >
             Get debt help now
           </button>
@@ -353,44 +383,50 @@
     </main>
 
     <div
-      class="flex flex-col bg-primary text-surface pt-12 px-6 gap-6 max-w-[1184px]"
+      class="flex flex-col bg-primary text-surface pt-12 px-6 gap-6 items-center mx-auto max-w-[1184px] lg:pt-8 lg:px-20 lg:flex-row lg:justify-between"
     >
-      <p class="title text-surface">Find out how DebtQuote can work for you</p>
-      <div class="flex flex-col gap-4 font-medium">
-        <p>Reduce what you owe</p>
-        <p>Pay less each month</p>
-        <p>Get rid of debt faster than making minimum payments.</p>
-      </div>
+      <div class="flex flex-col gap-6 lg:max-w-[611px]">
+        <p class="title text-surface">
+          Find out how DebtQuote can work for you
+        </p>
+        <div class="flex flex-col gap-4 font-medium">
+          <p>Reduce what you owe</p>
+          <p>Pay less each month</p>
+          <p>Get rid of debt faster than making minimum payments.</p>
+        </div>
 
-      <div class="flex flex-col px-6 w-full text-center gap-6">
-        <button
-          class="rounded-lg h-12 bg-accent text-white font-extrabold w-full"
+        <div
+          class="flex flex-col px-6 w-full text-center gap-6 max-w-[320px] md:mx-auto lg:mx-0 lg:px-0"
         >
-          Get debt help now
-        </button>
-      </div>
+          <button
+            class="rounded-lg h-14 bg-accent text-white font-extrabold w-full"
+          >
+            Get your free evaluation
+          </button>
+        </div>
 
-      <p class="font-medium">
-        <span> Or speak to a debt consultant </span>
-        <span class="font-bold"> 800-910-0056 </span>
-      </p>
+        <p class="font-medium">
+          <span> Or speak to a debt consultant </span>
+          <span class="font-bold"> 800-910-0056 </span>
+        </p>
+      </div>
 
       <img
         src="assets/images/consultant.png"
         alt="consultant"
-        class="pt-12 pb-2 px-8"
+        class="pt-12 pb-2 px-8 max-w-[380px] w-full my-auto lg:p-0"
       />
     </div>
 
     <section
-      class="flex flex-col w-full bg-banner text-center text-[22px] text-primary py-6 px-2 max-w-[1184px]"
+      class="flex flex-col w-full bg-banner text-center text-[22px] text-primary py-6 px-2 mx-auto max-w-[1184px]"
     >
       <p class="font-semibold">Have more questions?</p>
       <p class="font-extrabold">Call us now 800-910-0065</p>
     </section>
 
     <footer
-      class="flex flex-col bg-primary text-surface font-[roboto] py-16 px-12 gap-8 max-w-[1184px]"
+      class="flex flex-col bg-primary text-surface font-[roboto] py-16 px-12 gap-8 mx-auto max-w-[1184px]"
     >
       <div class="flex flex-col self-center gap-6 text-[20px] font-semibold">
         <div class="flex flex-row gap-2">
