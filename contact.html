@@ -173,36 +173,56 @@
         </div>
       </nav>
     </header>
-    <main class="max-w-[1184px] flex flex-col">
-      <section class="container flex flex-col px-6 pt-8 gap-8">
-        <div class="flex flex-col gap-6">
-          <p class="title">How can we help?</p>
-          <p class="subtitle text-left text-text max-w-[400px]">
-            When you need answers to questions or experts on your side, we’ll be
-            here to support you along the way.
-          </p>
-
-          <div class="flex flex-col gap-8">
-            <img
-              src="./assets/images/contact.png"
-              alt="Contact us"
-              class="py-10"
-            />
-
-            <div class="flex flex-col gap-8 px-8">
-              <button
-                class="rounded-lg h-14 bg-accent text-white font-extrabold"
+    <main class="max-w-[1184px] flex flex-col lg:mx-auto">
+      <section
+        class="container flex flex-col px-6 pt-8 gap-8 lg:gap-12 lg:pt-10"
+      >
+        <div
+          class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-12"
+        >
+          <div class="lg:flex lg:flex-row lg:gap-20 lg:max-w-[610px]">
+            <div class="flex flex-col gap-6 md:items-center lg:items-start">
+              <p class="title">How can we help?</p>
+              <p
+                class="subtitle text-left text-text max-w-[400px] lg:max-w-none lg:w-full"
               >
-                Get debt help now
-              </button>
+                When you need answers to questions or experts on your side,
+                we’ll be here to support you along the way.
+              </p>
+
+              <div
+                class="flex flex-col gap-8 items-center lg:items-start w-full"
+              >
+                <img
+                  src="./assets/images/contact.png"
+                  alt="Contact us"
+                  class="py-10 lg:p-0 w-[324px] h-[228px] lg:hidden"
+                />
+
+                <div
+                  class="flex flex-col gap-8 px-8 w-full lg:px-0 max-w-[320px]"
+                >
+                  <button
+                    class="rounded-lg h-14 bg-accent text-white font-extrabold"
+                  >
+                    Get debt help now
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
+
+          <img
+            src="./assets/images/contact.png"
+            alt="Contact us"
+            class="hidden lg:block w-[300px] xl:w-[470px]"
+          />
         </div>
 
-        <div class="flex flex-col gap-6">
-          <div class="flex flex-col text-center text-primary gap-4">
-            <span class="text-[22px] font-bold"> Here to help </span>
-            <span class="font-bold"> Let’s get in touch </span>
+        <div class="flex flex-col gap-6 g:gap-10 lg:items-center">
+          <div class="flex flex-col text-center text-primary gap-4 lg:gap-6">
+            <span class="subtitle font-bold"> Here to help </span>
+            <span class="font-bold lg:text-xl"> Let’s get in touch </span>
           </div>
 
           <span class="text-center">
@@ -213,7 +233,22 @@
           </span>
         </div>
 
-        <div class="flex flex-col gap-8 px-6">
+        <div class="flex flex-col gap-6 g:gap-10 lg:items-center">
+          <div class="flex flex-col text-center text-primary gap-4 lg:gap-6">
+            <span class="subtitle font-bold"> Open hours </span>
+            <span class="font-bold lg:text-xl">
+              We’ll connect you with expert help
+            </span>
+          </div>
+
+          <span class="text-center">
+            Whether you need expert guidance or personalized service for your
+            Freedom Debt Relief program, our 550+ certified debt consultants and
+            350+ customer service representatives are here to help.
+          </span>
+        </div>
+
+        <div class="flex flex-col gap-8 px-6 lg:flex-row">
           <div class="flex flex-col gap-6 p-8">
             <div class="flex flex-col gap-4 items-center">
               <img
@@ -390,7 +425,7 @@
     </main>
 
     <footer
-      class="flex flex-col bg-primary text-surface font-[roboto] py-16 px-12 gap-8 max-w-[1184px]"
+      class="flex flex-col bg-primary text-surface font-[roboto] py-16 px-12 gap-8 max-w-[1184px] mx-auto"
     >
       <div class="flex flex-col self-center gap-6 text-[20px] font-semibold">
         <div class="flex flex-row gap-2">
