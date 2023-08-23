@@ -173,77 +173,95 @@
         </div>
       </nav>
     </header>
-    <main class="max-w-[1184px] flex flex-col pb-10">
-      <section class="container flex flex-col px-6 pt-8 gap-8">
-        <div class="flex flex-col gap-6">
-          <p class="title">We help people like you</p>
-          <p class="subtitle text-left text-text max-w-[400px]">
-            We're here for the millions of people who are struggling to make
-            minimum monthly payments and want to resolve their debt, so they can
-            live their lives to the fullest.
-          </p>
+    <main class="max-w-[1184px] flex flex-col pb-10 mx-auto">
+      <section
+        class="container flex flex-col px-6 pt-8 gap-8 lg:gap-20 lg:px-0"
+      >
+        <div class="flex flex-col lg:flex-row lg:justify-between">
+          <div class="flex flex-col justify-center gap-6 lg:gap-12">
+            <div class="flex flex-col gap-6 lg:gap-10">
+              <p class="title">We help people like you</p>
+              <p
+                class="text-[22px] leading-[30px] font-semibold text-left text-text max-w-[400px] lg:max-w-[610px]"
+              >
+                We're here for the millions of people who are struggling to make
+                minimum monthly payments and want to resolve their debt, so they
+                can live their lives to the fullest.
+              </p>
+            </div>
 
-          <div class="flex flex-col gap-8">
-            <img src="./assets/images/help-people.png" alt="hwe help people" />
+            <img
+              src="./assets/images/help-people.png"
+              alt="hwe help people"
+              class="lg:hidden"
+            />
 
-            <div class="flex flex-col gap-8 px-8">
+            <div
+              class="flex flex-col px-8 max-w-[320px] w-full lg:p-0 lg:mx-auto"
+            >
               <button
                 class="rounded-lg h-14 bg-accent text-white font-extrabold"
               >
                 Get debt help now
               </button>
             </div>
-
-            <div class="flex flex-col gap-6">
-              <div class="flex flex-col text-center text-primary gap-4">
-                <span class="text-[22px] font-bold">Financial Situation</span>
-                <span class="font-bold">
-                  Stressed and dealing with hardship
-                </span>
-              </div>
-
-              <span>
-                Many people struggle with debt due to events beyond their
-                control. We negotiate with your creditors to reduce what you owe
-                and resolve your debt. We’ll consider your hardship, such as:
-              </span>
-            </div>
           </div>
+
+          <img
+            src="./assets/images/help-people.png"
+            alt="hwe help people"
+            class="hidden lg:block w-[513px] h-[366px]"
+          />
         </div>
 
-        <div class="px-6">
-          <ul class="flex flex-col gap-4 px-6">
-            <li class="flex gap-2">
+        <div class="flex flex-col gap-6 lg:gap-10 lg:items-center">
+          <div class="flex flex-col text-center text-primary gap-4 lg:gap-6">
+            <span class="subtitle font-bold">Financial Situation</span>
+            <span class="font-bold lg:text-xl lg:font-medium">
+              Stressed and dealing with hardship
+            </span>
+          </div>
+
+          <span>
+            Many people struggle with debt due to events beyond their control.
+            We negotiate with your creditors to reduce what you owe and resolve
+            your debt. We’ll consider your hardship, such as:
+          </span>
+
+          <ul
+            class="flex flex-col gap-4 px-12 lg:flex-row lg:flex-wrap lg:max-w-[890px] lg:gap-16 lg:px-0"
+          >
+            <li class="flex gap-2 w-[254px] shrink-0">
               <div class="bg-primary w-6 h-6 rounded-full">
                 <img src="./assets/images/check.svg" alt="check logo" />
               </div>
               <span> Reduced income </span>
             </li>
-            <li class="flex gap-2">
+            <li class="flex gap-2 w-[254px] shrink-0">
               <div class="bg-primary w-6 h-6 rounded-full">
                 <img src="./assets/images/check.svg" alt="check logo" />
               </div>
               <span> Unexpected expenses </span>
             </li>
-            <li class="flex gap-2">
+            <li class="flex gap-2 w-[254px] shrink-0">
               <div class="bg-primary w-6 h-6 rounded-full">
                 <img src="./assets/images/check.svg" alt="check logo" />
               </div>
               <span> Job loss </span>
             </li>
-            <li class="flex gap-2">
+            <li class="flex gap-2 w-[254px] shrink-0">
               <div class="bg-primary w-6 h-6 rounded-full">
                 <img src="./assets/images/check.svg" alt="check logo" />
               </div>
               <span> Medical bills </span>
             </li>
-            <li class="flex gap-2">
+            <li class="flex gap-2 w-[254px] shrink-0">
               <div class="bg-primary w-6 h-6 rounded-full">
                 <img src="./assets/images/check.svg" alt="check logo" />
               </div>
               <span> Divorce </span>
             </li>
-            <li class="flex gap-2">
+            <li class="flex gap-2 w-[254px] shrink-0">
               <div class="bg-primary w-6 h-6 rounded-full">
                 <img src="./assets/images/check.svg" alt="check logo" />
               </div>
@@ -254,7 +272,7 @@
 
         <div class="flex flex-col px-6 w-full text-center gap-6">
           <button
-            class="rounded-lg h-12 bg-accent text-white font-extrabold w-full"
+            class="rounded-lg h-14 bg-accent text-white font-extrabold w-full"
           >
             Get your free evaluation
           </button>
@@ -491,7 +509,7 @@
 
       <div class="flex flex-col px-6 w-full text-center gap-6">
         <button
-          class="rounded-lg h-12 bg-accent text-white font-extrabold w-full"
+          class="rounded-lg h-14 bg-accent text-white font-extrabold w-full"
         >
           Get your free evaluation
         </button>
@@ -514,7 +532,7 @@
 
       <div class="flex flex-col px-6 w-full text-center gap-6">
         <button
-          class="rounded-lg h-12 bg-accent text-white font-extrabold w-full"
+          class="rounded-lg h-14 bg-accent text-white font-extrabold w-full"
         >
           Get your free evaluation
         </button>
