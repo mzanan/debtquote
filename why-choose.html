@@ -173,63 +173,88 @@
         </div>
       </nav>
     </header>
-    <main class="max-w-[1184px] flex flex-col">
-      <section class="container flex flex-col px-6 pt-8 gap-8">
-        <div class="flex flex-col gap-6">
-          <p class="title">Why choose DebtQuote Debt relief</p>
-          <p class="subtitle text-left text-text max-w-[400px]">
-            As a leader in debt resolution, we empower everyday people to move
-            toward a better financial future. We could help resolve your debt in
-            as little as 24-48 months
-          </p>
-
-          <div class="flex flex-col gap-8">
-            <img
-              src="./assets/images/why-choose.png"
-              alt="why choose debt quote"
-            />
-
-            <div class="flex flex-col gap-8 px-8">
-              <button
-                class="rounded-lg h-14 bg-accent text-white font-extrabold"
+    <main class="max-w-[1184px] flex flex-col lg:mx-auto">
+      <section
+        class="container flex flex-col px-6 pt-8 gap-8 lg:gap-12 lg:pt-10 lg:px-0"
+      >
+        <div
+          class="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12"
+        >
+          <div class="lg:flex lg:flex-row lg:gap-20 lg:max-w-[610px]">
+            <div class="flex flex-col gap-6 md:items-center lg:items-start">
+              <p class="title">Why choose DebtQuote Debt relief</p>
+              <p
+                class="text-[22px] leading-[30px] font-semibold text-text max-w-[400px] lg:max-w-none lg:w-full"
               >
-                Get debt help now
-              </button>
-            </div>
+                As a leader in debt resolution, we empower everyday people to
+                move toward a better financial future. We could help resolve
+                your debt in as little as 24-48 months
+              </p>
 
-            <div class="flex flex-col gap-6 px-6">
-              <div class="minicard">
-                <span class="text-sm font-extrabold">$15 billion+</span>
-                <span class="card--description">in debt resolved</span>
+              <div class="flex flex-col gap-8 items-center lg:items-start">
+                <img
+                  src="./assets/images/why-choose.png"
+                  alt="why choose debt quote"
+                  class="w-[324px] h-[228px] lg:hidden"
+                />
+
+                <div
+                  class="flex flex-col gap-8 items-center max-w-[320px] w-full lg:items-start"
+                >
+                  <div class="flex flex-col gap-8 px-8 w-full lg:px-0">
+                    <button
+                      class="rounded-lg h-14 bg-accent text-white font-extrabold"
+                    >
+                      Get debt help now
+                    </button>
+                  </div>
+
+                  <div class="flex flex-col gap-6 px-6 lg:flex-row lg:px-0">
+                    <div class="minicard">
+                      <span class="text-sm font-extrabold">$15 billion+</span>
+                      <span class="card--description">in debt resolved</span>
+                    </div>
+
+                    <div class="minicard">
+                      <span class="text-sm font-extrabold">850,000+</span>
+                      <span class="card--description">clients served</span>
+                    </div>
+
+                    <div class="minicard">
+                      <span class="text-sm font-extrabold">20 years</span>
+                      <span class="card--description">as a trusted leader</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-
-              <div class="minicard">
-                <span class="text-sm font-extrabold">850,000+</span>
-                <span class="card--description">clients served</span>
-              </div>
-
-              <div class="minicard">
-                <span class="text-sm font-extrabold">20 years</span>
-                <span class="card--description">as a trusted leader</span>
-              </div>
-            </div>
-
-            <div class="flex flex-col gap-6">
-              <div class="flex flex-col text-center text-primary gap-4">
-                <span class="text-[22px] font-bold">How we compare</span>
-                <span class="font-bold">What makes us stand our</span>
-              </div>
-
-              <span class="text-center">
-                Here are a few reasons we continue to have success and positive
-                client reviews.
-              </span>
             </div>
           </div>
+
+          <img
+            src="./assets/images/why-choose.png"
+            alt="why choose debt quote"
+            class="lg:max-w-[537px] lg:max-h-[358px] lg:w-full lg:h-full hidden lg:block"
+          />
         </div>
 
-        <div class="flex flex-col gap-6">
-          <div class="card border gap-2 px-10 text-left">
+        <div class="flex flex-col gap-6 lg:gap-10 lg:items-center">
+          <div class="flex flex-col text-center text-primary gap-4 lg:gap-6">
+            <span class="subtitle font-bold">How we compare</span>
+            <span class="font-bold lg:text-xl lg:font-medium">
+              What makes us stand our
+            </span>
+          </div>
+
+          <span class="text-center">
+            Here are a few reasons we continue to have success and positive
+            client reviews.
+          </span>
+        </div>
+
+        <div class="flex flex-col gap-6 lg:flex-row items-center">
+          <div
+            class="card border gap-2 px-10 text-left h-[265px] md:w-[365px] lg:justify-start"
+          >
             <span class="text-[22px] font-semibold text-primary">
               Creditors take us seriously
             </span>
@@ -244,7 +269,9 @@
             </p>
           </div>
 
-          <div class="card border gap-2 px-10 text-left">
+          <div
+            class="card border gap-2 px-10 text-left h-[265px] md:w-[365px] lg:justify-start"
+          >
             <span class="text-[22px] font-semibold text-primary">
               Smart, flexible programs
             </span>
@@ -256,35 +283,41 @@
               relief program deposits into an account only you control.
             </p>
           </div>
+
+          <div
+            class="card border gap-2 px-10 text-left h-[265px] md:w-[365px] lg:justify-start"
+          >
+            <span class="text-[22px] font-semibold text-primary">
+              Support to enable your success
+            </span>
+            <p class="card--description">
+              Support for your debt resolution journey via your 24/7
+              <span class="font-bold">online dashboard</span> or by talking to
+              one of our <span class="font-bold">350+</span>
+              service representatives.
+            </p>
+          </div>
         </div>
 
-        <div class="card border gap-2 px-10 text-left">
-          <span class="text-[22px] font-semibold text-primary">
-            Support to enable your success
-          </span>
-          <p class="card--description">
-            Support for your debt resolution journey via your 24/7
-            <span class="font-bold">online dashboard</span> or by talking to one
-            of our <span class="font-bold">350+</span>
-            service representatives.
-          </p>
-        </div>
-
-        <div class="flex flex-col text-center gap-6">
-          <div class="flex flex-col gap-4">
-            <p class="subtitle">Our commitment to you</p>
-            <p class="font-bold text-primary">
+        <div class="flex flex-col text-center gap-6 lg:gap-8">
+          <div class="flex flex-col gap-4 lg:gap-6">
+            <p class="subtitle font-bold">Our commitment to you</p>
+            <p class="font-bold text-primary lg:text-xl">
               The DebtQuote debt relief promise
             </p>
           </div>
           <p>
             There are four concrete ways we assure our customers needs are
-            placed at the center of evereything we do.
+            placed at the center of everything we do.
           </p>
         </div>
 
-        <div class="flex flex-col gap-1 px-4">
-          <div class="flex flex-col gap-6 p-8 items-center">
+        <div
+          class="flex flex-col gap-1 px-4 lg:flex-row lg:px-0 items-center lg:items-start"
+        >
+          <div
+            class="flex flex-col gap-6 p-8 items-center md:w-[320px] md:text-center"
+          >
             <img
               src="./assets/images/free-debt-evaluation.png"
               alt="Free debt evaluation"
@@ -304,9 +337,13 @@
             </span>
           </div>
 
-          <div class="w-full h-[1px] bg-[#A2A5F0]"></div>
+          <div
+            class="max-w-[320px] w-full h-[1px] bg-[#A2A5F0] lg:w-[1px] lg:h-[320px] lg:self-center"
+          ></div>
 
-          <div class="flex flex-col gap-6 p-8 items-center">
+          <div
+            class="flex flex-col gap-6 p-8 items-center md:w-[320px] md:text-center"
+          >
             <img
               src="./assets/images/personalized-assessment.png"
               alt="Personalized assessment"
@@ -327,9 +364,13 @@
             </span>
           </div>
 
-          <div class="w-full h-[1px] bg-[#A2A5F0]"></div>
+          <div
+            class="max-w-[320px] w-full h-[1px] bg-[#A2A5F0] lg:w-[1px] lg:h-[320px] lg:self-center"
+          ></div>
 
-          <div class="flex flex-col gap-6 p-8 items-center">
+          <div
+            class="flex flex-col gap-6 p-8 items-center md:w-[320px] md:text-center"
+          >
             <img src="./assets/images/clear-terms.png" alt="Clear terms" />
 
             <span class="text-center text-xs"> You won’t be surprised </span>
@@ -342,9 +383,13 @@
             </span>
           </div>
 
-          <div class="w-full h-[1px] bg-[#A2A5F0]"></div>
+          <div
+            class="w-full h-[1px] bg-[#A2A5F0] lg:w-[1px] lg:h-[320px] lg:self-center"
+          ></div>
 
-          <div class="flex flex-col gap-6 p-8 items-center">
+          <div
+            class="flex flex-col gap-6 p-8 items-center md:w-[320px] md:text-center"
+          >
             <img
               src="./assets/images/program-guarantee.png"
               alt="Program guarantee"
@@ -367,60 +412,88 @@
     </main>
 
     <section
-      class="flex flex-col pt-11 pb-16 w-full bg-banner text-center gap-7 overflow-hidden"
+      class="flex flex-col pt-11 pb-16 w-full bg-banner text-center gap-7 overflow-hidden mx-auto max-w-[1184px]"
     >
       <span class="text-2xl font-semibold text-primary">As featured in</span>
 
       <div class="max-w-[1184px] overflow-hidden">
-        <img src="./assets/images/cnbc.png" alt="CNBC" />
-        <img src="./assets/images/motley-fool.png" alt="The Motley Fool" />
-        <img src="./assets/images/msn.png" alt="msn" />
-        <img src="./assets/images/usa-today.png" alt="USA Today" />
-        <img src="./assets/images/yahoo.png" alt="Yahoo Finance" />
+        <div
+          class="flex gap-2 items-center animate-logos-sm lg:animate-logos-lg lg:gap-12"
+        >
+          <img
+            src="./assets/images/cnbc.png"
+            alt="CNBC"
+            class="w-[130px] h-[94px] lg:w-[250px] lg:h-[180px]"
+          />
+          <img
+            src="./assets/images/motley-fool.png"
+            alt="The Motley Fool"
+            class="w-[130px] h-[94px] lg:w-[250px] lg:h-[180px]"
+          />
+          <img
+            src="./assets/images/msn.png"
+            alt="msn"
+            class="w-[130px] h-[94px] lg:w-[250px] lg:h-[180px]"
+          />
+          <img
+            src="./assets/images/usa-today.png"
+            alt="USA Today"
+            class="w-[130px] h-[94px] lg:w-[250px] lg:h-[180px]"
+          />
+          <img
+            src="./assets/images/yahoo.png"
+            alt="Yahoo Finance"
+            class="w-[130px] h-[94px] lg:w-[250px] lg:h-[180px]"
+          />
+        </div>
       </div>
     </section>
 
     <section
-      class="flex flex-col bg-primary text-surface pt-12 px-6 gap-6 max-w-[1184px]"
+      class="flex flex-col bg-primary text-surface pt-12 px-6 gap-6 items-center mx-auto max-w-[1184px] lg:pt-8 lg:px-20 lg:flex-row lg:justify-between"
     >
-      <p class="title text-surface">
-        Begin your journey with us to a better financial future
-      </p>
-      <div class="flex flex-col gap-4 font-medium">
-        <p>No upfront fees</p>
-        <p>No loan required</p>
-        <p>No more doing it alone</p>
-      </div>
+      <div class="flex flex-col gap-6 lg:max-w-[611px]">
+        <p class="title text-surface">
+          Begin your journey with us to a better financial future
+        </p>
+        <div class="flex flex-col gap-4 font-medium">
+          <p>No upfront fees</p>
+          <p>No loan required</p>
+          <p>No more doing it alone</p>
+        </div>
 
-      <div class="flex flex-col px-6 w-full text-center gap-6">
-        <button
-          class="rounded-lg h-12 bg-accent text-white font-extrabold w-full"
+        <div
+          class="flex flex-col px-6 w-full text-center gap-6 max-w-[320px] md:mx-auto lg:mx-0 lg:px-0"
         >
-          Get your free evaluation
-        </button>
-      </div>
+          <button
+            class="rounded-lg h-14 bg-accent text-white font-extrabold w-full"
+          >
+            Get your free evaluation
+          </button>
+        </div>
 
-      <p class="font-medium">
-        <span> Or speak to a debt consultant </span>
-        <span class="font-bold"> 800-910-0056 </span>
-      </p>
+        <p class="font-medium">
+          <span> Or speak to a debt consultant </span>
+          <span class="font-bold"> 800-910-0056 </span>
+        </p>
+      </div>
 
       <img
         src="assets/images/consultant.png"
         alt="consultant"
-        class="pt-12 pb-2 px-8"
+        class="pt-12 pb-2 px-8 max-w-[380px] w-full my-auto lg:p-0"
       />
     </section>
 
     <section
-      class="flex flex-col w-full bg-banner text-center text-[22px] text-primary py-6 px-2 max-w-[1184px]"
+      class="flex flex-col w-full bg-banner text-center text-[22px] text-primary py-6 px-2 max-w-[1184px] mx-auto"
     >
       <p class="font-semibold">Have more questions?</p>
       <p class="font-extrabold">Call us now 800-910-0065</p>
     </section>
 
     <footer
-      class="flex flex-col bg-primary text-surface font-[roboto] py-16 px-12 gap-8 max-w-[1184px]"
+      class="flex flex-col bg-primary text-surface font-[roboto] py-16 px-12 gap-8 max-w-[1184px] mx-auto"
     >
       <div class="flex flex-col self-center gap-6 text-[20px] font-semibold">
         <div class="flex flex-row gap-2">
