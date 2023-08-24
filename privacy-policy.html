@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./dist/styles/index.css" rel="stylesheet" />
+    <link href="./dist/libs/splidejs/css/splide.min.css" rel="stylesheet" />
+    <script src="./dist/libs/splidejs/js/splide.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav id="navbar" class="w-full lg:bg-surface shadow-sm">
+        <div
+          class="flex flex-col lg:flex-row lg:container lg:mx-auto lg:max-w-[1184px]"
+        >
+          <div
+            class="flex items-center h-[4.5rem] px-6 drop-shadow-sm bg-surface justify-between lg:drop-shadow-none"
+          >
+            <a href="./index.html">
+              <img src="assets/images/logo.png" alt="logo" />
+            </a>
+            <div class="flex lg:hidden">
+              <button
+                type="button"
+                id="navbar-btn"
+                class="text-text focus:outline-none"
+              >
+                <svg class="h-8 w-8 fill-current" viewBox="0 0 24 24">
+                  <path
+                    id="navbar-btn-close"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M3 7h18v2H3V7zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"
+                  />
+                  <path
+                    id="navbar-btn-open"
+                    d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            id="navbar-menu"
+            class="transition-all duration-700 h-0 bg-surface overflow-hidden lg:h-[4.5rem] lg:flex-1 lg:bg-surface lg:transition-none"
+          >
+            <ul
+              class="flex flex-col justify-center gap-6 p-6 pr-4 pt-12 lg:flex-row lg:py-0 lg:justify-end lg:h-full lg:items-center lg:gap-8"
+            >
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  id="link1"
+                  class="py-2.5 flex items-center justify-between"
+                  onclick="toggleSubmenu('submenu1', 'icon1'); this.classList.toggle('clicked');"
+                >
+                  The Program
+                  <svg
+                    id="icon1"
+                    class="lg:hidden"
+                    width="5"
+                    height="10"
+                    viewBox="0 0 5 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 10L5 5L0 0V10Z" fill="#2A2A2A" />
+                  </svg>
+                </a>
+                <ul
+                  id="submenu1"
+                  class="transition-all duration-700 lg:transition-none"
+                  style="display: none"
+                >
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./how-it-works.html">How It Works</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./help-people.html">Who we Help</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./about.html">Why Choose Debt Quote</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4"><a href="#">Testimonials</a></li>
+                  <li class="h-12 py-3 pl-4"><a href="#">FAQ</a></li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="py-2.5 transition-all flex items-center justify-between a-color-clicked"
+                  onclick="toggleSubmenu('submenu2', 'icon2'); this.classList.toggle('clicked');"
+                >
+                  Articles
+                  <svg
+                    id="icon2"
+                    class="lg:hidden"
+                    width="5"
+                    height="10"
+                    viewBox="0 0 5 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 10L5 5L0 0V10Z" fill="#2A2A2A" />
+                  </svg>
+                </a>
+                <ul
+                  id="submenu2"
+                  class="transition-all duration-700 lg:transition-none"
+                  style="display: none"
+                >
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./guide-to-debt.html">Debt Consolidation</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./debt-consolidation.html"
+                      >Debt Consolidation Near Me</a
+                    >
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./counseling.html">Pros and cons of Credit</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="#">Debt Relief Overview</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./debt-relief.html">Credit Card Debt Relief</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./programs.html">Debt Relief Programs</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="./about.html"
+                  class="py-2.5 transition-all flex items-center justify-between"
+                >
+                  About Us
+                  <svg
+                    class="lg:hidden"
+                    width="5"
+                    height="10"
+                    viewBox="0 0 5 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 10L5 5L0 0V10Z" fill="#2A2A2A" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./contact.html"
+                  class="py-2.5 transition-all flex items-center justify-between"
+                >
+                  Contact Us
+                  <svg
+                    class="lg:hidden"
+                    width="5"
+                    height="10"
+                    viewBox="0 0 5 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 10L5 5L0 0V10Z" fill="#2A2A2A" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="max-w-[1184px] flex flex-col lg:mx-auto">
+      <section class="container flex flex-col px-6 pt-8 gap-8">
+        <div class="flex flex-col gap-6 lg:gap-8">
+          <p
+            class="text-[28px] leading-[34px] text-primary font-extrabold lg:text-[38px] md:text-center"
+          >
+            Privacy Policy
+          </p>
+
+          <div>
+            <p>
+              Welcome and thank you for your interest in DebtQuote, LLC
+              (“Site"). The Site is the property of Debt Quote, LLC (”Freedom”,
+              "we," "us" or "our").
+            </p>
+            <br />
+            <p>
+              This Privacy Policy applies to this Site and any other site and
+              mobile apps owned and operated by Freedom Debt Relief, LLC and its
+              wholly owned affiliates (collectively “Freedom”, “we”, “our” or
+              “us”).
+            </p>
+            <br />
+            <p>
+              This Policy is provided to communicate how we and our affiliates
+              collect, protect, use, share and retain your personal information
+              when visiting our Site.
+            </p>
+          </div>
+
+          <div>
+            <p class="font-bold">
+              Please read this Policy before using our Site as continued
+              navigation constitutes your agreement to the term of this policy.
+            </p>
+            <br />
+            <p class="font-bold">Changes to this Privacy Policy</p>
+            <br />
+            <p>
+              Freedom reserves the right to update this privacy policy at any
+              time. When we make changes, we will revise the date at the top of
+              this page. Changes will be effective when posted unless otherwise
+              indicated. We encourage you check this page periodically to stay
+              informed about how we help provide the information we collect.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <div class="flex flex-col gap-4">
+            <p class="subtitle text-left font-extrabold">
+              Personal Information We Collect
+            </p>
+
+            <div>
+              <p>
+                For the purposes of this Privacy Policy, "personal information"
+                shall mean individually identifiable information from or about
+                an individual.
+              </p>
+              <br />
+              <p>
+                We collect personal information from you when you visit,
+                interact or register on our website and apps, respond to an
+                advertisement on third-party websites or call us. We may collect
+                the following information:
+              </p>
+            </div>
+          </div>
+
+          <ul class="flex flex-col gap-4">
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <p>
+                <span class="font-semibold">Information you provide:</span>
+                email address, full name, telephone number, date of birth,
+                address, employment, salary, etc.
+              </p>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <p>
+                <span class="font-semibold"
+                  >Information from third parties:</span
+                >
+                credit reporting data (accounts, pay history, balances), lead
+                generation data.
+              </p>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <p>
+                <span class="font-semibold">
+                  Participation in contests or surveys:
+                </span>
+                we collect personal information such as name, address, email
+                address and phone number when you participate in contests or
+                fill out surveys sponsored by us or our affiliates. Survey
+                information collected may include characteristics, preferences,
+                behaviors, attitudes, ability, intelligence predispositions,
+                etc. We collect this information in order to improve our
+                services, products and to improve your experience with us.
+              </p>
+            </li>
+
+            <li class="flex flex-col gap-6 lg:pb-4">
+              <div class="flex gap-6">
+                <div
+                  class="bg-primary w-6 h-6 rounded-full shrink-0 self-center"
+                >
+                  <img src="./assets/images/check.svg" alt="check logo" />
+                </div>
+                <p>
+                  <span class="font-semibold">
+                    Information from cookies or other tracking technologies:
+                  </span>
+                </p>
+              </div>
+
+              <p>
+                <span>
+                  o Cookies are small blocks of data created by a web server
+                  while a user is browsing a website. This data is stored on
+                  your hard drive containing non-personally identifiable
+                  information about you. This data functions as your computer’s
+                  identification and enables us to improve your experience by
+                  maintaining your authenticated session and preferences. We and
+                  our third-party vendors use “cookies” and similar tools to
+                  track your use of the Website when you use our services. Our
+                  systems automatically log information about your computer,
+                  tablet or phone. You may choose to set your web browser to
+                  notify you when you receive a cookie or refuse cookies
+                  altogether. If you do so, some parts of the Site may not
+                  function as intended. We reserve the right to transfer and/or
+                  sell aggregate or group data about Users of the Site Offerings
+                  for lawful purposes. Aggregate or group data is data that
+                  describes the demographics, usage and other characteristics of
+                  Site Offerings Users as a group, without disclosing personally
+                  identifiable information.
+                </span>
+              </p>
+            </li>
+
+            <li class="flex flex-col gap-6 lg:pb-4">
+              <div class="flex gap-6">
+                <div
+                  class="bg-primary w-6 h-6 rounded-full shrink-0 self-center"
+                >
+                  <img src="./assets/images/check.svg" alt="check logo" />
+                </div>
+                <p>
+                  <span class="font-semibold lg:pb-10">
+                    Internet, device or other activity
+                  </span>
+                </p>
+              </div>
+
+              <p>
+                <span>
+                  We may collect certain non-personally identifiable information
+                  about you and your desktop computer, tablet or mobile device
+                  when you visit the Site. This non- personally identifiable
+                  information includes, without limitation, the type of browser
+                  that you use, your IP address, the type of operating system
+                  that you use and the domain name of your Internet service
+                  provider. We use the non-personally identifiable information
+                  that we collect to improve the design and content of the Site
+                  and to enable us to personalize your experience. We also may
+                  use this information in the aggregate to analyze usage of the
+                  Site.
+                </span>
+              </p>
+            </li>
+
+            <li class="flex flex-col gap-6 lg:pb-4">
+              <div class="flex gap-6">
+                <div
+                  class="bg-primary w-6 h-6 rounded-full shrink-0 self-center"
+                >
+                  <img src="./assets/images/check.svg" alt="check logo" />
+                </div>
+                <p>
+                  <span class="font-semibold lg:pb-10">
+                    Referring exit pages/Advertising
+                  </span>
+                </p>
+              </div>
+
+              <div>
+                <p>
+                  DebtQuote, as well as third party entities such as Google®,
+                  use cookies, pixels and other tracking technology
+                  (collectively, “tracking technology”) in connection with the
+                  Site for purposes of tracking Users’ activities (such as
+                  websites visited, advertisements selected and pages viewed)
+                  after they leave the Site.
+                </p>
+                <br />
+                <p>
+                  Freedom, and its third-party partners, use this tracking
+                  technology to target applicable Users with advertisements
+                  featuring products/services we offer, as well as third-party
+                  products/services that may be of interest to applicable Users.
+                  In addition, Freedom uses a third-party service called Hotjar
+                  in order to better understand our Users’ needs and to optimize
+                  our offerings. Hotjar is a technology service that helps us
+                  better understand our Users’ Site-related experience (e.g. how
+                  much time they spend on which Site pages, which links they
+                  click on, what Users do and do not like, etc.) and this
+                  enables us to build and maintain our offerings. Hotjar uses
+                  cookies and other technology to collect data on our Users’
+                  behavior and their devices (in particular, the various
+                  devices’ IP addresses (captured and stored only in anonymized
+                  form), device screen size, device type, browser information,
+                  geographic location (country only) and preferred language used
+                  to display our website). Hotjar stores this information in a
+                  pseudonymized User profile. Neither Hotjar nor Freedom will
+                  ever use this information to identify individual Users or to
+                  match this information with additional data on an individual
+                  User.
+                </p>
+                <br />
+                <p>
+                  In general, Users may be able to disable some, or all, of this
+                  tracking activity by utilizing the “Do Not Track” setting or
+                  similar options within most major Internet browsers.
+                </p>
+                <br />
+                <p>
+                  Users can opt out of certain Google®-related tracking
+                  technology, and customize the Google® Display Network ads that
+                  they receive, by visiting the My Ad Center at:
+                  https://myadcenter.google.com/Google® also recommends
+                  installing the Google® Analytics Opt-out Browser Add-on for
+                  your web browser, which is available here:
+                  <a
+                    href="https://tools.google.com/dlpage/gaoptout"
+                    class="underline"
+                  >
+                    https://tools.google.com/dlpage/gaoptout </a
+                  >. To the extent permissible under applicable law, we are not
+                  responsible for the tracking practices of third-parties in
+                  connection with the Site.
+                </p>
+                <br />
+                <p>
+                  Google® is a registered trademark of Google, Inc. (“Google”).
+                  Please be advised that Freedom is not in any way affiliated
+                  with Google, nor are the Site Offerings endorsed, administered
+                  or sponsored by Google.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-6 lg:pb-4">
+          <div class="flex flex-col gap-4">
+            <p
+              class="text-[22px] leading-[30px] lg:text-[26px] lg:leading-[34px] font-extrabold text-primary"
+            >
+              Use of Your Personal Information
+            </p>
+
+            <p class="lg:pb-10">
+              Information we gather from you or third parties is used to:
+            </p>
+
+            <ul class="flex flex-col gap-4">
+              <li class="flex gap-6">
+                <div
+                  class="bg-primary w-6 h-6 rounded-full shrink-0 self-center"
+                >
+                  <img src="./assets/images/check.svg" alt="check logo" />
+                </div>
+                <span>
+                  Inform you about products or services we think you will be
+                  interested in
+                </span>
+              </li>
+
+              <li class="flex gap-6">
+                <div
+                  class="bg-primary w-6 h-6 rounded-full shrink-0 self-center"
+                >
+                  <img src="./assets/images/check.svg" alt="check logo" />
+                </div>
+                <span> Facilitate the use of our Site </span>
+              </li>
+
+              <li class="flex gap-6">
+                <div
+                  class="bg-primary w-6 h-6 rounded-full shrink-0 self-center"
+                >
+                  <img src="./assets/images/check.svg" alt="check logo" />
+                </div>
+                <span>
+                  Improve our Site, product offerings or services, or the
+                  services of our service providers
+                </span>
+              </li>
+
+              <li class="flex gap-6">
+                <div
+                  class="bg-primary w-6 h-6 rounded-full shrink-0 self-center"
+                >
+                  <img src="./assets/images/check.svg" alt="check logo" />
+                </div>
+                <span> Consider you for the products/services we offer </span>
+              </li>
+
+              <li class="flex gap-6">
+                <div
+                  class="bg-primary w-6 h-6 rounded-full shrink-0 self-center"
+                >
+                  <img src="./assets/images/check.svg" alt="check logo" />
+                </div>
+                <span> Verify your eligibility, identity </span>
+              </li>
+
+              <li class="flex gap-6">
+                <div
+                  class="bg-primary w-6 h-6 rounded-full shrink-0 self-center"
+                >
+                  <img src="./assets/images/check.svg" alt="check logo" />
+                </div>
+                <span>
+                  Contact you regarding your inquiry, account or employment
+                  opportunities
+                </span>
+              </li>
+
+              <li class="flex gap-6">
+                <div
+                  class="bg-primary w-6 h-6 rounded-full shrink-0 self-center"
+                >
+                  <img src="./assets/images/check.svg" alt="check logo" />
+                </div>
+                <span> Process payments on your behalf </span>
+              </li>
+
+              <li class="flex gap-6">
+                <div
+                  class="bg-primary w-6 h-6 rounded-full shrink-0 self-center"
+                >
+                  <img src="./assets/images/check.svg" alt="check logo" />
+                </div>
+                <span>
+                  Create and maintain login information for our Site
+                </span>
+              </li>
+
+              <li class="flex gap-6">
+                <div
+                  class="bg-primary w-6 h-6 rounded-full shrink-0 self-center"
+                >
+                  <img src="./assets/images/check.svg" alt="check logo" />
+                </div>
+                <span>
+                  Monitor, conduct, improve analytics on our products, services
+                  and offerings
+                </span>
+              </li>
+
+              <li class="flex gap-6">
+                <div
+                  class="bg-primary w-6 h-6 rounded-full shrink-0 self-center"
+                >
+                  <img src="./assets/images/check.svg" alt="check logo" />
+                </div>
+                <span>
+                  Internal administrative, security, relationship management
+                </span>
+              </li>
+
+              <li class="flex gap-6">
+                <div
+                  class="bg-primary w-6 h-6 rounded-full shrink-0 self-center"
+                >
+                  <img src="./assets/images/check.svg" alt="check logo" />
+                </div>
+                <span> Send push notifications </span>
+              </li>
+
+              <li class="flex gap-6">
+                <div
+                  class="bg-primary w-6 h-6 rounded-full shrink-0 self-center"
+                >
+                  <img src="./assets/images/check.svg" alt="check logo" />
+                </div>
+                <span>
+                  Detect and protect against security incidents, malicious,
+                  deceptive, fraudulent or illegal activity
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-6 lg:gap-10 lg:pb-4">
+          <div class="flex flex-col gap-4 lg:gap-10">
+            <p
+              class="text-[22px] leading-[30px] lg:text-[26px] lg:leading-[34px] font-extrabold text-primary"
+            >
+              Sharing your Personal Information
+            </p>
+
+            <div>
+              <p>
+                Freedom shares your personal information with unaffiliated third
+                parties as permitted or required by law. We may share your
+                personal information with our affiliated or unaffiliated third
+                parties as part of joint marketing campaigns.
+              </p>
+              <br />
+              <p>
+                We may also provide your information to third-party companies
+                and individuals who perform certain functions on our behalf.
+                When we share your information with service providers, we
+                require the security and confidentiality of your information as
+                well as limiting their use of the information to reasonably
+                carry out their work with us, including to comply with
+                applicable state and federal laws. Third parties we may share
+                your information with include:
+              </p>
+            </div>
+          </div>
+
+          <ul class="flex flex-col gap-4">
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span>
+                Affiliates to market/consider you for their products/services
+              </span>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span>
+                Servicing partners to provide statements, process
+                paymentsService providers to facilitate your use of our Site or
+                services
+              </span>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span>
+                Financial Institutions who partner with us for products and
+                services we offer
+              </span>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span>
+                Marketing service providers to send direct and electronic mail,
+                remove duplicate information from User lists, analyze data and
+                provide marketing analysis
+              </span>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span>
+                Other financial service third parties for their marketing
+                purposes as permitted by law (for California or Vermont
+                residents we will not sell or share your personal information
+                for to nonaffiliated marketing third parties without your
+                consent)
+              </span>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span> Auditors, examiners, law enforcement </span>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span> Credit reporting agencies </span>
+            </li>
+          </ul>
+
+          <div>
+            <p>
+              These companies’ privacy and information sharing practices are set
+              forth in their respective privacy policies.
+            </p>
+            <br />
+            <p>
+              We may also transmit information between and among our affiliates,
+              services providers, or contractors who may be located in
+              facilities in other countries. We take precautions to protect your
+              information and abide by the laws of the country to which we first
+              received your information. Transfer of information to other
+              countries may subject your personal information to the laws of
+              that country, thus if permitted by law, may be accessible without
+              notice to you by the courts, law enforcement and national security
+              authorities of that country. By using our Site or agreeing to use
+              our products and services you acknowledge the collection,
+              international transfer, storage and processing of your information
+              in other countries.
+            </p>
+            <br />
+            <p>
+              Further, personal information may be disclosed or transferred as
+              part of any merger, consolidation, sale of assets, equity
+              financing or other situations where personal information may need
+              to be transferred.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-6 lg:gap-10 lg:pb-4">
+          <p
+            class="text-[22px] leading-[30px] lg:text-[26px] lg:leading-[34px] font-extrabold text-primary"
+          >
+            Protecting your Personal Information
+          </p>
+
+          <div>
+            <p>
+              Freedom takes the privacy and security of our visitors’ and
+              members’ personal information seriously. We maintain industry
+              standard technical and physical safeguards designed to safeguard
+              your information. When you make personal information available to
+              us, we protect it both while transmitting from your browser to our
+              servers and while stored on our systems through encryption
+              standards with advanced TLS (Transport Layer Security). Facilities
+              where our systems are located can only be accessed by authorized
+              individuals.
+            </p>
+            <br />
+            <p>
+              Please be advised, however, that while we take every reasonable
+              precaution available to protect your data, no storage facility,
+              technology, software, security protocols or data transmission over
+              the internet or wireless networks can be guaranteed to be 100%
+              secure. As such, we cannot warrant that your personal information
+              will be absolutely secure.
+            </p>
+            <br />
+            <p>
+              You can also take precautions to keep your information safe.
+              Following are some methods that can help:
+            </p>
+          </div>
+
+          <ul class="flex flex-col gap-4 lg:pb-4">
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span>
+                Be cautions when using public networks or computers. Make sure
+                to completely log out of accounts and clear caches after use.
+              </span>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span> Choose complex passwords </span>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span>
+                o Don’t use things related to birthday, address, phone or any
+                PIN
+              </span>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span> Use different passwords for each website </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:gap-10 lg:pb-4">
+          <p
+            class="text-[22px] leading-[30px] lg:text-[26px] lg:leading-[34px] font-extrabold text-primary"
+          >
+            Third-Party Websites
+          </p>
+
+          <p>
+            This Site may contain links to third-party owned and/or operated
+            websites including, without limitation, websites owned and/or
+            operated by Freedom’s service providers and/or marketing partners.
+            We are not responsible for the privacy practices or the content of
+            those websites/companies. These third-party websites and entities
+            have separate privacy and data collection practices and Freedom has
+            no responsibility or liability relating to them.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:gap-10 lg:pb-4">
+          <p
+            class="text-[22px] leading-[30px] lg:text-2xl font-bold text-primary"
+          >
+            Minors
+          </p>
+
+          <p>
+            Freedom’s site is not directed or intended for individuals under 18
+            and does not knowingly solicit or collect information from visitors
+            under 18. Visitors under 18 should not provide any personal
+            identifiable information of any kind on our Site. If we learn or are
+            notified that we have collected any information on someone under 18,
+            we will promptly remove the data from our system.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:gap-10 lg:pb-4">
+          <p
+            class="text-[22px] leading-[30px] lg:text-2xl font-bold text-primary"
+          >
+            Visiting our Website from Outside the United States
+          </p>
+
+          <p>
+            The Site is intended to provide products and services inside the U.S
+            and is governed by the laws of the U.S. If you are visiting the Site
+            from outside the U.S., your communication with us may result in the
+            transfer of your to leave your country. By visiting the Site and/or
+            otherwise communicating electronically with us, you consent to such
+            transfers, even if your jurisdiction does not have the same privacy
+            laws as the jurisdiction where our servers are located, we will
+            treat your information as subject to the protections of U.S. Law,
+            this Policy and our Consumer Privacy Notice.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:gap-10 lg:pb-4">
+          <p
+            class="text-[22px] leading-[30px] lg:text-2xl font-bold text-primary"
+          >
+            Changing or Updating your Information
+          </p>
+
+          <p>
+            Freedom relies on you to update and correct your personal
+            information. If you find that our information about you is incorrect
+            or incomplete and our Site does not permit you to update or correct
+            certain information, contact us:
+            <br /><br />
+            <span class="font-semibold">Phone</span>: 800-655-6303 <br />
+            <span class="font-semibold">Email</span>:
+            <a class="underline" href="mailto:support@debtquote.com">
+              support@debtquote.com
+            </a>
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:gap-10 lg:pb-4">
+          <p
+            class="text-[22px] leading-[30px] lg:text-2xl font-bold text-primary"
+          >
+            Opt Out/Unsubscribe:
+          </p>
+
+          <p>
+            You may opt out of some promotional or information sharing options
+            the following ways:
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:gap-10 lg:pb-4">
+          <p
+            class="text-[22px] leading-[30px] lg:text-2xl font-bold text-primary"
+          >
+            Promotional emails:
+          </p>
+
+          <p>
+            To opt out of receiving emails from us, you can: a) click on
+            “unsubscribe” in the footer of any email message, or b) email us at:
+            <a class="underline" href="mailto:support@freedomdebtrelief.com">
+              support@freedomdebtrelief.com
+            </a>
+            , or c) call us at 800-655-6303.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:gap-10 lg:pb-4">
+          <p
+            class="text-[22px] leading-[30px] lg:text-2xl font-bold text-primary"
+          >
+            Information Sharing:
+          </p>
+
+          <p>
+            To opt out of information sharing, you can: a) email us at
+            <a class="underline" href="mailto:support@freedomdebtrelief.com">
+              support@freedomdebtrelief.com
+            </a>
+            or b) call us at 800-655-6303. We may or may not be able to honor
+            your request if you have an existing relationship with us.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:gap-10 lg:pb-4">
+          <p
+            class="text-[22px] leading-[30px] lg:text-2xl font-bold text-primary"
+          >
+            Text message/Push Notifications:
+          </p>
+
+          <p>
+            To opt out of text/push notifications, you can reply “STOP” to the
+            notification, or you can call/email us as noted above.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:gap-10 lg:pb-4">
+          <p
+            class="text-[22px] leading-[30px] lg:text-2xl font-bold text-primary"
+          >
+            Notice to California Residents
+          </p>
+
+          <p>
+            This section applies solely to California residents and supplements,
+            and in no way limits, the Privacy Policy set forth above.
+          </p>
+          <p>
+            These Provisions are intended to be in compliance with the
+            California Consumer Privacy Act of 2018 (“CCPA”). Any terms defined
+            in the CCPA have the same meaning when used in these Provisions.
+            This notice explains how/what personal information we collect, use
+            and share of the personal information collected and the rights and
+            choices for California Residents with respect to our handling of
+            their personal information.
+          </p>
+          <p>
+            This notice does not include personal information in relation to:
+          </p>
+
+          <ul class="flex flex-col gap-4">
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span>
+                Publicly available information from government records.
+              </span>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span> De-identified or aggregated User information. </span>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span>
+                Health or medical information covered by the Health Insurance
+                Portability and Accountability Act of 1996 (HIPAA) and the
+                California Confidentiality of Medical Information Act (CMIA) or
+                clinical trial data.
+              </span>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span>
+                Personal information covered by certain sector-specific privacy
+                laws, including the Fair Credit Reporting Act (FRCA), the
+                Gramm-Leach-Bliley Act (GLBA), the California Financial
+                Information Privacy Act (FIPA), and the Driver's Privacy
+                Protection Act of 1994.
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:gap-10 lg:pb-4">
+          <p
+            class="text-[22px] leading-[30px] lg:text-2xl font-bold text-primary"
+          >
+            Notice of Collection of Personal Information
+          </p>
+
+          <p>
+            The personal information we collect depends on California residents’
+            interactions with us. Following are the types of interaction and the
+            information we may collect:
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:gap-10 lg:pb-4">
+          <p
+            class="text-[22px] leading-[30px] lg:text-2xl font-bold text-primary"
+          >
+            Types of interaction:
+          </p>
+
+          <ul class="flex flex-col gap-4">
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span> Website and Mobile App Use and Registration </span>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span> Applying for Products or Services </span>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span> Participation in Surveys and Contests </span>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span> Communicating with Us </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:gap-12 lg:pb-4">
+          <p
+            class="text-[22px] leading-[30px] lg:text-2xl font-bold text-primary"
+          >
+            Information we may collect:
+          </p>
+
+          <div class="overflow-x-auto">
+            <table class="w-[961px] mx-auto">
+              <tbody class="flex flex-col gap-8 py-4">
+                <tr class="bg-table-primary p-4">
+                  <th class="w-[350px] text-primary font-bold">
+                    Category of Personal Information
+                  </th>
+                  <th class="w-[210px] text-primary font-bold">Collected</th>
+                  <th class="w-[210px] text-primary font-bold">Sold</th>
+                  <th class="w-[350px] text-primary font-bold">
+                    Disclosed for a Business Purpose
+                  </th>
+                </tr>
+                <tr class="bg-table-secondary p-4 text-sm">
+                  <td class="w-[280px]">
+                    <span class="font-semibold">Identifiers:</span> full name,
+                    Social Security Number, email address, Internet Protocol
+                    address, email address, account name, telephone number,
+                    username, password or other similar identifiers, driver’s
+                    license, passport or other similar data.
+                  </td>
+                  <td class="w-[280px] text-center">Yes</td>
+                  <td class="w-[280px] text-center">No</td>
+                  <td class="w-[280px]">
+                    Service providers, marketing partners, banking partners,
+                    government entities, law enforcement, auditors, examiners,
+                    lawyers and other parties as required by law
+                  </td>
+                </tr>
+                <tr class="bg-table-primary p-4 text-sm">
+                  <td class="w-[280px]">
+                    <span class="font-semibold">Financial Data:</span> bank
+                    account, credit or debit card number, transactions.
+                  </td>
+                  <td class="w-[280px] text-center">Yes</td>
+                  <td class="w-[280px] text-center">No</td>
+                  <td class="w-[280px]">
+                    Service providers, marketing partners, banking partners,
+                    government entities, law enforcement, auditors, examiners,
+                    lawyers and other parties as required by law
+                  </td>
+                </tr>
+                <tr class="bg-table-secondary p-4 text-sm">
+                  <td class="w-[280px]">
+                    Protected Classification Characteristics under state and
+                    federal law: age, race, sec, religion, national origin and
+                    marital status.
+                  </td>
+                  <td class="w-[280px] text-center">Yes</td>
+                  <td class="w-[280px] text-center">No</td>
+                  <td class="w-[280px]">
+                    Service providers, marketing partners, banking partners,
+                    government entities, law enforcement, auditors, examiners,
+                    lawyers and other parties as required by law
+                  </td>
+                </tr>
+                <tr class="bg-table-primary p-4 text-sm">
+                  <td class="w-[280px]">
+                    <span class="font-semibold">Commercial Information:</span>
+                    records of personal property, products or services obtained.
+                  </td>
+                  <td class="w-[280px] text-center">Yes</td>
+                  <td class="w-[280px] text-center">No</td>
+                  <td class="w-[280px]">
+                    Service providers, marketing partners, banking partners,
+                    government entities, law enforcement, auditors, examiners,
+                    lawyers and other parties as required by law
+                  </td>
+                </tr>
+                <tr class="bg-table-secondary p-4 text-sm">
+                  <td class="w-[280px]">
+                    <span class="font-semibold">Biometric Information:</span>
+                    preferences, trends, abilities, predispositions,
+                    characteristics, behaviors.**
+                  </td>
+                  <td class="w-[280px] text-center">Yes</td>
+                  <td class="w-[280px] text-center">No</td>
+                  <td class="w-[280px]">
+                    Service providers, marketing partners, banking partners,
+                    government entities, law enforcement, auditors, examiners,
+                    lawyers and other parties as required by law
+                  </td>
+                </tr>
+                <tr class="bg-table-primary p-4 text-sm">
+                  <td class="w-[280px]">
+                    <span class="font-semibold"
+                      >Network activity information:</span
+                    >
+                    browsing history, search history, interaction with a
+                    website, application or advertisement
+                  </td>
+                  <td class="w-[280px] text-center">Yes</td>
+                  <td class="w-[280px] text-center">No</td>
+                  <td class="w-[280px]">
+                    Service providers, marketing partners, banking partners,
+                    government entities, law enforcement, auditors, examiners,
+                    lawyers and other parties as required by law
+                  </td>
+                </tr>
+                <tr class="bg-table-secondary p-4 text-sm">
+                  <td class="w-[280px]">
+                    <span class="font-semibold">Geolocation data:</span>
+                    physical location of device.
+                  </td>
+                  <td class="w-[280px] text-center">Yes</td>
+                  <td class="w-[280px] text-center">No</td>
+                  <td class="w-[280px]">
+                    Service providers, marketing partners, banking partners,
+                    government entities, law enforcement, auditors, examiners,
+                    lawyers and other parties as required by law
+                  </td>
+                </tr>
+                <tr class="bg-table-primary p-4 text-sm">
+                  <td class="w-[280px]">
+                    Professional or employment related information: current or
+                    past job history.
+                  </td>
+                  <td class="w-[280px] text-center">Yes</td>
+                  <td class="w-[280px] text-center">No</td>
+                  <td class="w-[280px]">
+                    Service providers, marketing partners, banking partners,
+                    government entities, law enforcement, auditors, examiners,
+                    lawyers and other parties as required by law
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <p
+            class="text-[22px] leading-[30px] lg:text-2xl font-bold text-primary"
+          >
+            Notice of Collection of Personal Information
+          </p>
+
+          <div>
+            <p>
+              Information collected is used to personalize your experience on
+              our Site, improve your experience with our Site, products and
+              services, to advertise to you, recognize you on subsequent visits,
+              verify your identity, evaluate you for certain products/services,
+              build a better member experience, improve member relationship
+              protocols, fulfill contract obligations with you, to respond to
+              inquired from you, testing, research, analysis, product
+              development, respond to law enforcement, court orders or
+              governmental examiners and to train and educate employees for
+              compliance purposes.
+            </p>
+            <br />
+            <p>
+              We may also supplement the information you provide or that we
+              gather from your interaction with our Site by using third-party
+              sources such as credit bureau information and address/phone
+              information to verify your identity and to protect you against
+              fraud or identity theft.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <p
+            class="text-[22px] leading-[30px] lg:text-2xl font-bold text-primary"
+          >
+            California Residents Rights and Choices
+          </p>
+
+          <p>
+            The CCPA provides California residents with specific rights
+            regarding their personal information. Following are those rights and
+            how to exercise them:
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <div class="flex flex-col gap-4">
+            <p
+              class="text-[22px] leading-[30px] lg:text-2xl font-bold text-primary"
+            >
+              Right to Know Access:
+            </p>
+
+            <p>
+              You can request free of charge the following information covering
+              the prior 12- months of your request:
+            </p>
+          </div>
+
+          <ul class="flex flex-col gap-4">
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span>
+                The categories of personal information we collected about you
+              </span>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span>
+                The categories of sources for the personal information we
+                collected about you
+              </span>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span>
+                Our business purpose for collecting or selling that personal
+                information
+              </span>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span>
+                The categories of third parties with whom we have shared that
+                personal information
+              </span>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span>
+                The specific pieces of personal information we collected about
+                you (also called a data portability request)
+              </span>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span>
+                The categories of information that we sold in the prior 12
+                months, and for each category, the categories of third parties
+                to which we sold that particular category of personal
+                information
+              </span>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span>
+                The categories of information that we disclosed for a business
+                purpose in the prior 12 months and for each category, the
+                categories of third parties to which we disclosed that
+                particular category of personal information
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <p
+            class="text-[22px] leading-[30px] lg:text-2xl font-bold text-primary"
+          >
+            Right to Opt Out of the Sale of Your Personal Information
+          </p>
+
+          <p>
+            The CCPA provides its residents the right to opt out of our sale of
+            your personal information to third parties.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <p
+            class="text-[22px] leading-[30px] lg:text-2xl font-bold text-primary"
+          >
+            Right to Request Deletion
+          </p>
+
+          <p>
+            You have the right to request that we delete your personal
+            information that we collected from you and retained, subject to
+            certain exceptions. Once we receive your request and confirm your
+            identity, we will review your request to delete your personal
+            information from our (their) records, unless a CCPA exception
+            applies.
+          </p>
+
+          <p>
+            We may deny your deletion request if retaining the information is
+            necessary for us or our service providers to:
+          </p>
+
+          <p>
+            Complete the transaction for which we collected the personal
+            information, provide a good or service that you requested, take
+            actions reasonably anticipated within the context of our ongoing
+            business relationship with you, or otherwise perform our obligations
+            in connection with our contract with you.
+          </p>
+
+          <p>
+            Please be advised that deleting your personal information may
+            terminate your access to certain of the Site Offerings. If you wish
+            to continue using the full complement of Site Offerings, we may not
+            be able to delete all of the personal information that we have on
+            file for you.
+          </p>
+
+          <p>
+            Further after we delete your personal information, residual copies
+            may take a period of time before they are deleted from our active
+            servers and may remain in our backup systems.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <p
+            class="text-[22px] leading-[30px] lg:text-2xl font-bold text-primary"
+          >
+            How to Exercise your Rights
+          </p>
+
+          <p>
+            If you wish to exercise any of your CCPA rights noted above or have
+            any questions or comments about this privacy policy, the ways in
+            which we collect and use your personal information, or your choices
+            and rights regarding such use, please contact us by either:
+          </p>
+          <ul>
+            <li class="list-disc">Calling us at: 800-655-6303</li>
+            <li class="list-disc">
+              Emailing us at:
+              <a class="underline" href="mailto:support@debtquote.com"
+                >support@debtquote.com</a
+              >
+            </li>
+          </ul>
+          <p>
+            We will respond to your request within the provisions allowed by
+            CCPA; in no event later than 45 days of the receipt of your request,
+            unless we notify you of any delay otherwise.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <p
+            class="text-[22px] leading-[30px] lg:text-2xl font-bold text-primary"
+          >
+            Submitting Requests for Someone Else
+          </p>
+
+          <p>
+            California residents can utilize an “Authorized Agent” to make
+            requests on their behalf. We will require that the Authorized Agent
+            provide us with a valid written authorization confirming said
+            authority that is executed by you and the Authorized Agent.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <p
+            class="text-[22px] leading-[30px] lg:text-2xl font-bold text-primary"
+          >
+            Identity Verification
+          </p>
+
+          <p>
+            When you make any CCPA request, we are required to verify your
+            identity before providing a response to the request. We will ask you
+            to verify your identity when you submit a request, including any
+            Authorized Agent’s identity.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <div class="flex flex-col gap-4">
+            <p
+              class="text-[22px] leading-[30px] lg:text-2xl font-bold text-primary"
+            >
+              Right to Non-Discrimination
+            </p>
+
+            <p>
+              We will not discriminate against you for exercising any of your
+              CCPA rights, including but not limited to:
+            </p>
+          </div>
+
+          <ul class="flex flex-col gap-4">
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span> Deny you goods or services </span>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span>
+                Charge you different prices or rates for goods or services,
+                including through granting discounts or other benefits, or
+                imposing penalties
+              </span>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span>
+                Provide you a different level or quality of goods or services
+              </span>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <span>
+                Suggest that you may receive a different price or rate for goods
+                or services or a different level or quality of goods or services
+              </span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="flex flex-col bg-primary text-surface font-[roboto] py-16 px-12 gap-8 max-w-[1184px] mx-auto"
+    >
+      <div class="flex flex-col self-center gap-6 text-[20px] font-semibold">
+        <div class="flex flex-row gap-2">
+          <img src="./assets/images/terms-of-use.svg" alt="terms-of-service" />
+          <a
+            href="./terms-of-service.html"
+            class="text-[20px] leading-6 underline decoration-solid font-semibold"
+            >Terms of Services</a
+          >
+        </div>
+
+        <div class="flex flex-row gap-2">
+          <img src="./assets/images/privacy-policy.svg" alt="privacy-policy" />
+          <a
+            href="./privacy-policy.html"
+            class="text-[20px] leading-6 underline decoration-solid font-semibold"
+            >Privacy Policy</a
+          >
+        </div>
+      </div>
+
+      <p class="text-lg">
+        *Our estimates are based on prior results, which will vary depending on
+        your specific enrolled creditors and your individual program terms. Not
+        all clients are able to complete their program for various reasons,
+        including their ability to save sufficient funds. We do not guarantee
+        that your debts will be resolved for a specific amount or percentage or
+        within a specific period of time. We do not assume your debts, make
+        monthly payments to creditors or provide tax, bankruptcy, accounting or
+        legal advice or credit repair services. Our service is not available in
+        all states, including New Jersey, and our fees may vary from state to
+        state. Please contact a tax professional to discuss potential tax
+        consequences of less than full balance debt resolution. Read and
+        understand all program materials prior to enrollment. The use of debt
+        settlement services will likely adversely affect your creditworthiness,
+        may result in you being subject to collections or being sued by
+        creditors or collectors and may increase the outstanding balances of
+        your enrolled accounts due to the accrual of fees and interest. However,
+        negotiated settlements we obtain on your behalf resolve the entire
+        account, including all accrued fees and interest. C.P.D. Reg. No.
+        T.S.12-03825.
+      </p>
+
+      <p class="text-lg">
+        ** This guarantee takes effect when you graduate the program—or even if
+        you leave before graduating. When you exit the program, we’ll use the
+        combined total of all the debts you enrolled and settled and the fees
+        you paid to us to calculate your eligibility for a refund.
+      </p>
+
+      <p class="text-lg">
+        DebtQuote, LLC does not discriminate on the basis of race, color,
+        religion, sex, marital status, national origin, or ancestry.
+      </p>
+
+      <div class="flex flex-col items-center text-[20px] pb-5">
+        <div class="flex gap-4">
+          <img
+            src="./assets/images/copyright.png"
+            alt="copyright icon"
+            style="width: 25px; height: 25px"
+          />
+          <span>2023 All Rights Reserved</span>
+        </div>
+        <p class="font-bold">DebtQuote.com</p>
+      </div>
+    </footer>
+  </body>
+</html>

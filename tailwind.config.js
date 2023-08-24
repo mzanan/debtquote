@@ -4,13 +4,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        surface: "#FEFEFE",
         primary: "#05084E",
-        tertiary: "#F2E3E1",
         secondary: "#66CCCC",
+        tertiary: "#F2E3E1",
+        surface: "#FEFEFE",
         accent: "#DF1C01",
         text: "#2A2A2A",
         banner: "#E4938A",
+        "table-primary": "#f4f4f4",
+        "table-secondary": "#ededed",
       },
     },
   },
