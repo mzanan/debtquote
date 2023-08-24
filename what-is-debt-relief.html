@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./dist/styles/index.css" rel="stylesheet" />
+    <link href="./dist/libs/splidejs/css/splide.min.css" rel="stylesheet" />
+    <script src="./dist/libs/splidejs/js/splide.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav id="navbar" class="w-full lg:bg-surface shadow-sm">
+        <div
+          class="flex flex-col lg:flex-row lg:container lg:mx-auto lg:max-w-[1184px]"
+        >
+          <div
+            class="flex items-center h-[4.5rem] px-6 drop-shadow-sm bg-surface justify-between lg:drop-shadow-none"
+          >
+            <a href="./index.html">
+              <img src="assets/images/logo.png" alt="logo" />
+            </a>
+            <div class="flex lg:hidden">
+              <button
+                type="button"
+                id="navbar-btn"
+                class="text-text focus:outline-none"
+              >
+                <svg class="h-8 w-8 fill-current" viewBox="0 0 24 24">
+                  <path
+                    id="navbar-btn-close"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M3 7h18v2H3V7zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"
+                  />
+                  <path
+                    id="navbar-btn-open"
+                    d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            id="navbar-menu"
+            class="transition-all duration-700 h-0 bg-surface overflow-hidden lg:h-[4.5rem] lg:flex-1 lg:bg-surface lg:transition-none"
+          >
+            <ul
+              class="flex flex-col justify-center gap-6 p-6 pr-4 pt-12 lg:flex-row lg:py-0 lg:justify-end lg:h-full lg:items-center lg:gap-8"
+            >
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  id="link1"
+                  class="py-2.5 flex items-center justify-between"
+                  onclick="toggleSubmenu('submenu1', 'icon1'); this.classList.toggle('clicked');"
+                >
+                  The Program
+                  <svg
+                    id="icon1"
+                    class="lg:hidden"
+                    width="5"
+                    height="10"
+                    viewBox="0 0 5 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 10L5 5L0 0V10Z" fill="#2A2A2A" />
+                  </svg>
+                </a>
+                <ul
+                  id="submenu1"
+                  class="transition-all duration-700 lg:transition-none"
+                  style="display: none"
+                >
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./how-it-works.html">How It Works</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./help-people.html">Who we Help</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./why-choose.html">Why Choose Debt Quote</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4"><a href="#">Testimonials</a></li>
+                  <li class="h-12 py-3 pl-4"><a href="#">FAQ</a></li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="py-2.5 transition-all flex items-center justify-between a-color-clicked"
+                  onclick="toggleSubmenu('submenu2', 'icon2'); this.classList.toggle('clicked');"
+                >
+                  Articles
+                  <svg
+                    id="icon2"
+                    class="lg:hidden"
+                    width="5"
+                    height="10"
+                    viewBox="0 0 5 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 10L5 5L0 0V10Z" fill="#2A2A2A" />
+                  </svg>
+                </a>
+                <ul
+                  id="submenu2"
+                  class="transition-all duration-700 lg:transition-none"
+                  style="display: none"
+                >
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./guide-to-debt.html">Debt Consolidation</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./debt-consolidation.html"
+                      >Debt Consolidation Near Me</a
+                    >
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./counseling.html">Pros and cons of Credit</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="#">Debt Relief Overview</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./credit-card-debt-relief.html"
+                      >Credit Card Debt Relief</a
+                    >
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./programs.html">Debt Relief Programs</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="./about.html"
+                  class="py-2.5 transition-all flex items-center justify-between"
+                >
+                  About Us
+                  <svg
+                    class="lg:hidden"
+                    width="5"
+                    height="10"
+                    viewBox="0 0 5 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 10L5 5L0 0V10Z" fill="#2A2A2A" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./contact.html"
+                  class="py-2.5 transition-all flex items-center justify-between"
+                >
+                  Contact Us
+                  <svg
+                    class="lg:hidden"
+                    width="5"
+                    height="10"
+                    viewBox="0 0 5 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 10L5 5L0 0V10Z" fill="#2A2A2A" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="max-w-[1184px] flex flex-col lg:mx-auto">
+      <section class="container px-6 pt-8 md:justify-between xl:px-0">
+        <div class="flex flex-col gap-8 md:items-center">
+          <p class="title max-w-[400px] md:max-w-none">
+            What is Debt Relief - An Overview
+          </p>
+
+          <div class="flex flex-col gap-6">
+            <img
+              src="./assets/images/what-is-debt-relief.png"
+              alt="Credit Card Debt Relief"
+            />
+          </div>
+
+          <div
+            class="flex flex-col gap-6 lg:flex-row lg:justify-between lg:gap-0 md:items-center md:w-full"
+          >
+            <div class="flex flex-col gap-6 lg:gap-8 lg:max-w-[656px]">
+              <p class="subtitle font-bold px-8 lg:font-bold">Key takeaways</p>
+
+              <ul class="flex flex-col gap-7">
+                <li class="flex gap-6">
+                  <div
+                    class="bg-primary w-6 h-6 rounded-full shrink-0 self-center"
+                  >
+                    <img src="./assets/images/check.svg" alt="check logo" />
+                  </div>
+                  <span>
+                    Debt relief is when a creditor forgives or cancels the money
+                    you owe.
+                  </span>
+                </li>
+
+                <li class="flex gap-6">
+                  <div
+                    class="bg-primary w-6 h-6 rounded-full shrink-0 self-center"
+                  >
+                    <img src="./assets/images/check.svg" alt="check logo" />
+                  </div>
+                  <span>
+                    The relief may temporarily give you time to get back on
+                    track. Or it may be permanent and include forgiving part of
+                    the money you owe.
+                  </span>
+                </li>
+
+                <li class="flex gap-6">
+                  <div
+                    class="bg-primary w-6 h-6 rounded-full shrink-0 self-center"
+                  >
+                    <img src="./assets/images/check.svg" alt="check logo" />
+                  </div>
+                  <span>
+                    You may seek debt relief for credit card debt, medical debt,
+                    or student loans.
+                  </span>
+                </li>
+
+                <li class="flex gap-6">
+                  <div
+                    class="bg-primary w-6 h-6 rounded-full shrink-0 self-center"
+                  >
+                    <img src="./assets/images/check.svg" alt="check logo" />
+                  </div>
+                  <span>
+                    Freedom Debt Relief is the leading debt relief company that
+                    helps you negotiate and settle your debt.
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="flex flex-col gap-8 rounded-2xl shadow-md border py-10 px-4 max-w-[364px]"
+            >
+              <p
+                class="text-[22px] leading-[30px] font-semibold text-center px-6"
+              >
+                Achieve financial control. How much debt do you have?
+              </p>
+
+              <div class="flex flex-col gap-6 max-w-[280px] w-full self-center">
+                <div class="slider-container">
+                  <input
+                    type="range"
+                    class="range w-full"
+                    name="quantity"
+                    min="0"
+                    max="100"
+                    aria-label="slider"
+                  />
+
+                  <div class="tooltip"></div>
+                </div>
+
+                <div class="flex justify-between text-primary">
+                  <span>$1000</span>
+                  <span>$100000 +</span>
+                </div>
+              </div>
+
+              <button
+                class="rounded-lg h-12 bg-accent text-white font-extrabold md:block"
+              >
+                Get your free plan now
+              </button>
+
+              <p class="flex flex-col justify-center text-primary text-center">
+                <span class="text-sm font-normal">
+                  Or talk to a certified debt consultant
+                </span>
+                <span class="text-[22px] leading-8 font-semibold">
+                  800-910-0065
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section
+      class="container flex flex-col gap-8 pt-6 px-6 pb-8 max-w-[1184px] mx-auto lg:pt-10"
+    >
+      <div class="flex flex-col gap-6">
+        <p>
+          If you ask yourself what
+          <a href="https://www.freedomdebtrelief.com/" class="underline">
+            debt relief</a
+          >
+          is, then chances are you are struggling to pay your bills. Anyone can
+          hit a rough spot. The reasons for financial hardship vary, but the
+          most common ones are medical expenses, job loss, or income loss.
+        </p>
+
+        <p>
+          If you need clarification on the term debt relief, you have come to
+          the right place. Freedom Debt Relief understands the ins and outs of
+          debt relief and is the nation’s top debt settlement provider. We have
+          helped over 650,000 clients resolve over $15 billion in debt since
+          2002. Our experience shows us that there are different reasons for
+          financial hardship.
+        </p>
+
+        <p>
+          As the name implies, debt relief is a possible solution to your
+          financial troubles. But, since there are a lot of hardships and your
+          problem is unique, you want to make sure that you find the right kind
+          of debt relief.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <p class="subtitle text-left font-bold lg:font-extrabold">
+          Debt relief definition - the short version
+        </p>
+
+        <p>
+          <a href="https://www.freedomdebtrelief.com/" class="underline">
+            Debt relief</a
+          >
+          is when a lender or creditor changes the terms of your debt to make it
+          easier for you to cope with your financial and legal obligations.
+          Possible solutions include:
+        </p>
+
+        <ul class="flex flex-col gap-4">
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span> Pushing off payments. </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span> Reducing your interest rate. </span>
+          </li>
+
+          <li class="flex gap-6">
+            <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+              <img src="./assets/images/check.svg" alt="check logo" />
+            </div>
+            <span>
+              Canceling or forgiving part (or all) of the amount you owe.
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <p class="subtitle text-left font-bold lg:font-extrabold">
+          Learn more about debt relief
+        </p>
+
+        <p>
+          DebtQuote understands that debt relief only works if you match your
+          financial situation with the right program. We want to ensure that you
+          know how debt relief works, the different programs, and what kind of
+          debts can be settled.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <p class="subtitle text-left font-bold lg:font-extrabold">
+          Ok, what is debt relief?
+        </p>
+      </div>
+
+      <ul class="flex flex-col gap-6">
+        <li class="flex gap-6">
+          <div
+            class="flex justify-center items-center self-center bg-primary w-6 h-6 rounded-full shrink-0"
+          >
+            <span class="text-lg text-surface font-bold">1</span>
+          </div>
+          <span>
+            Temporary relief through forbearance or deferment: The creditor lets
+            you stop making payments or make partial payments on your loan for a
+            short period.
+          </span>
+        </li>
+
+        <li class="flex gap-6">
+          <div
+            class="flex justify-center items-center self-center bg-primary w-6 h-6 rounded-full shrink-0"
+          >
+            <span class="text-lg text-surface font-bold">2</span>
+          </div>
+          <span>
+            Lender or credit card company hardship programs: Your credit card
+            company might offer a program that they call a “hardship program.”
+            Usually, that is another name for a temporary relief program like
+            forbearance or deferment.
+          </span>
+        </li>
+
+        <li class="flex gap-6">
+          <div
+            class="flex justify-center items-center self-center bg-primary w-6 h-6 rounded-full shrink-0"
+          >
+            <span class="text-lg text-surface font-bold">3</span>
+          </div>
+          <span>
+            Debt modification programs: The lender restructures your debt by
+            lowering your interest rate or adding more years to your repayment
+            period. You get immediate relief when your monthly payment drops. A
+            debt management plan falls into this category. There are also
+            student loan and mortgage modification programs.
+          </span>
+        </li>
+
+        <li class="flex gap-6">
+          <div
+            class="flex justify-center items-center self-center bg-primary w-6 h-6 rounded-full shrink-0"
+          >
+            <span class="text-lg text-surface font-bold">4</span>
+          </div>
+          <span>
+            Debt forgiveness programs: The creditor reduces the amount of money
+            that you owe. Two forms of debt forgiveness are debt settlement (or
+            debt negotiation) and bankruptcy.
+          </span>
+        </li>
+      </ul>
+
+      <div
+        class="flex flex-col gap-8 rounded-2xl shadow-md border py-10 px-4 max-w-[364px] mx-auto"
+      >
+        <p class="text-[22px] leading-[30px] font-semibold text-center px-6">
+          Achieve financial control. How much debt do you have?
+        </p>
+
+        <div class="flex flex-col gap-6 max-w-[280px] w-full self-center">
+          <div class="slider-container">
+            <input
+              type="range"
+              class="range w-full"
+              name="quantity"
+              min="0"
+              max="100"
+              aria-label="slider"
+            />
+
+            <div class="tooltip"></div>
+          </div>
+
+          <div class="flex justify-between text-primary">
+            <span>$1000</span>
+            <span>$100000 +</span>
+          </div>
+        </div>
+
+        <button
+          class="rounded-lg h-14 bg-accent text-white font-extrabold md:block"
+        >
+          Get your free plan now
+        </button>
+
+        <p class="flex flex-col justify-center text-primary text-center">
+          <span class="text-sm font-normal">
+            Or talk to a certified debt consultant
+          </span>
+          <span class="text-[22px] leading-8 font-semibold">
+            800-910-0065
+          </span>
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <p class="subtitle text-left font-bold lg:font-extrabold">
+          Recommended Reads
+        </p>
+
+        <div
+          class="flex flex-col gap-6 md:items-center lg:items-start lg:flex-row lg:justify-between"
+        >
+          <div
+            class="card p-6 border max-w-[364px] h-[450px] w-full justify-start"
+          >
+            <p
+              class="text-[22px] leading-[30px] text-primary font-bold text-start"
+            >
+              Credit card counseling pros and cons
+            </p>
+
+            <div class="h-[1px] max-w-[300px] bg-[#05084E4D] w-full"></div>
+
+            <img
+              src="./assets/images/counseling.png"
+              alt="Credit card counseling pros and cons"
+              class="w-[300px] h-[220px]"
+            />
+
+            <p class="text-primary text-center">
+              Credit card counseling pros and cons
+            </p>
+          </div>
+
+          <div
+            class="card p-6 border max-w-[364px] h-[450px] w-full justify-start"
+          >
+            <p
+              class="text-[22px] leading-[30px] text-primary font-bold text-start"
+            >
+              Debt Consolidation near me
+            </p>
+
+            <div class="h-[1px] max-w-[300px] bg-[#05084E4D] w-full"></div>
+
+            <img
+              src="./assets/images/debt-consolidation-near-me.png"
+              alt="Debt Consolidation near me"
+              class="w-[300px] h-[220px]"
+            />
+
+            <p class="text-primary text-center">Debt Consolidation Near Me</p>
+          </div>
+
+          <div
+            class="card p-6 border max-w-[364px] h-[450px] w-full justify-start"
+          >
+            <p
+              class="text-[22px] leading-[30px] text-primary font-bold text-start"
+            >
+              Complete Guide to Debt consolidation
+            </p>
+
+            <div class="h-[1px] max-w-[300px] bg-[#05084E4D] w-full"></div>
+
+            <img
+              src="./assets/images/guide-to-debt-consolidation.png"
+              alt="Complete Guide to Debt consolidation"
+              class="w-[300px] h-[220px]"
+            />
+
+            <p class="text-primary text-center">
+              Complete Guide to Debt consolidation
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="flex flex-col bg-primary w-full text-surface font-[roboto] py-16 px-12 gap-8 max-w-[1184px] mx-auto"
+    >
+      <div class="flex flex-col self-center gap-6 text-[20px] font-semibold">
+        <div class="flex flex-row gap-2">
+          <img src="./assets/images/terms-of-use.svg" alt="terms-of-service" />
+          <a
+            href="./terms-of-service.html"
+            class="text-[20px] leading-6 underline decoration-solid font-semibold"
+            >Terms of Services</a
+          >
+        </div>
+
+        <div class="flex flex-row gap-2">
+          <img src="./assets/images/privacy-policy.svg" alt="privacy-policy" />
+          <a
+            href="./privacy-policy.html"
+            class="text-[20px] leading-6 underline decoration-solid font-semibold"
+            >Privacy Policy</a
+          >
+        </div>
+      </div>
+
+      <p class="text-lg">
+        *Our estimates are based on prior results, which will vary depending on
+        your specific enrolled creditors and your individual program terms. Not
+        all clients are able to complete their program for various reasons,
+        including their ability to save sufficient funds. We do not guarantee
+        that your debts will be resolved for a specific amount or percentage or
+        within a specific period of time. We do not assume your debts, make
+        monthly payments to creditors or provide tax, bankruptcy, accounting or
+        legal advice or credit repair services. Our service is not available in
+        all states, including New Jersey, and our fees may vary from state to
+        state. Please contact a tax professional to discuss potential tax
+        consequences of less than full balance debt resolution. Read and
+        understand all program materials prior to enrollment. The use of debt
+        settlement services will likely adversely affect your creditworthiness,
+        may result in you being subject to collections or being sued by
+        creditors or collectors and may increase the outstanding balances of
+        your enrolled accounts due to the accrual of fees and interest. However,
+        negotiated settlements we obtain on your behalf resolve the entire
+        account, including all accrued fees and interest. C.P.D. Reg. No.
+        T.S.12-03825.
+      </p>
+
+      <p class="text-lg">
+        ** This guarantee takes effect when you graduate the program—or even if
+        you leave before graduating. When you exit the program, we’ll use the
+        combined total of all the debts you enrolled and settled and the fees
+        you paid to us to calculate your eligibility for a refund.
+      </p>
+
+      <p class="text-lg">
+        DebtQuote, LLC does not discriminate on the basis of race, color,
+        religion, sex, marital status, national origin, or ancestry.
+      </p>
+
+      <div class="flex flex-col items-center text-[20px] pb-5">
+        <div class="flex gap-4">
+          <img
+            src="./assets/images/copyright.png"
+            alt="copyright icon"
+            style="width: 25px; height: 25px"
+          />
+          <span>2023 All Rights Reserved</span>
+        </div>
+        <p class="font-bold">DebtQuote.com</p>
+      </div>
+    </footer>
+
+    <script src="./assets/index.js"></script>
+  </body>
+</html>
