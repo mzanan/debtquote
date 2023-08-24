@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./dist/styles/index.css" rel="stylesheet" />
+    <link href="./dist/libs/splidejs/css/splide.min.css" rel="stylesheet" />
+    <script src="./dist/libs/splidejs/js/splide.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav id="navbar" class="w-full lg:bg-surface shadow-sm">
+        <div
+          class="flex flex-col lg:flex-row lg:container lg:mx-auto lg:max-w-[1184px]"
+        >
+          <div
+            class="flex items-center h-[4.5rem] px-6 drop-shadow-sm bg-surface justify-between lg:drop-shadow-none"
+          >
+            <a href="./index.html">
+              <img src="assets/images/logo.png" alt="logo" />
+            </a>
+            <div class="flex lg:hidden">
+              <button
+                type="button"
+                id="navbar-btn"
+                class="text-text focus:outline-none"
+              >
+                <svg class="h-8 w-8 fill-current" viewBox="0 0 24 24">
+                  <path
+                    id="navbar-btn-close"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M3 7h18v2H3V7zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"
+                  />
+                  <path
+                    id="navbar-btn-open"
+                    d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            id="navbar-menu"
+            class="transition-all duration-700 h-0 bg-surface overflow-hidden lg:h-[4.5rem] lg:flex-1 lg:bg-surface lg:transition-none"
+          >
+            <ul
+              class="flex flex-col justify-center gap-6 p-6 pr-4 pt-12 lg:flex-row lg:py-0 lg:justify-end lg:h-full lg:items-center lg:gap-8"
+            >
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  id="link1"
+                  class="py-2.5 flex items-center justify-between"
+                  onclick="toggleSubmenu('submenu1', 'icon1'); this.classList.toggle('clicked');"
+                >
+                  The Program
+                  <svg
+                    id="icon1"
+                    class="lg:hidden"
+                    width="5"
+                    height="10"
+                    viewBox="0 0 5 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 10L5 5L0 0V10Z" fill="#2A2A2A" />
+                  </svg>
+                </a>
+                <ul
+                  id="submenu1"
+                  class="transition-all duration-700 lg:transition-none"
+                  style="display: none"
+                >
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./how-it-works.html">How It Works</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./help-people.html">Who we Help</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./about.html">Why Choose Debt Quote</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4"><a href="#">Testimonials</a></li>
+                  <li class="h-12 py-3 pl-4"><a href="#">FAQ</a></li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="py-2.5 transition-all flex items-center justify-between a-color-clicked"
+                  onclick="toggleSubmenu('submenu2', 'icon2'); this.classList.toggle('clicked');"
+                >
+                  Articles
+                  <svg
+                    id="icon2"
+                    class="lg:hidden"
+                    width="5"
+                    height="10"
+                    viewBox="0 0 5 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 10L5 5L0 0V10Z" fill="#2A2A2A" />
+                  </svg>
+                </a>
+                <ul
+                  id="submenu2"
+                  class="transition-all duration-700 lg:transition-none"
+                  style="display: none"
+                >
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./guide-to-debt.html">Debt Consolidation</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./debt-consolidation.html"
+                      >Debt Consolidation Near Me</a
+                    >
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./counseling.html">Pros and cons of Credit</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="#">Debt Relief Overview</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./debt-relief.html">Credit Card Debt Relief</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./programs.html">Debt Relief Programs</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="./about.html"
+                  class="py-2.5 transition-all flex items-center justify-between"
+                >
+                  About Us
+                  <svg
+                    class="lg:hidden"
+                    width="5"
+                    height="10"
+                    viewBox="0 0 5 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 10L5 5L0 0V10Z" fill="#2A2A2A" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./contact.html"
+                  class="py-2.5 transition-all flex items-center justify-between"
+                >
+                  Contact Us
+                  <svg
+                    class="lg:hidden"
+                    width="5"
+                    height="10"
+                    viewBox="0 0 5 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 10L5 5L0 0V10Z" fill="#2A2A2A" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="max-w-[1184px] flex flex-col lg:mx-auto">
+      <section class="container flex flex-col px-6 pt-8 gap-8">
+        <div class="flex flex-col gap-6 lg:gap-8">
+          <p
+            class="text-[28px] leading-[34px] text-primary font-extrabold md:text-center lg:text-[38px]"
+          >
+            Terms of Use
+          </p>
+
+          <p class="subtitle text-left font-extrabold">
+            Terms of Use Agreement
+          </p>
+
+          <div>
+            <p>
+              You are visiting a website owned by Freedom Debt Relief, LLC. By
+              using this website, you are entering into a legal agreement to
+              abide by the terms of use you see here, and you are agreeing that
+              you have read and fully understand these terms of use.
+            </p>
+            <br />
+            <p>
+              This Terms of Use Agreement (“Agreement”) applies to the websites
+              operated by Freedom Debt Relief, LLC and any of its affiliates and
+              subsidiaries (“Websites” or each individually “Website”) on which
+              this Agreement is displayed. This Agreement also applies to your
+              use of any goods, facilities or services offered through the
+              Websites (collectively “Services”), regardless of how they are
+              accessed. By accessing, browsing, or using the Websites, you
+              acknowledge that you understand, accept and agree to be bound by
+              this Agreement, as well as our Privacy Policy, which is
+              incorporated into this Agreement by reference. You agree that, to
+              the fullest extent required by the law of any state, you have been
+              provided with, have received, and are agreeing to all disclosure
+              and consent requirements. Certain Services may include additional
+              terms; by agreeing to proceed with any such Services you
+              acknowledge that you have read, understand, and agree to be bound
+              by any additional terms displayed or referenced that apply to that
+              Service.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-6 lg:pb-2">
+          <ul class="flex flex-col gap-4">
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <p>
+                For purposes of this Agreement, “you” or “your” means the
+                person(s) using the Websites and/or the Services, and any
+                person(s) for whom such person(s) are acting as an agent with
+                respect to the Websites and/or the Services.
+              </p>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <p>
+                “Freedom”, “us” or “we” includes Freedom Debt Relief, LLC and
+                any of its affiliates or subsidiaries.
+              </p>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <p>
+                “Loan” includes, but may not be limited to, any of the credit
+                and related products and services which you may inquire about by
+                using the Freedom websites.
+              </p>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <p>
+                “Provider(s)” includes, but may not be limited to, the banks,
+                lenders, financial institutions, insurers, service providers,
+                real estate companies, dealers, agents, brokers and other
+                entities offering products and services through Freedom’s
+                Websites.
+              </p>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <p>
+                “Form” refers to your request to be matched with Freedom’s
+                services and/or a provider of any of the products and services
+                that you may be connected to through Freedom’s Websites or
+                telephone agents.
+              </p>
+            </li>
+          </ul>
+
+          <span>
+            We reserve the right, at our sole discretion, to change or modify
+            the Websites or this Agreement (or any portion thereof) at any time.
+            Such changes and modifications become effective immediately upon
+            posting on the Websites. You agree to review this Agreement for any
+            such changes upon your use of the Websites and that your continued
+            use of the Websites or Services constitutes your acceptance of such
+            changes and modifications. The Websites are intended for individuals
+            who are at least 18 years of age and are accessing the internet from
+            a physical location within the United States of America. By using or
+            accessing the Websites, you acknowledge that you are 18 years of age
+            or older and are accessing the internet from a physical location
+            within the United States of America.
+          </span>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:gap-10 lg:pb-2">
+          <p class="text-[22px] leading-[30px] text-primary underline italic">
+            Privacy Policy
+          </p>
+
+          <p>
+            Our
+            <a href="./privacy-policy.html" class="underline">
+              Privacy Policy </a
+            >, hereby incorporated by reference into this Agreement, explains
+            how We collect, protect, share, and use your information as part of
+            our technology platforms, and all of our products and services.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:gap-10 lg:pb-2">
+          <p class="text-[22px] leading-[30px] text-primary underline italic">
+            Copyright, Trademark and Service Mark Notices
+          </p>
+
+          <p>
+            All text, graphics, photographs, videos, sound, trademarks, logos,
+            artwork, interfaces and computer code, including but not limited to
+            the design, coordination, “look and feel” and arrangement of
+            elements contained on the Websites (collectively “Content”) is owned
+            or licensed by or to Freedom. The Content is protected by trademark,
+            copyright, and patent laws, and other intellectual property rights
+            and unfair competition laws. Except as expressly stated herein, no
+            part of the Websites or Content may be copied, reproduced,
+            republished, uploaded, posted, publicly displayed, encoded,
+            transmitted or distributed in any way, including the use of framing
+            or mirrors, to any other computer, server, website or other medium
+            for publication or distribution or for any commercial enterprise,
+            without Freedom’s prior written permission. Nothing on the Websites
+            should be construed as granting any license or right to use any
+            Content.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-6 lg:gap-10 lg:pb-2">
+          <div class="flex flex-col gap-4 lg:gap-6">
+            <p class="text-[22px] leading-[30px] text-primary underline italic">
+              Disclaimers and Liability
+            </p>
+
+            <p>
+              THE WEBSITES, CONTENT AND SERVICES ARE PROVIDED FOR USE “AS IS”
+              WITHOUT WARRANTY OF ANY KIND. FREEDOM DOES NOT WARRANT THAT THE
+              WEBSITES, CONTENT OR SERVICES WILL BE ACCURATE, ERROR-FREE OR
+              UNINTERRUPTED. FREEDOM DOES NOT WARRANT THAT THE WEBSITES, CONTENT
+              OR SERVICES WILL PROVIDE SPECIFIC RESULTS.
+            </p>
+
+            <p>TO THE MAXIMUM EXTENT NOT PROHIBITED BY LAW:</p>
+          </div>
+
+          <ul class="flex flex-col gap-4">
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <p>
+                UNDER NO CIRCUMSTANCES WILL FREEDOM BE LIABLE FOR ANY DAMAGES
+                WHATSOEVER ARISING OUT OF YOUR RELIANCE ON OR USE OF THE
+                WEBSITES, CONTENT, SERVICES OR OTHER ITEMS LOCATED ON THE
+                WEBSITES.
+              </p>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <p>
+                FREEDOM DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER STATUTORY,
+                EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, IMPLIED
+                WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+                PURPOSE.
+              </p>
+            </li>
+          </ul>
+
+          <p>
+            ADDITIONALLY, THE INCLUSION OR OFFERING OF ANY PRODUCTS OR SERVICES
+            ON THE WEBSITES DOES NOT CONSTITUTE ANY ENDORSEMENT OR
+            RECOMMENDATION OF SUCH PRODUCTS OR SERVICES BY US. ALL SUCH
+            INFORMATION, PRODUCTS AND SERVICES ARE PROVIDED “AS IS” WITHOUT
+            WARRANTY OF ANY KIND.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:gap-10 lg:pb-2">
+          <p class="text-[22px] leading-[30px] text-primary underline italic">
+            Indemnity
+          </p>
+
+          <p>
+            You agree to indemnify, defend and hold harmless Freedom and its
+            officers, directors, shareholders, predecessors,
+            successors-in-interest, licensors, employees, agents, subsidiaries
+            and affiliates (“Freedom Parties”), from and against any and all
+            claims, losses, liabilities, expenses (including attorneys’ fees and
+            costs) and damages arising out of or relating to your use of the
+            Websites or Services, your violation of any third-party right or
+            law, or your violation or alleged violation of this Agreement. You
+            must not settle any such claim or matter without the prior written
+            consent of Freedom. The Freedom Parties reserve the right, at their
+            own expense, to assume the exclusive defense and control of any
+            matter subject to indemnification by you, and you further agree that
+            you will cooperate fully in the defense of any such claims.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:gap-10 lg:pb-2">
+          <p class="text-[22px] leading-[30px] text-primary underline italic">
+            Limitation on Damages
+          </p>
+
+          <p>
+            FREEDOM’S LIABILITY, IF ANY, SHALL BE LIMITED TO DIRECT AND
+            FORESEEABLE DAMAGES, WHICH SHALL NOT EXCEED THE AMOUNT PROVIDED
+            BELOW. UNDER NO CIRCUMSTANCES SHALL FREEDOM BE LIABLE FOR INDIRECT,
+            INCIDENTAL, CONSEQUENTIAL, SPECIAL, STATUTORY, PUNITIVE OR EXEMPLARY
+            DAMAGES SUCH AS, BUT NOT LIMITED TO, LOSS OF REVENUE OR ANTICIPATED
+            PROFITS OR LOST BUSINESS, LOSS OF OR DAMAGE TO DATA, OR EMOTIONAL
+            DISTRESS NOTWITHSTANDING ANY OTHER PROVISION OF THIS AGREEMENT, IN
+            NO EVENT SHALL FREEDOM’S TOTAL LIABILITY EXCEED U.S. $100.00. THESE
+            LIMITATIONS AND EXCLUSIONS APPLY EVEN IF THIS REMEDY DOES NOT FULLY
+            COMPENSATE YOU FOR ANY LOSSES OR FAILS OF ITS ESSENTIAL PURPOSE OR
+            IF WE KNEW OR SHOULD HAVE KNOWN ABOUT THE POSSIBILITY OF THE
+            DAMAGES. TO THE MAXIMUM EXTENT PERMITTED BY LAW, THESE LIMITATIONS
+            AND EXCLUSIONS APPLY TO ANY CLAIMS RELATED TO THIS AGREEMENT OR TO
+            THE SERVICES.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:gap-10 lg:pb-2">
+          <p class="text-[22px] leading-[30px] text-primary underline italic">
+            Links to Third Party Websites
+          </p>
+
+          <p>
+            The Websites may contain links to websites maintained by third
+            parties. Such links are provided for your convenience and reference
+            only. We do not operate or control in any respect any information,
+            software, products or services available on non-affiliated
+            third-party websites. Our inclusion of a link to a website does not
+            imply any endorsement of the services or the website, its contents,
+            or its sponsoring organization. Your use of any such third-party
+            websites may be subject to other terms and conditions imposed by the
+            third parties maintaining those websites. When you leave the
+            Websites, you agree that We are not responsible for the accuracy or
+            content of the information provided by that website, nor is it
+            liable for any direct or indirect technical or system issues arising
+            out of your access to or use of third-party technologies or programs
+            available through that website.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:pb-2">
+          <p class="text-[22px] leading-[30px] text-primary underline italic">
+            Errors and Delays
+          </p>
+
+          <p>
+            You agree that Freedom is not responsible for any errors or delays
+            in responding to a request or referral form caused by, including but
+            not limited to, an incorrect email address or other information
+            provided by you or other technical problems beyond our reasonable
+            control.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:gap-10 lg:pb-2">
+          <p class="text-[22px] leading-[30px] text-primary underline italic">
+            Dispute Resolution, Governing Law, Waivers and Limitations
+          </p>
+
+          <div class="flex flex-col gap-4">
+            <p>
+              YOU AGREE THAT ANY DISPUTE BETWEEN YOU AND US, INCLUDING WITHOUT
+              LIMITATION DISPUTES RELATING TO THE WEBSITES, CONTENT OR SERVICES
+              (“DISPUTE”), SHALL BE FINALLY AND EXCLUSIVELY RESOLVED BY BINDING
+              INDIVIDUAL ARBITRATION ADMINISTERED BY THE AMERICAN ARBITRATION
+              ASSOCIATION (“AAA”) IN ACCORDANCE WITH ITS CONSUMER ARBITRATION
+              RULES. DISPUTES WILL BE ARBITRATED AT A HEARING CONDUCTED IN SAN
+              MATEO, CALIFORNIA; THE ARBITRATOR(S) SHALL HAVE NO AUTHORITY TO
+              DEVIATE FROM THE LAW, AND THE ARBITRATOR(S) SHALL MAKE ALL
+              REASONABLE EFFORTS TO EXPEDITE THE ARBITRATION PROCEEDINGS AND TO
+              LIMIT DISCOVERY. THIS MEANS THAT YOU WILL NOT BE ABLE TO LITIGATE
+              ANY SUCH DISPUTE IN COURT, AND THAT YOU AGREE TO WAIVE YOUR RIGHT
+              TO A JURY TRIAL. YOU AGREE THAT ANY DISPUTE WILL BE GOVERNED BY
+              THE LAWS OF THE STATE OF CALIFORNIA WITHOUT REGARD TO ANY
+              CONFLICTS OF LAWS PROVISIONS. IF ANY MATTER PROCEEDS IN COURT,
+              INCLUDING POST-ARBITRATION CONFIRMATION PROCEEDINGS, YOU AGREE TO
+              THE EXCLUSIVE PERSONAL JURISDICTION BY, AND VENUE IN, THE STATE
+              AND FEDERAL COURTS LOCATED IN SAN MATEO COUNTY, CALIFORNIA, AND
+              WAIVE ANY OBJECTION TO SUCH JURISDICTION OR VENUE.
+            </p>
+            <p>
+              You agree that no arbitration under this agreement shall be joined
+              to an arbitration involving any other party subject to this
+              agreement. Arbitration must be on an individual basis. You may not
+              join or consolidate claims in arbitration or litigate in court or
+              arbitrate any claims as a representative or member of a class or
+              in a private attorney general capacity.
+            </p>
+            <p>
+              You agree that any dispute or disagreement regarding the
+              enforceability, applicability or interpretation of any provision
+              of this Agreement, including the provisions regarding dispute
+              resolution and arbitration, is a Dispute subject to the
+              arbitration provisions herein and shall be resolved by an
+              arbitrator.
+            </p>
+            <p>
+              You also agree that any dispute or cause of action arising out of
+              or related to the Websites, Services or Content must be commenced
+              within one year from the later of (1) when the dispute or cause of
+              action accrues or, (2) through the exercise of reasonable
+              diligence you should have known about the accrual of the cause of
+              action. Otherwise, such cause of action is permanently barred.
+            </p>
+            <p>
+              Except to the extent that you subsequently enter into a debt
+              resolution agreement with Freedom, this Agreement (including all
+              referenced or incorporated policies, agreements and other
+              provisions) constitutes the entire agreement between you and
+              Freedom and supersedes all prior or contemporaneous oral or
+              written agreements or other communications between the parties
+              with respect to the subject matter hereof. If a conflict between
+              the language of this Terms of Use Agreement and the language of
+              any terms incorporated by reference, the latter incorporated terms
+              shall control.
+            </p>
+            <p>
+              You acknowledge and agree that, in entering into this Agreement,
+              you are not relying on any representation, warranty, statement or
+              promise, express or implied, not explicitly set forth in this
+              Agreement, and you hereby waive any claimed reliance on same. If
+              any provision of this Agreement shall be found to be invalid or
+              unenforceable, you agree such provision shall, to the maximum
+              extent feasible, be modified by to render it enforceable with
+              respect to the Dispute at issue and to reflect to the maximum
+              extent possible the intent of the existing language of the
+              provision when considered in the context of this Agreement as a
+              whole, that such modified provision shall be enforced with respect
+              to the underlying claims in the Dispute at issue, and that such a
+              finding of invalidity or unenforceability shall not affect the
+              validity or enforceability of this Agreement as a whole or of any
+              other provision of this Agreement.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:gap-10 lg:pb-2">
+          <p
+            class="text-[22px] leading-[30px] lg:text-2xl text-primary font-bold"
+          >
+            Terms Applicable to All Services
+          </p>
+
+          <div class="flex flex-col gap-4">
+            <p>
+              We provide content related to products/services we offer and
+              fulfill upon, certain educational content, and operate online
+              marketplaces that enable consumers to consider and be matched with
+              Providers through Freedom’s Websites for financial products and
+              services.
+            </p>
+            <p class="font-semibold">
+              By submitting any Form through a Freedom Website, and separately
+              for each such request you submit, you are indicating that you
+              desire to be contacted by Providers, and you are providing express
+              written consent that Freedom and Providers with whom you are
+              matched, may deliver calls or text messages to you, including for
+              marketing purposes, using an automatic telephone dialing system or
+              an artificial or prerecorded voice to the phone number you have
+              provided. You understand that you are providing this consent to
+              receive such telephone calls even if your telephone number is
+              currently listed on any federal, state, local, internal, or
+              corporate Do-Not-Call (“DNC”) Lists. You understand that you are
+              not required to consent to receive these communications as a
+              condition of using Freedom’s services.
+            </p>
+            <p>
+              You consent to receive email from Freedom, its affiliates, and its
+              Providers at the email address you provided or at other addresses
+              that may be associated with you that we receive from Providers or
+              other parties. You hereby consent to any such email, so it will
+              not be considered spam or unauthorized by any local, state or
+              federal law or regulation. You agree that the consents described
+              herein shall remain valid and in effect until you revoke them by
+              opting out as described below.
+            </p>
+            <p>
+              <span class="font-semibold">
+                You may opt out of receiving emails from Debtquote
+              </span>
+              at any time by engaging in any of the following reasonable means:
+              (1) visiting our opt-out page at
+              <a
+                href="http://preferences.freedomdebtrelief.com/email"
+                class="underline"
+              >
+                http://preferences.freedomdebtrelief.com/email
+              </a>
+              (2) notifying a Freedom customer service representative that you
+              no longer wish to be contacted by Freedom and are revoking your
+              consent to be contacted; or (3) Responding to any SMS, mobile, or
+              text message you receive from Freedom in accordance with the
+              express written instructions of that particular messaging program.
+              At any time, you may update your preferred method of contact by
+              calling 1-800-655-6303. You agree to notify any particular
+              Provider directly if you no longer want to receive communications
+              from them. You further agree that Freedom is not responsible for a
+              Provider’s failure to follow your or our instructions to stop
+              contacting you.
+            </p>
+            <p>
+              <span class="font-semibold"
+                >Freedom is not a lender or a creditor.</span
+              >
+              Freedom is not an agent of either you or any Provider. Except as
+              otherwise provided for in your state (please see the Licenses
+              section of the Websites), Freedom is not acting as your agent or
+              as the agent of any Provider. Freedom’s services are only
+              administrative. You agree you will rely on your own judgment and
+              research independent of any communications or information you
+              receive from Freedom in deciding which available product, terms
+              and Provider best suits your needs and financial situation.
+            </p>
+            <p>
+              Any Form you submit is not an application for credit or
+              credit/debt related services. Rather, it is an inquiry to be
+              matched with Freedom and/or the Providers that may be able to
+              present conditional offers. The Provider (other than Freedom) is
+              solely responsible for its services to you, and you agree that
+              Freedom shall not be liable for any damages or costs of any type
+              arising out of or in any way connected with your use of such
+              services or your interactions with any Provider. You understand
+              that Providers may keep your Form information and any other
+              information provided by Freedom or received by them in the
+              processing of your Form, whether you are qualified for a product
+              with them or complete a formal application for services with them.
+            </p>
+            <p>
+              For any Service, by saving your information with Freedom or
+              submitting a Form, you represent that all the information you have
+              provided is true, accurate, current and complete. You further
+              acknowledge that you alone will use your account to access the
+              Services. You must not sell, transform or assign your account to
+              anyone else. You agree to keep your login information
+              confidential, to employ reasonable and appropriate safeguards to
+              prevent unauthorized access to your account, and to not share your
+              account credentials with any third party or allow anyone else to
+              log into our Services as you. You are responsible for all
+              activities that occur under your member account. If you believe
+              that your account is no longer secure, you agree to notify us
+              immediately.
+            </p>
+            <p>
+              When you “submit” information, create an account or otherwise
+              register for Services through our Websites, you understand and
+              agree that you have established a business relationship between
+              you and Freedom. Accordingly, Freedom may send your information to
+              certain affiliates and third parties as provided in the
+              <a href="./privacy-policy.html" class="underline"
+                >Privacy Policy</a
+              >
+              and you agree that Freedom, its affiliates, and persons calling on
+              Freedom’s behalf may contact you using information you provided
+              with information and offers of services available through Freedom
+              and the Websites. You also give Freedom permission to retain all
+              such provided information and to make live or recorded calls to
+              discuss, provide or remind you of any information regarding your
+              submission, including incomplete Forms, the identification of
+              matched Providers, deadlines, quality of services or other matters
+              in connection with your Form.
+            </p>
+            <p>
+              In addition, certain state and federal laws require that the
+              information you provide us is housed and securely maintained and
+              cannot be removed, purged, or destroyed until the expiration of
+              certain prescribed periods. Providers may also from time-to-time
+              be required to share the information you submit to them with
+              Freedom in order to adhere to applicable laws. Providers and
+              Freedom may also maintain and share information provided by you
+              and about you by third parties for internal marketing and
+              analytics. You are providing express written consent for the
+              retention of this information upon completion of an inquiry form
+              for Freedom and the selected Provider to share this information
+              for these purposes.
+            </p>
+            <p>
+              By submitting a Form, you are providing express written
+              instructions under the Fair Credit Reporting Act for Freedom and
+              Provider partners with whom you are matched to obtain your
+              consumer credit report from your credit profile or other
+              information from contracted Credit Bureau(s) for the purpose of
+              matching you to a Provider, product, or service through the
+              Freedom network. This information could include, but might not be
+              limited to, your credit report, credit score, and other credit
+              information. Freedom may obtain a limited credit report (“soft
+              pull”) regardless of whether you provide your Social Security
+              Number. To help the government fight identity theft, the funding
+              of terrorism and money laundering activities, and to help attempt
+              to verify your identity, Freedom and its Providers may obtain,
+              verify and record information that identifies each person who
+              opens an account with us and Providers. Freedom and its Providers
+              may ask for your name, Social Security Number, address, telephone
+              number, date of birth and other important information including,
+              but not limited to, information received from your credit file,
+              that may allow us and Providers to properly identify you. It is
+              possible that a Provider may perform a soft inquiry on your credit
+              at the same time for the same or similar purposes, but the soft
+              inquiry into your credit does not impact your credit score. Not
+              all Providers will receive your Social Security Number and, for
+              those that do, not all will perform the soft inquiry of credit.
+              Freedom does not perform hard inquiries into credit, though
+              certain lenders on its network will perform a hard inquiry to
+              evaluate you for a firm offer of credit. From time-to-time Freedom
+              is examined by state and federal regulators and as such is
+              required to maintain your Personally Identifiable Information to
+              adhere to certain jurisdictions’ data retention requirements. Your
+              information may also be obtained from Providers after you are
+              matched to adhere to state and federal reporting and record
+              retention requirements. You authorize Freedom and its
+              participating Providers to share such information as required.
+            </p>
+            <p>
+              Services offered by Providers may only be made to residents of
+              states where Providers are authorized to make their products
+              and/or services available. A Provider’s participation in and
+              offering of its products on the Websites does not constitute an
+              offer by any Provider or by Freedom to provide services outside of
+              their authorized jurisdictions, and to the extent you seek or
+              receive information from a Provider regarding any prospective
+              service which would be outside of the Providers’ authorized
+              jurisdiction, that information is for informational purposes only.
+              Providers shall have the right to discontinue, suspend or
+              terminate the offering of any product or service in any specific
+              state through the Websites at any time, without prior notice.
+            </p>
+            <p>
+              We do not guarantee acceptance into any particular program or
+              specific terms or conditions with any Provider; approval standards
+              are established and maintained solely by individual Providers.
+              Likewise, we do not guarantee that the rates offered by Providers
+              include the lowest rates available in the market or the rate that
+              the Providers will ultimately charge. Providers may not offer all
+              products as well as not offer products in all states. You might
+              not be matched with the Provider making any specific offer.
+            </p>
+            <p>
+              By clicking on any button indicating an acceptance or agreement to
+              terms, a continuance of processing or submission (collectively, a
+              “submission”) you understand that you are consenting,
+              acknowledging and agreeing to the stated terms and conditions of
+              that submission and that you are submitting an inquiry for a
+              Service through Freedom to each of the Providers to whom your
+              inquiry is transmitted.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:gap-10 lg:pb-2">
+          <p
+            class="text-[22px] leading-[30px] lg:text-2xl text-primary font-bold"
+          >
+            Terms Applicable to Financial Education Content
+          </p>
+
+          <p>
+            We provide content and tools on our Websites that allow you to
+            enhance your financial education and learn how certain financial
+            decisions could impact your financial well-being. We provide these
+            materials for informational, educational, and entertainment purposes
+            only, and at no time are we providing legal, financial, investment,
+            tax planning, or medical advice. You may see offers on these
+            Websites from companies that compensate us. This compensation may
+            impact the location and order in which these offers appear. Our
+            Websites do not include the entire universe of available credit or
+            financial offers.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-6 lg:gap-10 lg:pb-2">
+          <p
+            class="text-[22px] leading-[30px] lg:text-2xl text-primary font-bold"
+          >
+            Ratings & Reviews and User-Generated Content
+          </p>
+
+          <p>
+            On certain Freedom Websites, you may submit user generated content.
+            By submitting any content on these Websites or through any social
+            media channel associated with Freedom, you represent and warrant
+            that:
+          </p>
+
+          <ul class="flex flex-col gap-4">
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <p>
+                you are the sole author and owner of the intellectual property
+                rights thereto;
+              </p>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <p>
+                all “moral rights” that you may have in such content have been
+                voluntarily waived by you;
+              </p>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <p>all content that you post is accurate;</p>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <p>you are at least 13 years old; and</p>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <p>
+                use of the content you supply does not violate this Agreement
+                and will not cause injury to any person or entity.
+              </p>
+            </li>
+          </ul>
+
+          <p>
+            You further agree and warrant that you shall not submit any content:
+          </p>
+
+          <ul class="flex flex-col gap-4">
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <p>that is known by you to be false, inaccurate or misleading;</p>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <p>
+                that infringes any third party’s copyright, patent, trademark,
+                trade secret or other proprietary rights or rights of publicity
+                or privacy;
+              </p>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <p>
+                that violates any law, statute, ordinance or regulation
+                (including, but not limited to, those governing export control,
+                consumer protection, unfair competition, anti-discrimination or
+                false advertising);
+              </p>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <p>
+                that is, or may reasonably be considered to be, defamatory,
+                libelous, hateful, racially or religiously biased or offensive,
+                unlawfully threatening or unlawfully harassing to any
+                individual, partnership or corporation;
+              </p>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <p>
+                for which you were compensated or granted any consideration by
+                any third party;
+              </p>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <p>
+                that includes any information that references other websites,
+                addresses, email addresses, contact information or phone
+                numbers; or
+              </p>
+            </li>
+
+            <li class="flex gap-6">
+              <div class="bg-primary w-6 h-6 rounded-full shrink-0 self-center">
+                <img src="./assets/images/check.svg" alt="check logo" />
+              </div>
+              <p>
+                that contains any computer viruses, worms or other potentially
+                damaging computer programs or files.
+              </p>
+            </li>
+          </ul>
+
+          <p>
+            You agree to indemnify and hold Freedom (and its officers,
+            directors, agents, subsidiaries, joint ventures, employees and
+            third-party service providers), harmless from all claims, demands,
+            and damages (actual and consequential) of every kind and nature,
+            known and unknown including reasonable attorneys’ fees, arising out
+            of a breach of your representations and warranties set forth above,
+            this Agreement, or your violation of any law or the rights of a
+            third party.
+          </p>
+          <p>
+            For any content that you submit on the Websites, TrustPilot,
+            Facebook, Twitter or any similar Freedom-affiliated social media
+            property, you grant Freedom a perpetual, irrevocable, royalty-free,
+            transferable right and license to use, copy, modify, delete in its
+            entirety, adapt, publish, translate, create derivative works from
+            and/or sell and/or distribute such content and/or incorporate such
+            content into any form, medium or technology throughout the world
+            without compensation to you.
+          </p>
+          <p>
+            All content that you submit may be used at our sole discretion. We
+            reserve the right to change, condense or delete any content on any
+            website or social media property that we deem, in our sole
+            discretion, to violate the content guidelines or any other provision
+            of these Terms of Use. We do not guarantee that you will have any
+            recourse to edit or delete any content you have submitted. For the
+            ratings and reviews service, ratings and written comments are
+            generally posted within two to four business days. We reserve the
+            right to remove or to refuse to post any submission for any reason.
+            You acknowledge that you, not Freedom, are responsible for the
+            contents of your submission. None of the content that you submit
+            shall be subject to any obligation of confidence on the part of us,
+            our agents, subsidiaries, affiliates, partners or third-party
+            service providers and their respective directors, officers and
+            employees.
+          </p>
+          <p>
+            By submitting content or submitting your email address in connection
+            with your rating and review, you agree that Freedom and its
+            third-party service providers or the entity being reviewed may use
+            your email address to contact you about the status of your review
+            and other administrative purposes.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:pb-2">
+          <p class="text-[22px] leading-[30px] text-primary underline italic">
+            How We Are Compensated
+          </p>
+
+          <p>
+            Freedom may be paid a marketing lead generation fee by Providers for
+            the goods, facilities and services provided. Your use of the
+            Websites and/or Freedom’s services constitutes your agreement with
+            this compensation arrangement.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:pb-2">
+          <p class="text-[22px] leading-[30px] text-primary underline italic">
+            Terms Applicable to Account Creation and/or Registration Features
+          </p>
+
+          <p>
+            By creating and/or registering for an account (whether directly or
+            in conjunction with submitting a Form), you understand and consent
+            to Freedom receiving and accessing consumer report information about
+            you from one or more credit bureaus. By registering with Freedom,
+            you are providing express written instructions under the federal
+            Fair Credit Reporting Act that we may use and analyze your
+            information as follows: to (a) present you an overview of your
+            credit profile including detailed information where available; (b)
+            provide you with customized recommendations and general information
+            about you; and/or (c) serve you targeted ads and other
+            communications based on your information, (d) identify affiliate and
+            non-affiliate Providers that may be able to provide valuable
+            services to you; (e) so that Freedom may perform analysis and data
+            modeling in order to offer customers better Services in the future.
+            This information could include, but might not be limited to, your
+            credit report, credit score, and other credit information. For as
+            long as you maintain a Freedom account, you are providing express
+            written consent for us to maintain and share information provided by
+            you, and about you by third parties, to assist with litigation,
+            regulatory request(s), law enforcement requests, internal analytics,
+            marketing purposes, and any other legally permissible purpose.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:pb-2">
+          <p class="text-[22px] leading-[30px] text-primary underline italic">
+            Terms Applicable to Account Creation and/or Registration Features
+          </p>
+
+          <p>
+            By creating and/or registering for an account (whether directly or
+            in conjunction with submitting a Form), you understand and consent
+            to Freedom receiving and accessing consumer report information about
+            you from one or more credit bureaus. By registering with Freedom,
+            you are providing express written instructions under the federal
+            Fair Credit Reporting Act that we may use and analyze your
+            information as follows: to (a) present you an overview of your
+            credit profile including detailed information where available; (b)
+            provide you with customized recommendations and general information
+            about you; and/or (c) serve you targeted ads and other
+            communications based on your information, (d) identify affiliate and
+            non-affiliate Providers that may be able to provide valuable
+            services to you; (e) so that Freedom may perform analysis and data
+            modeling in order to offer customers better Services in the future.
+            This information could include, but might not be limited to, your
+            credit report, credit score, and other credit information. For as
+            long as you maintain a Freedom account, you are providing express
+            written consent for us to maintain and share information provided by
+            you, and about you by third parties, to assist with litigation,
+            regulatory request(s), law enforcement requests, internal analytics,
+            marketing purposes, and any other legally permissible purpose.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-6 pb-12">
+          <div class="flex flex-col gap-4">
+            <p class="text-[22px] leading-[30px] text-primary underline italic">
+              Widgets
+            </p>
+
+            <p>
+              Generally, widgets are tools that you may place on your website,
+              which allow visitors to your website to access and view content on
+              or from another website. Widgets published by Freedom (“Widgets”)
+              provide access to the Websites, Content and Services from points
+              outside of the Websites. Widgets may be placed on your websites,
+              blogs, your pages at online social network or media sites (to the
+              extent permitted by such sites), and other similar platforms.
+              Freedom prohibits the placement of Widgets on websites, platforms
+              or devices that contain content that is sexual, offensive,
+              deceptive or illegal in nature or that in any way promotes or
+              encourages hatred, violence, discrimination or illegal activities,
+              or otherwise inappropriate as determined by Freedom in its sole
+              discretion. You shall use the Widgets in a manner consistent with
+              all applicable laws and solely for lawful purposes. You cannot use
+              the Widgets for any other purpose, and nothing in this Agreement
+              shall be deemed to grant you any rights, title or interest in the
+              Widgets, Websites, Content or Services. Freedom reserves the right
+              to remove or demand the removal of any Widget, or revoke your
+              right to use any Widget, for any reason.
+            </p>
+            <p>
+              By accessing and using any Widget (including copying any Widget
+              html code), you agree to be bound by the following:
+            </p>
+          </div>
+
+          <ul class="flex flex-col gap-4">
+            <li class="flex gap-6">
+              <div
+                class="flex flex-col bg-primary w-6 h-6 rounded-full shrink-0 self-center items-center justify-center"
+              >
+                <span class="text-lg font-bold text-table-primary"> 1 </span>
+              </div>
+              <p>
+                You may only display the Widget(s) on a website you own and
+                operate and not in any other manner or in any other medium.
+              </p>
+            </li>
+
+            <li class="flex gap-6">
+              <div
+                class="flex flex-col bg-primary w-6 h-6 rounded-full shrink-0 self-center items-center justify-center"
+              >
+                <span class="text-lg font-bold text-table-primary"> 2 </span>
+              </div>
+              <p>
+                You may not modify any Widget. Without limitation, you may not
+                change any code provided by Freedom, obscure or disable any
+                element of any Widget, tag links to Freedom from the Widget with
+                a “nofollow” attribute or otherwise prevent or discourage search
+                engines from following or scoring link.
+              </p>
+            </li>
+
+            <li class="flex gap-6">
+              <div
+                class="flex flex-col bg-primary w-6 h-6 rounded-full shrink-0 self-center items-center justify-center"
+              >
+                <span class="text-lg font-bold text-table-primary"> 3 </span>
+              </div>
+              <p>
+                Except for displaying the Widget, you agree not to make any
+                representations, warranties (express or implied) or other
+                statements concerning Freedom, our Websites, Services, and
+                Providers.
+              </p>
+            </li>
+
+            <li class="flex gap-6">
+              <div
+                class="flex flex-col bg-primary w-6 h-6 rounded-full shrink-0 self-center items-center justify-center"
+              >
+                <span class="text-lg font-bold text-table-primary"> 4 </span>
+              </div>
+              <p>
+                You may not display any Widget in any manner that implies
+                affiliation with, sponsorship or endorsement by Freedom.
+              </p>
+            </li>
+
+            <li class="flex gap-6">
+              <div
+                class="flex flex-col bg-primary w-6 h-6 rounded-full shrink-0 self-center items-center justify-center"
+              >
+                <span class="text-lg font-bold text-table-primary"> 5 </span>
+              </div>
+              <p>
+                You must place the Widget on a page that is context-appropriate
+                to the content of the Widget, and any reference to Freedom or
+                its products and services must be accurate. For example, you may
+                place Widgets on pages of your web site that contain a
+                discussion of personal finance, mortgages or residential real
+                estate.
+              </p>
+            </li>
+
+            <li class="flex gap-6">
+              <div
+                class="flex flex-col bg-primary w-6 h-6 rounded-full shrink-0 self-center items-center justify-center"
+              >
+                <span class="text-lg font-bold text-table-primary"> 6 </span>
+              </div>
+              <p>
+                You may not place the Widget on any site that contains any
+                content that is in any way unlawful, harmful, obscene,
+                harassing, or racially, ethnically, or otherwise objectionable.
+                Additionally, you may not place the Widget on any site that
+                disparages Freedom, our Services, or the products/services of
+                Providers on our network, infringes any Freedom intellectual
+                property or other rights, or violates any applicable law.
+              </p>
+            </li>
+
+            <li class="flex gap-6">
+              <div
+                class="flex flex-col bg-primary w-6 h-6 rounded-full shrink-0 self-center items-center justify-center"
+              >
+                <span class="text-lg font-bold text-table-primary"> 7 </span>
+              </div>
+              <p>
+                Freedom grants you a non-transferable, non-exclusive, revocable
+                right to download/display the Widget solely in accordance with
+                (i) the terms of this Agreement and (ii) solely in connection
+                with the Widget, to use our logos, trademarks, trade names and
+                other intellectual property contained in the Widget. This
+                Agreement does not grant you any right in any Freedom code,
+                content, logos or trademarks beyond the limited permission to
+                display the Widget granted herein. Freedom reserves the right at
+                any time to terminate or modify your permission to display the
+                Widget. The Widgets are subject to change from time to time in
+                our sole discretion. We may cease to return content from the
+                Widget at any time in our sole discretion.
+              </p>
+            </li>
+
+            <li class="flex gap-6">
+              <div
+                class="flex flex-col bg-primary w-6 h-6 rounded-full shrink-0 self-center items-center justify-center"
+              >
+                <span class="text-lg font-bold text-table-primary"> 8 </span>
+              </div>
+              <p>
+                You acknowledge and agree that Freedom may crawl or otherwise
+                monitor your web site to confirm compliance with this Agreement.
+              </p>
+            </li>
+
+            <li class="flex gap-6">
+              <div
+                class="flex flex-col bg-primary w-6 h-6 rounded-full shrink-0 self-center items-center justify-center"
+              >
+                <span class="text-lg font-bold text-table-primary"> 9 </span>
+              </div>
+              <p>
+                The Widget and any information, software, and related services
+                are provided “as is” with no warranty, and Freedom expressly
+                disclaims any warranties that may be expressed or implied by law
+                regarding any Widget, including warranties of accuracy or
+                non-infringement. Use of Widgets is at your own risk. Freedom is
+                not liable for any direct, indirect, punitive, incidental,
+                special or consequential damages or other injury arising out of
+                or in any way connected with the use of any Widget whether
+                resulting in whole or in part, from breach of contract, tortious
+                behavior, negligence, strict liability or otherwise.
+              </p>
+            </li>
+
+            <li class="flex gap-6">
+              <div
+                class="flex flex-col bg-primary w-6 h-6 rounded-full shrink-0 self-center items-center justify-center"
+              >
+                <span class="text-lg font-bold text-table-primary"> 10 </span>
+              </div>
+              <p>
+                Freedom reserves the right to change this Agreement in its sole
+                discretion at any time without notice, and you are responsible
+                for regularly reviewing this Agreement. Your continued use of
+                any Widget after the effective date of such changes will
+                constitute acceptance of, and agreement to, any such changes.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="flex flex-col bg-primary text-surface font-[roboto] py-16 px-12 gap-8 max-w-[1184px] mx-auto"
+    >
+      <div class="flex flex-col self-center gap-6 text-[20px] font-semibold">
+        <div class="flex flex-row gap-2">
+          <img src="./assets/images/terms-of-use.svg" alt="terms-of-service" />
+          <a
+            href="./terms-of-service.html"
+            class="text-[20px] leading-6 underline decoration-solid font-semibold"
+            >Terms of Services</a
+          >
+        </div>
+
+        <div class="flex flex-row gap-2">
+          <img src="./assets/images/privacy-policy.svg" alt="privacy-policy" />
+          <a
+            href="./privacy-policy.html"
+            class="text-[20px] leading-6 underline decoration-solid font-semibold"
+            >Privacy Policy</a
+          >
+        </div>
+      </div>
+
+      <p class="text-lg">
+        *Our estimates are based on prior results, which will vary depending on
+        your specific enrolled creditors and your individual program terms. Not
+        all clients are able to complete their program for various reasons,
+        including their ability to save sufficient funds. We do not guarantee
+        that your debts will be resolved for a specific amount or percentage or
+        within a specific period of time. We do not assume your debts, make
+        monthly payments to creditors or provide tax, bankruptcy, accounting or
+        legal advice or credit repair services. Our service is not available in
+        all states, including New Jersey, and our fees may vary from state to
+        state. Please contact a tax professional to discuss potential tax
+        consequences of less than full balance debt resolution. Read and
+        understand all program materials prior to enrollment. The use of debt
+        settlement services will likely adversely affect your creditworthiness,
+        may result in you being subject to collections or being sued by
+        creditors or collectors and may increase the outstanding balances of
+        your enrolled accounts due to the accrual of fees and interest. However,
+        negotiated settlements we obtain on your behalf resolve the entire
+        account, including all accrued fees and interest. C.P.D. Reg. No.
+        T.S.12-03825.
+      </p>
+
+      <p class="text-lg">
+        ** This guarantee takes effect when you graduate the program—or even if
+        you leave before graduating. When you exit the program, we’ll use the
+        combined total of all the debts you enrolled and settled and the fees
+        you paid to us to calculate your eligibility for a refund.
+      </p>
+
+      <p class="text-lg">
+        DebtQuote, LLC does not discriminate on the basis of race, color,
+        religion, sex, marital status, national origin, or ancestry.
+      </p>
+
+      <div class="flex flex-col items-center text-[20px] pb-5">
+        <div class="flex gap-4">
+          <img
+            src="./assets/images/copyright.png"
+            alt="copyright icon"
+            style="width: 25px; height: 25px"
+          />
+          <span>2023 All Rights Reserved</span>
+        </div>
+        <p class="font-bold">DebtQuote.com</p>
+      </div>
+    </footer>
+  </body>
+</html>
