@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./dist/styles/index.css" rel="stylesheet" />
+    <link href="./dist/libs/splidejs/css/splide.min.css" rel="stylesheet" />
+    <script src="./dist/libs/splidejs/js/splide.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav id="navbar" class="w-full lg:bg-surface shadow-sm">
+        <div
+          class="flex flex-col lg:flex-row lg:container lg:mx-auto lg:max-w-[1184px]"
+        >
+          <div
+            class="flex items-center h-[4.5rem] px-6 drop-shadow-sm bg-surface justify-between lg:drop-shadow-none"
+          >
+            <a href="./index.html">
+              <img src="assets/images/logo.png" alt="logo" />
+            </a>
+            <div class="flex lg:hidden">
+              <button
+                type="button"
+                id="navbar-btn"
+                class="text-text focus:outline-none"
+              >
+                <svg class="h-8 w-8 fill-current" viewBox="0 0 24 24">
+                  <path
+                    id="navbar-btn-close"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M3 7h18v2H3V7zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"
+                  />
+                  <path
+                    id="navbar-btn-open"
+                    d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            id="navbar-menu"
+            class="transition-all duration-700 h-0 bg-surface overflow-hidden lg:h-[4.5rem] lg:flex-1 lg:bg-surface lg:transition-none"
+          >
+            <ul
+              class="flex flex-col justify-center gap-6 p-6 pr-4 pt-12 lg:flex-row lg:py-0 lg:justify-end lg:h-full lg:items-center lg:gap-8"
+            >
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  id="link1"
+                  class="py-2.5 flex items-center justify-between"
+                  onclick="toggleSubmenu('submenu1', 'icon1'); this.classList.toggle('clicked');"
+                >
+                  The Program
+                  <svg
+                    id="icon1"
+                    class="lg:hidden"
+                    width="5"
+                    height="10"
+                    viewBox="0 0 5 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 10L5 5L0 0V10Z" fill="#2A2A2A" />
+                  </svg>
+                </a>
+                <ul
+                  id="submenu1"
+                  class="transition-all duration-700 lg:transition-none"
+                  style="display: none"
+                >
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./how-it-works.html">How It Works</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./help-people.html">Who we Help</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./about.html">Why Choose Debt Quote</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4"><a href="#">Testimonials</a></li>
+                  <li class="h-12 py-3 pl-4"><a href="#">FAQ</a></li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="py-2.5 transition-all flex items-center justify-between a-color-clicked"
+                  onclick="toggleSubmenu('submenu2', 'icon2'); this.classList.toggle('clicked');"
+                >
+                  Articles
+                  <svg
+                    id="icon2"
+                    class="lg:hidden"
+                    width="5"
+                    height="10"
+                    viewBox="0 0 5 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 10L5 5L0 0V10Z" fill="#2A2A2A" />
+                  </svg>
+                </a>
+                <ul
+                  id="submenu2"
+                  class="transition-all duration-700 lg:transition-none"
+                  style="display: none"
+                >
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./guide-to-debt.html">Debt Consolidation</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./debt-consolidation.html"
+                      >Debt Consolidation Near Me</a
+                    >
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./counseling.html">Pros and cons of Credit</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="#">Debt Relief Overview</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./debt-relief.html">Credit Card Debt Relief</a>
+                  </li>
+                  <li class="h-12 py-3 pl-4">
+                    <a href="./programs.html">Debt Relief Programs</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="./about.html"
+                  class="py-2.5 transition-all flex items-center justify-between"
+                >
+                  About Us
+                  <svg
+                    class="lg:hidden"
+                    width="5"
+                    height="10"
+                    viewBox="0 0 5 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 10L5 5L0 0V10Z" fill="#2A2A2A" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./contact.html"
+                  class="py-2.5 transition-all flex items-center justify-between"
+                >
+                  Contact Us
+                  <svg
+                    class="lg:hidden"
+                    width="5"
+                    height="10"
+                    viewBox="0 0 5 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 10L5 5L0 0V10Z" fill="#2A2A2A" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main
+      class="max-w-[1184px] flex flex-col gap-8 px-6 py-8 lg:py-10 lg:gap-12 lg:mx-auto"
+    >
+      <div
+        class="flex flex-col gap-6 px-6 lg:flex-row lg:items-center lg:justify-between lg:gap-12"
+      >
+        <div class="lg:flex lg:flex-row lg:gap-20 lg:max-w-[610px]">
+          <div
+            class="flex flex-col gap-6 md:items-center lg:items-start lg:gap-8"
+          >
+            <p class="title">Frequently Asked Questions</p>
+            <p
+              class="subtitle text-left text-text max-w-[400px] lg:max-w-none lg:w-full"
+            >
+              Find answers to commonly asked questions, so you can feel
+              confident taking action to resolve your debt.
+            </p>
+
+            <div class="flex flex-col gap-8 items-center lg:items-start w-full">
+              <img
+                src="./assets/images/faq.png"
+                alt="Contact us"
+                class="py-10 lg:p-0 lg:hidden"
+              />
+
+              <div
+                class="flex flex-col gap-8 px-8 w-full lg:px-0 max-w-[320px]"
+              >
+                <button
+                  class="rounded-lg h-14 bg-accent text-white font-extrabold"
+                >
+                  Get debt help now
+                </button>
+
+                <button
+                  class="rounded-lg h-14 text-primary border border-primary font-extrabold"
+                >
+                  Call 800-910-0065
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <img
+          src="./assets/images/faq.png"
+          alt="Contact us"
+          class="hidden lg:block w-[300px] xl:w-[470px]"
+        />
+      </div>
+
+      <section class="flex flex-col gap-6 lg:gap-8 lg:py-12">
+        <div class="flex flex-col gap-6">
+          <p
+            class="text-primary font-bold text-center text-[22px] leading-[30px] lg:text-2xl md:text-start lg:pt-12"
+          >
+            What you should know
+          </p>
+
+          <p class="text-primary font-bold text-[22px] leading-[30px]">
+            What is debt relief?
+          </p>
+        </div>
+
+        <div>
+          <p>
+            The type of debt relief Freedom Debt Relief offers is known by
+            several names: debt resolution, debt negotiation, and debt
+            settlement. Debt relief allows you to resolve your unsecured debt
+            (debt that is not backed by collateral like a car or a house; most
+            often credit card debt) by negotiating with creditors and reducing
+            the amount you owe. You could negotiate with your creditors on your
+            own or use a debt relief program like Freedom Debt Relief to help
+            you settle your debt.
+          </p>
+          <br />
+          <p>
+            During the debt relief process, you usually voluntarily stop paying
+            your creditors and start saving money in a special purpose account
+            (what Freedom Debt Relief calls your 'dedicated account') that is
+            used to hold the funds used to settle your debt. Once enough money
+            is saved into this account, the debt relief company you hired
+            contacts your creditors to negotiate a debt settlement amount that
+            is lower than what you currently owe.
+          </p>
+        </div>
+
+        <p
+          class="text-primary font-semibold lg:text-[22px] lg:leading-[30px] lg:text-2xl"
+        >
+          What is Debt Quote?
+        </p>
+        <p>
+          DebtQuote is the largest debt negotiator in the U.S. We offer our debt
+          relief program to Americans with unsecured debt (debt that is not
+          backed by collateral like a car or a house)—including credit card
+          debt, personal loan debt, and medical debt—and are experiencing a
+          legitimate financial hardship.
+        </p>
+
+        <p
+          class="text-primary font-bold lg:text-[22px] lg:leading-[30px] lg:text-2xl"
+        >
+          How does Debt Quote work?
+        </p>
+        <p>
+          The Freedom Debt Relief program is designed to resolve your debt for
+          significantly less than you owe, as quickly as possible. First, we
+          provide a debt consultation to review various options you have for
+          debt management (including credit counseling, bankruptcy, and
+          consolidation loan), and help you decide if debt relief and our
+          program specifically is right for you. If you decide that it is, we
+          work with you to design a program that fits your monthly budget (keep
+          in mind that it could be less than your monthly minimum payments).
+          Once you enroll, our expert debt negotiators create a negotiation
+          strategy, utilizing data that has been developed over 20 years, so
+          that we can reduce your debt and help get rid of your debt as quickly
+          as possible. Our company has used this method to resolve over $15
+          billion in debt since 2002.
+        </p>
+
+        <p
+          class="text-primary font-semibold text-center lg:text-left lg:text-[22px] lg:leading-[30px] lg:text-2xl"
+        >
+          What types of debt can DebtQuote help me with?
+        </p>
+        <p>
+          Freedom Debt Relief could help you with debt from credit cards,
+          medical bills, department store cards, and many other types of
+          unsecured debt (debt that is not backed by collateral like a car or a
+          house). Our program cannot help with secured debt, which is a debt
+          that involves collateral (like auto loans and mortgages). Also, we
+          cannot resolve federal student loans. We do help with private student
+          loans and some business debts on a case-by-case basis.
+        </p>
+
+        <p
+          class="text-primary font-bold text-center lg:text-left lg:text-[22px] lg:leading-[30px] lg:text-2xl"
+        >
+          How does debt relief affect my credit score?
+        </p>
+        <div class="flex flex-col gap-6">
+          <p>
+            The impact a debt relief solution has to your credit score depends
+            on the specific information found on your credit report at the time
+            of enrollment, and how the specific information found on your credit
+            report changes while in the program. Your credit report can be
+            affected by the settlements you experienced while in the program
+            (including how creditors report the information to the CRAs) as well
+            as your credit behavior while in the program. Depending on your
+            existing credit score, in the debt settlement process you will
+            likely see your credit score drop.
+          </p>
+          <p>
+            However, a key factor of your financial health is your
+            debt-to-income ratio. As debts are settled, your total debt should
+            decrease, thereby improving your debt-to-income ratio.
+          </p>
+        </div>
+
+        <p
+          class="text-primary font-bold text-center lg:text-left lg:text-[22px] lg:leading-[30px] lg:text-2xl"
+        >
+          How much does debt relief cost?
+        </p>
+        <div class="flex flex-col gap-6">
+          <p>
+            Across the industry, debt relief costs vary and are usually a
+            percentage of the original amount of your debt or a percentage of
+            the amount you've agreed to pay with the settlement.
+          </p>
+          <p>
+            Freedom Debt Relief’s fee ranges between 15% to 25% of enrolled debt
+            (the amount of debt enrolled to be settled)–your rate may vary
+            depending on your state of residency and amount you enroll.
+          </p>
+          <p>
+            In our program, clients pay FDR no fee whatsoever until a debt is
+            negotiated, the settlement has been approved and the first payment
+            has been made. You will know when a fee is charged because you will
+            approve every settlement deal. Once we reach a settlement with a
+            creditor, we immediately contact you for authorization. After you
+            authorize a settlement and a payment has been made to your creditor,
+            the fee associated with the debt is processed. The total fee
+            associated with the program is included in the monthly savings
+            quoted to you by a debt consultant.
+          </p>
+        </div>
+
+        <p
+          class="text-primary font-bold text-center lg:text-left lg:text-[22px] lg:leading-[30px] lg:text-2xl"
+        >
+          When does DebtQuote collect customer fees?
+        </p>
+        <div class="flex flex-col gap-6">
+          <p>
+            FDR does not charge any upfront fees and only collects its fees
+            after a settlement is authorized by the client and the first payment
+            is made.
+          </p>
+          <p>
+            This fee amount is disclosed in full upfront and will never
+            increase.
+          </p>
+          <p>
+            Note: As part of your debt settlement program, you open up a
+            dedicated account with Crossroads Financial Technologies (CFT) to
+            accumulate your settlement funds. You own this dedicated account and
+            all funds in it. CFT collects fees for setting up and maintaining
+            the dedicated account, and may also charge fees to make payments
+            from the dedicated account. There is a one-time fee of $9.95 to set
+            up the dedicated account, and a monthly fee of $9.95 that covers
+            account servicing. Freedom Debt Relief does not share or receive any
+            part of the fees paid to CFT.
+          </p>
+        </div>
+
+        <p
+          class="text-primary font-bold text-center lg:text-left lg:text-[22px] lg:leading-[30px] lg:text-2xl"
+        >
+          How is DebtQuote different from other debt relief options?
+        </p>
+        <div class="flex flex-col gap-6">
+          <p>
+            Freedom Debt Relief is an established leader in debt resolution.
+            Since 2002, over 850,000 clients have been served by the Freedom
+            Debt Relief program. We have resolved over $15 billion in debt. We
+            have a team of committed experts working on your side: 550+
+            certified debt consultants, 200+ debt negotiators, and 350+ customer
+            service representatives. We are an established employer with 1,300+
+            US employees in AZ, CA, and TX.
+          </p>
+          <p>
+            Lastly, Freedom Debt Relief formally has a promise to customers in
+            place to ensure that we deliver results to our customers. This
+            promise is called the
+            <a
+              href="https://www.freedomdebtrelief.com/why-were-better/"
+              class="underline"
+            >
+              Freedom Debt Relief Promise
+            </a>
+            and it assures that: 1. Each prospective customer has an opportunity
+            to learn about their
+            <a
+              href="https://www.freedomdebtrelief.com/learn/debt-relief/debt-relief-options/"
+              class="underline"
+            >
+              debt relief options </a
+            >, even those beyond our services. 2. Each customer receives a
+            personalized assessment and recommendation of the course of action
+            that offers the best opportunity for consumers to achieve their
+            financial goals. 3. Each customer is fully informed at each step of
+            the process. 4. Each customer has a Program Guarantee that Freedom
+            Debt Relief succeeds only when our customers succeed. In addition to
+            only charging fees when FDR delivers settlements, the Program
+            Guarantee states that when a customer graduates or leaves the
+            program, FDR will refund fees if their settlement and fees are more
+            than the amount they originally owed when they enrolled in the
+            program.
+          </p>
+        </div>
+
+        <p
+          class="text-primary font-bold text-center lg:text-left lg:text-[22px] lg:leading-[30px] lg:text-2xl"
+        >
+          What is the difference between credit counseling, debt settlement and
+          bankruptcy?
+        </p>
+        <div class="flex flex-col gap-6">
+          <ul class="list-disc px-6">
+            <li>
+              Credit counseling can help you learn to budget and stop
+              overspending. Counselors can enroll you in a debt management plan
+              where they typically lower your interest rates and set up a
+              payment schedule, to simplify debt repayment and make it more
+              affordable. Credit counselors control your (the consumer’s) money
+              and when/how the money is distributed to the creditors.
+            </li>
+            <li>
+              Debt settlement means convincing your creditors to accept less
+              than you owe as payment in full. They may be willing to do so if
+              you cannot afford to repay the full amount. With debt settlement,
+              and specifically Freedom Debt Relief, you the consumer approve all
+              actions by Freedom Debt Relief - i.e. Freedom Debt Relief does not
+              control your money and when/how the money is distributed to
+              creditors - everything must be approved by you, the consumer.
+            </li>
+            <li>
+              Bankruptcy is a court-ordered plan in which you either surrender
+              assets or pay into a plan to discharge some or all of your debts.
+            </li>
+            <li>
+              Learn much more from this article about the differences between
+              credit counseling, debt settlement and bankrupt
+            </li>
+          </ul>
+        </div>
+
+        <p
+          class="text-primary font-bold text-center lg:text-left lg:text-[22px] lg:leading-[30px] lg:text-2xl"
+        >
+          Can I withdraw money from my dedicated account with DebtQuote?
+        </p>
+        <p>
+          Yes, you may withdraw from your Dedicated Account, which you control,
+          at any time. This is an FDIC-insured account, and you control it, not
+          Freedom Debt Relief, meaning you can withdraw from it at any time.
+          However, FDR advises against withdrawing from your account as it
+          prevents you from being able to make your monthly deposits, which in
+          turn slows down your progress towards your settlement timeframe.
+        </p>
+
+        <p
+          class="text-primary font-bold text-center lg:text-left lg:text-[22px] lg:leading-[30px] lg:text-2xl"
+        >
+          Does DebtQuote offer loans?
+        </p>
+        <p>
+          Freedom Debt Relief does not itself offer loan products. We can refer
+          you to our affiliate companies that offer personal loans and home
+          equity loans. We always take your unique financial situation into
+          account, and will recommend alternative solutions that you may qualify
+          for, that may meet your needs.
+        </p>
+
+        <p
+          class="text-primary font-bold text-center lg:text-left lg:text-[22px] lg:leading-[30px] lg:text-2xl"
+        >
+          What benefits can I expect from DebtQuote?
+        </p>
+        <div class="flex flex-col gap-6">
+          <p>
+            DebtQuote has various benefits in place to assure that customers are
+            placed at the center of everything we do, and that Freedom Debt
+            Relief is the solution recommended only when it is truly the best
+            fit for the customer’s needs and circumstances.
+          </p>
+          <p>
+            These benefits are in place with the Freedom Debt Relief Promise,
+            which has four components in total that help assure that 1. You (the
+            customer) can make informed decisions, with a free debt
+            consultation; 2. You will be set up for success, with a free
+            financial assessment that includes cash flow analysis; 3. You won’t
+            be surprised, with clear terms and our commitment to transparency;
+            and 4. You will get results, with our Program Guarantee* that states
+            that if your total program settlement cost is more than the total
+            amount of debt you enroll in our program, we’ll refund you the
+            difference, up to 100% of our collected fees.*
+          </p>
+          <p>
+            Another benefit is our partnership with a network of attorneys, the
+            Legal Partner Network, that specializes in debt negotiation. The
+            cost of the Legal Partner Network service is included in your
+            program and will be available to you as long as you make all your
+            deposits on time and in the full amount. For more information,
+            please see question:“What do I do if my creditor takes legal
+            actions?”
+          </p>
+          <p>
+            Lastly, Freedom Debt Relief provides complimentary tools and
+            guidance to help customers succeed including an online dashboard for
+            clients, with access 24/7 and the ability to chat with Customer
+            Service 7 days a week. In the dashboard, clients can access various
+            videos and articles to grow your financial skills.
+          </p>
+          <p>
+            *For purposes of this settlement fee refund, your “FDR program
+            settlement costs” are (a) the total amount you paid to your
+            creditors through your FDR program, plus (b) the total settlement
+            fees paid to us as described in Subsection 5.a. (excluding any other
+            fees, costs or taxes you may incur).
+          </p>
+          <p>
+            In the event you charge, draw, or take advances on a debt after
+            enrollment, that debt, and any FDR program settlement costs
+            associated with that debt, will not be considered for purposes of
+            this settlement fee refund.
+          </p>
+        </div>
+
+        <p
+          class="text-primary font-bold text-center lg:text-left lg:text-[22px] lg:leading-[30px] lg:text-2xl"
+        >
+          Will I be totally debt free when i’m done?
+        </p>
+        <p>
+          Our program is focused on dealing with unsecured debts (debts that are
+          not backed by collateral such as debt from credit cards, medical
+          bills, and unsecured personal loans, etc.). We can’t help with debt
+          that is secured by collateral (such as mortgages or auto loans).
+          However, after completing the program, the money you had been paying
+          towards your unsecured creditors can be used to pay down secured debts
+          and start saving for your financial future. Not everyone completes our
+          program, so remember that sticking to your monthly savings plan is the
+          most important factor in determining your success
+        </p>
+
+        <p
+          class="text-primary font-bold text-center lg:text-left lg:text-[22px] lg:leading-[30px] lg:text-2xl"
+        >
+          Will debt collectors call me?
+        </p>
+        <p>
+          There are federal and state laws designed to protect you from
+          collections harassment, but the fact is most of our clients will
+          experience some collections calls. To help, we offer tools and
+          guidance on how to handle those interactions. Learn more about laws
+          that regulate debt collector behavior.
+        </p>
+
+        <p
+          class="text-primary font-bold text-center lg:text-left lg:text-[22px] lg:leading-[30px] lg:text-2xl"
+        >
+          What do I do if my creditor takes legal action?
+        </p>
+        <div class="flex flex-col gap-6">
+          <p>
+            Creditors may attempt to collect on enrolled debts by taking legal
+            action. While we (FDR) are not lawyers or licensed to practice law,
+            we want to make sure that if any enrolled accounts go into
+            litigation, the debt can still be negotiated.
+          </p>
+          <p>
+            We’ve partnered with a network of attorneys, the Legal Partner
+            Network, that specializes in debt negotiation. If any enrolled
+            creditor files a lawsuit against a client, we may engage a Legal
+            Partner Network attorney who will attempt to negotiate a settlement
+            with the creditor.
+          </p>
+          <p>
+            The focus of the attorney is to try to get the creditor to settle
+            the lawsuit and resolve the debt. The attorney will not represent
+            the client in court or file paperwork.
+          </p>
+          <p>
+            The cost of the Legal Partner Network service is included in the
+            program (without any subscription or service fees) and will be
+            available to the client as long as they make all of their deposits
+            on time and in the full amount.
+          </p>
+        </div>
+
+        <p
+          class="text-primary font-bold text-center lg:text-left lg:text-[22px] lg:leading-[30px] lg:text-2xl"
+        >
+          Is DebtQuote a legitimate company?
+        </p>
+        <p>
+          There are bad actors in the category of debt settlement, and we
+          understand people's concerns around debt relief programs potentially
+          being a scam.
+          <a href="https://www.freedomdebtrelief.com/scam/" class="underline">
+            Freedom Debt Relief is a legitimate company
+          </a>
+          that has helped tens of thousands of clients since we started in 2002.
+          We are a founding member of the American Fair Credit Council (AFCC)
+          and a platinum member of the International Association of Professional
+          Debt Arbitrators. Every day, our dedicated employees carry out our
+          mission to help people solve their debt challenges and move their
+          finances forward — even if the solution they choose isn't Freedom Debt
+          Relief. We refer people to other solutions (like credit counseling,
+          bankruptcy, consolidation loans, and HELOC) if we believe the clients'
+          needs are better met with other solutions. Learn more about
+          <a
+            href="https://www.freedomdebtrelief.com/why-were-better/"
+            class="underline"
+          >
+            our commitment to integrity and our accreditations</a
+          >.
+        </p>
+
+        <p
+          class="text-primary font-bold text-center lg:text-left lg:text-[22px] lg:leading-[30px] lg:text-2xl"
+        >
+          Does DebtQuote start negotiating with my creditors right away?
+        </p>
+        <p>
+          Negotiation activity is typically very limited until you have saved up
+          enough in your settlement account (also referred to as 'dedicated
+          account') to
+          <a
+            href="https://www.freedomdebtrelief.com/debt-solutions/how-to-negotiate/"
+            class="underline"
+          >
+            make reasonable offers to your creditors </a
+          >. Most (but not all) creditors do not want to spend time negotiating
+          an account unless they know there are funds available. The first
+          settlement typically happens between months four and six of a client’s
+          program, but this varies greatly depending on your monthly deposit
+          amount, the number of creditors you have enrolled in the program, and
+          the balance of each individual account. Over 60% of clients get their
+          first debt settled in the first 3 months of enrollment. In some
+          instances, it may take more than six months before the first
+          settlement is reached.
+        </p>
+
+        <p
+          class="text-primary font-bold text-center lg:text-left lg:text-[22px] lg:leading-[30px] lg:text-2xl"
+        >
+          How long does DebtQuote take?
+        </p>
+        <p>
+          The Freedom Debt Relief program is unique to each client. The program
+          length for Freedom Debt Relief customers is on average 24-48 months.*
+          The length of time that a client is enrolled depends on many factors,
+          like the amount of debt they have, who their creditors are, and the
+          amount the client is able to save/deposit every month, as well as the
+          consistency of those deposits. The Freedom Debt Relief team works with
+          each client to build a program and schedule that fits their specific
+          needs.
+        </p>
+
+        <p
+          class="text-primary font-bold text-center lg:text-left lg:text-[22px] lg:leading-[30px] lg:text-2xl"
+        >
+          Who is eligible for DebtQuote?
+        </p>
+        <p>
+          Freedom Debt Relief helps consumers that have experienced a hardship
+          (such as job loss, reduced income, unexpected expenses, medical, and
+          divorce) and are struggling with unsecured debts, including credit
+          cards, medical, department store and personal loan debts.
+        </p>
+
+        <p
+          class="text-primary font-bold text-center lg:text-left lg:text-[22px] lg:leading-[30px] lg:text-2xl"
+        >
+          When should you consider debt relief?
+        </p>
+        <p>
+          Consumers should consider debt relief if they have recently gone
+          through a hardship and are struggling to make minimum payments or can
+          make payments but still can't seem to make a dent in the debt. In many
+          cases, debt settlement is a good alternative to a loan or bankruptcy,
+          or credit counseling.
+        </p>
+      </section>
+    </main>
+
+    <footer
+      class="flex flex-col bg-primary text-surface font-[roboto] py-16 px-12 gap-8 max-w-[1184px] mx-auto"
+    >
+      <div class="flex flex-col self-center gap-6 text-[20px] font-semibold">
+        <div class="flex flex-row gap-2">
+          <img src="./assets/images/terms-of-use.svg" alt="terms-of-service" />
+          <a
+            href="./terms-of-service.html"
+            class="text-[20px] leading-6 underline decoration-solid font-semibold"
+            >Terms of Services</a
+          >
+        </div>
+
+        <div class="flex flex-row gap-2">
+          <img src="./assets/images/privacy-policy.svg" alt="privacy-policy" />
+          <a
+            href="./privacy-policy.html"
+            class="text-[20px] leading-6 underline decoration-solid font-semibold"
+            >Privacy Policy</a
+          >
+        </div>
+      </div>
+
+      <p class="text-lg">
+        *Our estimates are based on prior results, which will vary depending on
+        your specific enrolled creditors and your individual program terms. Not
+        all clients are able to complete their program for various reasons,
+        including their ability to save sufficient funds. We do not guarantee
+        that your debts will be resolved for a specific amount or percentage or
+        within a specific period of time. We do not assume your debts, make
+        monthly payments to creditors or provide tax, bankruptcy, accounting or
+        legal advice or credit repair services. Our service is not available in
+        all states, including New Jersey, and our fees may vary from state to
+        state. Please contact a tax professional to discuss potential tax
+        consequences of less than full balance debt resolution. Read and
+        understand all program materials prior to enrollment. The use of debt
+        settlement services will likely adversely affect your creditworthiness,
+        may result in you being subject to collections or being sued by
+        creditors or collectors and may increase the outstanding balances of
+        your enrolled accounts due to the accrual of fees and interest. However,
+        negotiated settlements we obtain on your behalf resolve the entire
+        account, including all accrued fees and interest. C.P.D. Reg. No.
+        T.S.12-03825.
+      </p>
+
+      <p class="text-lg">
+        ** This guarantee takes effect when you graduate the program—or even if
+        you leave before graduating. When you exit the program, we’ll use the
+        combined total of all the debts you enrolled and settled and the fees
+        you paid to us to calculate your eligibility for a refund.
+      </p>
+
+      <p class="text-lg">
+        DebtQuote, LLC does not discriminate on the basis of race, color,
+        religion, sex, marital status, national origin, or ancestry.
+      </p>
+
+      <div class="flex flex-col items-center text-[20px] pb-5">
+        <div class="flex gap-4">
+          <img
+            src="./assets/images/copyright.png"
+            alt="copyright icon"
+            style="width: 25px; height: 25px"
+          />
+          <span>2023 All Rights Reserved</span>
+        </div>
+        <p class="font-bold">DebtQuote.com</p>
+      </div>
+    </footer>
+  </body>
+</html>
