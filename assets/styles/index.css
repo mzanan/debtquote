@@ -69,10 +69,6 @@
   @apply hidden;
 }
 
-.clicked {
-  @apply bg-[#F2E4E4];
-}
-
 .slider-container {
   position: relative;
   width: 100%;

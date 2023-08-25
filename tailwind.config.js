@@ -13,6 +13,7 @@ module.exports = {
         banner: "#E4938A",
         "table-primary": "#f4f4f4",
         "table-secondary": "#ededed",
+        "contact-us": "#35376F",
       },
     },
   },
