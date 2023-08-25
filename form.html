@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./dist/styles/index.css" rel="stylesheet" />
+    <link href="./dist/libs/splidejs/css/splide.min.css" rel="stylesheet" />
+    <script src="./dist/libs/splidejs/js/splide.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav id="navbar" class="w-full lg:bg-surface shadow-sm">
+        <div
+          class="flex flex-col lg:flex-row lg:container lg:mx-auto lg:max-w-[1184px]"
+        >
+          <div
+            class="flex items-center h-[4.5rem] px-6 drop-shadow-sm bg-surface justify-between lg:drop-shadow-none"
+          >
+            <a href="./index.html">
+              <img src="assets/images/logo.png" alt="logo" />
+            </a>
+            <div class="flex lg:hidden">
+              <button
+                type="button"
+                id="navbar-btn"
+                class="text-text focus:outline-none"
+              >
+                <svg class="h-8 w-8 fill-current" viewBox="0 0 24 24">
+                  <path
+                    id="navbar-btn-close"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M3 7h18v2H3V7zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"
+                  />
+                  <path
+                    id="navbar-btn-open"
+                    d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            id="navbar-menu"
+            class="transition-all duration-700 h-0 bg-surface overflow-hidden lg:h-[4.5rem] lg:flex-1 lg:bg-surface lg:transition-none"
+          >
+            <ul
+              class="flex flex-col justify-center gap-6 p-6 pr-4 pt-12 lg:flex-row lg:py-0 lg:justify-end lg:h-full lg:items-center lg:gap-8"
+            >
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  id="link1"
+                  class="p-2 flex items-center justify-between hover:bg-[#f2e4e4] lg:gap-2"
+                  onclick="toggleSubmenu('submenu1', 'icon1');"
+                >
+                  The Program
+                  <svg
+                    id="icon1"
+                    class="lg:hidden"
+                    width="5"
+                    height="10"
+                    viewBox="0 0 5 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 10L5 5L0 0V10Z" fill="#2A2A2A" />
+                  </svg>
+
+                  <svg
+                    class="hidden lg:block"
+                    width="25"
+                    height="24"
+                    viewBox="0 0 25 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.8059 9.1121L12.4996 13.097L8.19322 9.1121C8.11628 9.04076 8.013 9.00082 7.90545 9.00082C7.79789 9.00082 7.69461 9.04076 7.61767 9.1121C7.58041 9.14675 7.55082 9.18811 7.53061 9.23375C7.51041 9.2794 7.5 9.32841 7.5 9.37793C7.5 9.42744 7.51041 9.47645 7.53061 9.5221C7.55082 9.56774 7.58041 9.6091 7.61767 9.64375L12.1989 13.8839C12.2793 13.9583 12.3872 14 12.4996 14C12.6119 14 12.7198 13.9583 12.8003 13.8839L17.3815 9.64457C17.419 9.60989 17.4488 9.56843 17.4691 9.52264C17.4895 9.47684 17.5 9.42763 17.5 9.37793C17.5 9.32822 17.4895 9.27901 17.4691 9.23322C17.4488 9.18742 17.419 9.14596 17.3815 9.11128C17.3045 9.03994 17.2012 9 17.0937 9C16.9861 9 16.8828 9.03994 16.8059 9.11128V9.1121Z"
+                      fill="#001F4D"
+                    />
+                  </svg>
+                </a>
+                <ul
+                  id="submenu1"
+                  class="transition-all duration-700 lg:transition-none lg:absolute lg:bg-surface"
+                  style="display: none"
+                >
+                  <li class="py-3 pl-4">
+                    <a href="./how-it-works.html" class="p-2 hover:bg-[#f2e4e4]"
+                      >How It Works</a
+                    >
+                  </li>
+                  <li class="py-3 pl-4">
+                    <a href="./help-people.html" class="p-2 hover:bg-[#f2e4e4]"
+                      >Who we Help</a
+                    >
+                  </li>
+                  <li class="py-3 pl-4">
+                    <a href="./why-choose.html" class="p-2 hover:bg-[#f2e4e4]"
+                      >Why Choose Debt Quote</a
+                    >
+                  </li>
+
+                  <li class="py-3 pl-4">
+                    <a href="./faqs.html" class="p-2 hover:bg-[#f2e4e4]">FAQ</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="p-2 transition-all flex items-center justify-between a-color-clicked hover:bg-[#f2e4e4] lg:gap-2"
+                  onclick="toggleSubmenu('submenu2', 'icon2'); "
+                >
+                  Articles
+                  <svg
+                    id="icon2"
+                    class="lg:hidden"
+                    width="5"
+                    height="10"
+                    viewBox="0 0 5 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 10L5 5L0 0V10Z" fill="#2A2A2A" />
+                  </svg>
+
+                  <svg
+                    class="hidden lg:block"
+                    width="25"
+                    height="24"
+                    viewBox="0 0 25 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.8059 9.1121L12.4996 13.097L8.19322 9.1121C8.11628 9.04076 8.013 9.00082 7.90545 9.00082C7.79789 9.00082 7.69461 9.04076 7.61767 9.1121C7.58041 9.14675 7.55082 9.18811 7.53061 9.23375C7.51041 9.2794 7.5 9.32841 7.5 9.37793C7.5 9.42744 7.51041 9.47645 7.53061 9.5221C7.55082 9.56774 7.58041 9.6091 7.61767 9.64375L12.1989 13.8839C12.2793 13.9583 12.3872 14 12.4996 14C12.6119 14 12.7198 13.9583 12.8003 13.8839L17.3815 9.64457C17.419 9.60989 17.4488 9.56843 17.4691 9.52264C17.4895 9.47684 17.5 9.42763 17.5 9.37793C17.5 9.32822 17.4895 9.27901 17.4691 9.23322C17.4488 9.18742 17.419 9.14596 17.3815 9.11128C17.3045 9.03994 17.2012 9 17.0937 9C16.9861 9 16.8828 9.03994 16.8059 9.11128V9.1121Z"
+                      fill="#001F4D"
+                    />
+                  </svg>
+                </a>
+                <ul
+                  id="submenu2"
+                  class="transition-all duration-700 lg:transition-none lg:absolute lg:bg-surface"
+                  style="display: none"
+                >
+                  <li class="py-3 pl-4">
+                    <a
+                      href="./guide-to-debt.html"
+                      class="p-2 hover:bg-[#f2e4e4]"
+                      >Debt Consolidation</a
+                    >
+                  </li>
+                  <li class="py-3 pl-4">
+                    <a
+                      href="./debt-consolidation.html"
+                      class="p-2 hover:bg-[#f2e4e4]"
+                      >Debt Consolidation Near Me</a
+                    >
+                  </li>
+                  <li class="py-3 pl-4">
+                    <a href="./counseling.html" class="p-2 hover:bg-[#f2e4e4]"
+                      >Pros and cons of Credit</a
+                    >
+                  </li>
+                  <li class="py-3 pl-4">
+                    <a href="#" class="p-2 hover:bg-[#f2e4e4]"
+                      >Debt Relief Overview</a
+                    >
+                  </li>
+                  <li class="py-3 pl-4">
+                    <a
+                      href="./credit-card-debt-relief.html"
+                      class="p-2 hover:bg-[#f2e4e4]"
+                      >Credit Card Debt Relief</a
+                    >
+                  </li>
+                  <li class="py-3 pl-4">
+                    <a href="./programs.html" class="p-2 hover:bg-[#f2e4e4]"
+                      >Debt Relief Programs</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="./about.html"
+                  class="p-2 transition-all flex items-center justify-between hover:bg-[#f2e4e4]"
+                >
+                  About Us
+                  <svg
+                    class="lg:hidden"
+                    width="5"
+                    height="10"
+                    viewBox="0 0 5 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 10L5 5L0 0V10Z" fill="#2A2A2A" />
+                  </svg>
+                </a>
+              </li>
+              <li
+                class="lg:bg-contact-us lg:text-white lg:font-bold lg:px-2 lg:rounded-lg max-lg:hover:bg-[#f2e4e4]"
+              >
+                <a
+                  href="./contact.html"
+                  class="p-2 transition-all flex items-center justify-between"
+                >
+                  Contact Us
+                  <svg
+                    class="lg:hidden"
+                    width="5"
+                    height="10"
+                    viewBox="0 0 5 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 10L5 5L0 0V10Z" fill="#2A2A2A" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="max-w-[1184px]">
+      <section
+        class="container flex flex-col items-center w-full pt-8 px-6 lg:pt-12"
+      >
+        <!-- Card 1 -->
+        <div
+          id="cardContainer1"
+          data-card="1"
+          class="flex flex-col max-w-[364px] h-[600px] md:w-[500px]"
+        >
+          <img
+            src="./assets/images/form-step-1.png"
+            alt="form steps indicator"
+            class="pb-12"
+          />
+          <p
+            class="text-2xl text-primary font-semibold text-center font-['roboto'] pb-12 lg:pb-20"
+          >
+            Choose your debt amount
+          </p>
+
+          <div
+            class="flex flex-col gap-4 max-w-[280px] w-full self-center pb-10 lb:pb-20"
+          >
+            <div class="slider-container">
+              <input
+                type="range"
+                class="range w-full"
+                name="quantity"
+                min="0"
+                max="100"
+                aria-label="slider"
+              />
+
+              <div class="tooltip"></div>
+            </div>
+
+            <div class="flex justify-between text-primary">
+              <span>$1000</span>
+              <span>$100000 +</span>
+            </div>
+          </div>
+
+          <button
+            class="rounded-lg h-14 bg-accent text-white font-extrabold w-[320px] self-center"
+            onclick="nextCard()"
+          >
+            Continue
+          </button>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          id="cardContainer2"
+          data-card="2"
+          class="flex flex-col max-w-[364px] h-[600px] md:w-[500px] hidden"
+        >
+          <img
+            src="./assets/images/form-step-2.png"
+            alt="form steps indicator"
+            class="pb-12"
+          />
+          <p
+            class="text-2xl text-primary font-semibold text-center font-['roboto'] pb-12 lg:pb-20"
+          >
+            What state do you live in?
+          </p>
+
+          <div class="relative font-['roboto'] pb-12 lg:pb-20">
+            <p class="absolute top-[-10px] text-xs ml-4 p-1 bg-surface">
+              State
+            </p>
+            <select
+              type="number"
+              name="size"
+              aria-label="State"
+              class="h-14 w-full px-4 bg-surface border border-[#1E1E1E] rounded"
+            >
+              <option disabled selected value="">State</option>
+              <option value="">California</option>
+              <option value="">Texas</option>
+              <option value="">Florida</option>
+            </select>
+          </div>
+
+          <button
+            class="rounded-lg h-14 bg-accent text-white font-extrabold w-[320px] self-center"
+            onclick="nextCard()"
+          >
+            Continue
+          </button>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          id="cardContainer3"
+          data-card="3"
+          class="flex flex-col max-w-[364px] md:w-[500px] hidden"
+        >
+          <img
+            src="./assets/images/form-step-3.png"
+            alt="form steps indicator"
+            class="pb-12"
+          />
+          <p
+            class="text-2xl text-primary font-semibold text-center font-['roboto'] pb-12 lg:pb-20"
+          >
+            Personal Information
+          </p>
+
+          <form class="flex flex-col gap-6 pb-10 lg:pb-12 font-['roboto']">
+            <div class="relative">
+              <label
+                class="absolute bg-surface text-placeholder text-xs px-1 ml-3.5 top-[-10px]"
+                >First Name</label
+              >
+              <input
+                type="text"
+                name="name"
+                placeholder="First Name"
+                class="pl-4 pr-14 py-2 rounded border-[1px] border-[#1E1E1E] w-full h-14"
+              />
+            </div>
+
+            <div class="relative">
+              <label
+                class="absolute bg-surface text-placeholder text-xs px-1 ml-3.5 top-[-10px]"
+                >Last Name</label
+              >
+              <input
+                type="text"
+                name="lastName"
+                placeholder="Last Name"
+                class="pl-4 pr-14 py-2 rounded border-[1px] border-[#1E1E1E] w-full h-14"
+              />
+            </div>
+
+            <div class="relative">
+              <label
+                class="absolute bg-surface text-placeholder text-xs px-1 ml-3.5 top-[-10px]"
+                >Phone</label
+              >
+              <input
+                type="number"
+                name="phone"
+                placeholder="Phone"
+                class="pl-4 pr-14 py-2 rounded border-[1px] border-[#1E1E1E] w-full h-14"
+              />
+              <img
+                src="assets/images/phone.svg"
+                class="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer"
+              />
+            </div>
+
+            <div class="relative">
+              <label
+                class="absolute bg-surface text-placeholder text-xs px-1 ml-3.5 top-[-10px]"
+                >Email</label
+              >
+              <input
+                type="email"
+                name="email"
+                placeholder="E-mail"
+                class="pl-4 pr-14 py-2 rounded border-[1px] border-[#1E1E1E] w-full h-14"
+              />
+              <img
+                src="assets/images/email.svg"
+                class="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer"
+              />
+            </div>
+          </form>
+
+          <span
+            class="text-[#888] text-xs font-['roboto'] max-w-[365px] pb-10 lg:pb-12"
+          >
+            By providing your number above, and clicking on’click to see your
+            results below, you are consenting to receive calls, texts, and
+            recorder messages in the manner described below.
+          </span>
+
+          <button
+            class="rounded-lg h-14 bg-accent text-white font-extrabold w-[320px] self-center mb-8 lg:mb-12"
+            onclick="nextCard()"
+          >
+            Continue
+          </button>
+
+          <span
+            class="text-[#888] text-xs font-['roboto'] md:w-[600px] self-center pb-10 lg:pb-12"
+          >
+            I consent to receive calls and text messages, including marketing
+            and promotional messages, from DebtQuote, LLC, and its related or
+            affiliated companies, including Bills.com, LLC, Freedom Financial
+            Asset Management, LLC d/b/a FreedomPlus, Achieve Loans, and Freedom
+            Debt Relief, LLC, and/or Service Providers, including through the
+            use of an automatic telephone dialing system or an artificial or
+            prerecorded voice, at any telephone number I provide. Msg and data
+            rates may apply. Consent is not a condition for purchase. For text
+            messages, reply STOP to cancel. If you choose not to consent, you
+            may call us at (833) 598-2658 to continue your inquiry.
+          </span>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          id="cardContainer4"
+          data-card="4"
+          class="flex flex-col max-w-[364px] md:w-[500px] hidden"
+        >
+          <img
+            src="./assets/images/form-step-3.png"
+            alt="form steps indicator"
+            class="pb-12"
+          />
+          <p
+            class="text-2xl text-primary font-semibold text-center font-['roboto'] pb-12 lg:pb-20"
+          >
+            Looking for the best results for you!
+          </p>
+
+          <img src="assets/images/completed-form.gif" class="pb-32" />
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="flex flex-col bg-primary text-surface font-[roboto] py-16 px-12 gap-8"
+    >
+      <div class="flex flex-col self-center gap-6 text-[20px] font-semibold">
+        <div class="flex flex-row gap-2">
+          <img src="./assets/images/terms-of-use.svg" alt="terms-of-service" />
+          <a
+            href="./terms-of-service.html"
+            class="text-[20px] leading-6 underline decoration-solid font-semibold"
+            >Terms of Services</a
+          >
+        </div>
+
+        <div class="flex flex-row gap-2">
+          <img src="./assets/images/privacy-policy.svg" alt="privacy-policy" />
+          <a
+            href="./privacy-policy.html"
+            class="text-[20px] leading-6 underline decoration-solid font-semibold"
+            >Privacy Policy</a
+          >
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-8 max-w-[1184px] mx-auto">
+        <p class="text-lg">
+          *Our estimates are based on prior results, which will vary depending
+          on your specific enrolled creditors and your individual program terms.
+          Not all clients are able to complete their program for various
+          reasons, including their ability to save sufficient funds. We do not
+          guarantee that your debts will be resolved for a specific amount or
+          percentage or within a specific period of time. We do not assume your
+          debts, make monthly payments to creditors or provide tax, bankruptcy,
+          accounting or legal advice or credit repair services. Our service is
+          not available in all states, including New Jersey, and our fees may
+          vary from state to state. Please contact a tax professional to discuss
+          potential tax consequences of less than full balance debt resolution.
+          Read and understand all program materials prior to enrollment. The use
+          of debt settlement services will likely adversely affect your
+          creditworthiness, may result in you being subject to collections or
+          being sued by creditors or collectors and may increase the outstanding
+          balances of your enrolled accounts due to the accrual of fees and
+          interest. However, negotiated settlements we obtain on your behalf
+          resolve the entire account, including all accrued fees and interest.
+          C.P.D. Reg. No. T.S.12-03825.
+        </p>
+
+        <p class="text-lg">
+          ** This guarantee takes effect when you graduate the program—or even
+          if you leave before graduating. When you exit the program, we’ll use
+          the combined total of all the debts you enrolled and settled and the
+          fees you paid to us to calculate your eligibility for a refund.
+        </p>
+
+        <p class="text-lg">
+          DebtQuote, LLC does not discriminate on the basis of race, color,
+          religion, sex, marital status, national origin, or ancestry.
+        </p>
+
+        <div class="flex flex-col items-center text-[20px] pb-5">
+          <div class="flex gap-4">
+            <img
+              src="./assets/images/copyright.png"
+              alt="copyright icon"
+              style="width: 25px; height: 25px"
+            />
+            <span>2023 All Rights Reserved</span>
+          </div>
+          <p class="font-bold">DebtQuote.com</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/index.js"></script>
+    <script>
+      function nextCard() {
+        const currentCard = document.querySelector("[data-card]:not(.hidden)");
+        const currentCardNumber = currentCard.dataset.card;
+        const nextCardNumber = parseInt(currentCardNumber) + 1;
+        const nextCard = document.getElementById(
+          "cardContainer" + nextCardNumber
+        );
+
+        if (nextCard) {
+          currentCard.classList.add("hidden");
+          nextCard.classList.remove("hidden");
+        }
+      }
+    </script>
+  </body>
+</html>
