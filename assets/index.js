@@ -15,20 +15,30 @@ function toggleSubmenu(submenuId, iconId, linkId) {
     submenu.style.display === "none" ? "rotate(0deg)" : "rotate(90deg)";
 }
 
-const range = document.querySelector(".range");
-const tooltip = document.querySelector(".tooltip");
+const ranges = document.querySelectorAll(".range");
+const tooltips = document.querySelectorAll(".tooltip");
 
-range.addEventListener("input", () => {
-  setTooltip(range, tooltip);
+ranges.forEach((range, index) => {
+  range.addEventListener("input", () => {
+    const val = range.value;
+    const min = range.min ? range.min : 0;
+    const max = range.max ? range.max : 100;
+    const newVal = Number(((val - min) * 100) / (max - min));
+    tooltips[index].innerHTML = val;
+    tooltips[index].style.left = `calc(${newVal}% + (${
+      8 - newVal * 0.15
+    }px) - 15px)`;
+  });
+
+  // Set initial tooltip position
+  const initialVal = range.value;
+  const initialMin = range.min ? range.min : 0;
+  const initialMax = range.max ? range.max : 100;
+  const initialNewVal = Number(
+    ((initialVal - initialMin) * 100) / (initialMax - initialMin)
+  );
+  tooltips[index].innerHTML = initialVal;
+  tooltips[index].style.left = `calc(${initialNewVal}% + (${
+    8 - initialNewVal * 0.15
+  }px) - 15px)`;
 });
-
-function setTooltip(range, tooltip) {
-  const val = range.value;
-  const min = range.min ? range.min : 0;
-  const max = range.max ? range.max : 100;
-  const newVal = Number(((val - min) * 100) / (max - min));
-  tooltip.innerHTML = val;
-  tooltip.style.left = `calc(${newVal}% + (${8 - newVal * 0.15}px) - 15px)`;
-}
-
-setTooltip(range, tooltip);
